@@ -5,14 +5,14 @@ import MobileNav from "components/MobileNav";
 ---
 
 <nav
-  class="sticky z-0 top-5 flex justify-between items-center mx-auto gap-5 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl"
+  class="sticky z-0 top-5 flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl"
 >
-  <a href="/" class="hover:ring-8 hover:ring-off-dark rounded-full transition">
-    <img src="avatar.png" alt="me" class="w-28" />
+  <a href="/" class="hover:ring-8 hover:ring-off-dark ring-2 ring-white/50 ring-offset-8 ring-offset-dark rounded-full transition">
+    <img src="avatar.png" alt="me" class="w-28 " />
   </a>
-  <div class="line bg-gradient-to-r h-[1px] from-black to-white w-full"></div>
+  <div class="line ml-2 bg-gradient-to-r h-[1px] from-white/50 via-black to-white/50 w-full"></div>
   <ul class="sm:flex hidden gap-2 items-center">
-    <li><SecondaryButton>Projects</SecondaryButton></li>
+    <li class="border-2 rounded-lg border-white/50 border-spacing-2"><SecondaryButton>Projects</SecondaryButton></li>
     <li><SecondaryButton>About</SecondaryButton></li>
     <li><SecondaryButton>Blog</SecondaryButton></li>
     <li><PrimaryButton>Contact</PrimaryButton></li>
