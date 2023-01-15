@@ -1,27 +1,20 @@
 ---
+import Arrow from "components/Arrow.astro";
 import Layout from "layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Layout></Layout>
-  </body>
-</html>
+<Layout title="Filip Ivanovic">
+  <div class="mt-52 w-full flex items-center justify-center flex-col">
+    <h1 class="text-6xl text-center font-bold">
+      Get to know Filip, your next <br />
+      <span>Front-end Developer</span>
+    </h1>
+    <Arrow />
+  </div>
+</Layout>
 
-<style is:global>
-  * {
-    @apply text-white;
-    font-family: articulat-cf, system-ui, sans-serif;
-    font-style: normal;
-  }
-  body{
-    @apply bg-dark;
+<style>
+  span {
+    @apply text-transparent font-bold bg-gradient-to-r from-violet-500 via-cyan-300 to-green-400 bg-clip-text bg-[length:200%_auto];
   }
 </style>
