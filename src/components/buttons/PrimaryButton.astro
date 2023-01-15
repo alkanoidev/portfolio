@@ -1,0 +1,13 @@
+<button class=""><slot /></button>
+
+<style>
+  button {
+    background-image: url("bg.svg");
+    background-size: cover;
+    @apply py-3 px-6 transition rounded-lg bg-primary text-black font-bold;
+  }
+
+  button:hover {
+    @apply ring-secondary ring-2 ring-offset-2 ring-offset-black;
+  }
+</style>
