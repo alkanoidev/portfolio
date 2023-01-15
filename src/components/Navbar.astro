@@ -11,7 +11,7 @@ import MobileNav from "components/MobileNav";
     <img src="avatar.png" alt="me" class="w-28" />
   </a>
   <div class="line bg-gradient-to-r h-[1px] from-black to-white w-full"></div>
-  <ul class=" sm:flex hidden gap-2 items-center">
+  <ul class="sm:flex hidden gap-2 items-center">
     <li><SecondaryButton>Projects</SecondaryButton></li>
     <li><SecondaryButton>About</SecondaryButton></li>
     <li><SecondaryButton>Blog</SecondaryButton></li>
@@ -28,3 +28,20 @@ import MobileNav from "components/MobileNav";
     @apply bg-off-dark;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  gsap.fromTo(
+    ".line",
+    {
+      duration: 1,
+      opacity: 0,
+      ease: "power1.inOut",
+    },
+    {
+      duration: 1,
+      opacity: 1,
+      ease: "power1.inOut",
+    }
+  );
+</script>
