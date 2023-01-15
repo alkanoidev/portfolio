@@ -1,0 +1,27 @@
+---
+import Layout from "layouts/Layout.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Layout></Layout>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    @apply text-white;
+    font-family: articulat-cf, system-ui, sans-serif;
+    font-style: normal;
+  }
+  body{
+    @apply bg-dark;
+  }
+</style>
