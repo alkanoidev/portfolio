@@ -4,21 +4,33 @@ import SecondaryButton from "components/buttons/SecondaryButton";
 import MobileNav from "components/MobileNav";
 ---
 
-<nav
-  class="sticky z-0 top-5 flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl"
->
-  <a href="/" class="hover:ring-8 hover:ring-off-dark ring-2 ring-white/50 ring-offset-8 ring-offset-dark rounded-full transition">
-    <img src="avatar.png" alt="me" class="w-28 " />
-  </a>
-  <div class="line ml-2 bg-gradient-to-r h-[1px] from-white/50 via-black to-white/50 w-full"></div>
-  <ul class="sm:flex hidden gap-2 items-center">
-    <li class="border-2 rounded-lg border-white/50 border-spacing-2"><SecondaryButton>Projects</SecondaryButton></li>
-    <li><SecondaryButton>About</SecondaryButton></li>
-    <li><SecondaryButton>Blog</SecondaryButton></li>
-    <li><PrimaryButton>Contact</PrimaryButton></li>
-  </ul>
-  <MobileNav client:visible />
-</nav>
+<div class="sticky z-10 top-0 py-5 w-full mt-10 bg-dark">
+  <nav
+    class="flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl px-2 sm:px-0"
+  >
+    <a
+      href="/"
+      class="hover:ring-8 ring-4 ring-off-dark ring-offset-dark ring-offset-8 rounded-full transition sm:ml-0 ml-2"
+    >
+      <img src="avatar.png" alt="me" class="sm:w-28 w-20" />
+    </a>
+    <div
+      class="line ml-2 bg-gradient-to-r h-[4px] from-off-dark via-black to-off-dark w-full"
+    >
+    </div>
+    <ul class="sm:flex hidden gap-4 items-center">
+      <li
+        class="ring-2 rounded-lg ring-off-dark ring-offset-2 ring-offset-transparent"
+      >
+        <SecondaryButton>Projects</SecondaryButton>
+      </li>
+      <li><SecondaryButton>About</SecondaryButton></li>
+      <li><SecondaryButton>Blog</SecondaryButton></li>
+      <li><PrimaryButton>Contact</PrimaryButton></li>
+    </ul>
+    <MobileNav client:visible />
+  </nav>
+</div>
 
 <style>
   ul li a {
