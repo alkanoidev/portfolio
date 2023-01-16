@@ -1,66 +1,35 @@
 ---
 import Arrow from "components/Arrow.astro";
+import Project from "components/Project";
+import SecondaryButton from "components/buttons/SecondaryButton";
 import Layout from "layouts/Layout.astro";
 ---
 
 <Layout title="Filip Ivanovic">
-  <div class="mt-52 w-full h-full flex items-center justify-center flex-col">
-    <h1 class="text text-6xl text-center font-bold">
-      <span class="word">Get to know</span>
-      <span class="word">Filip,</span>
-      <span class="word">your next</span>
-      <br />
-      <span
-        class="word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary via-primary to-violet-500 bg-cover"
-        >Front-end Developer</span
-      >
-    </h1>
-    <Arrow />
-  </div>
-  <div class="mt-52 w-full h-full flex flex-col justify-center">
-    <h1 class="projects text-5xl font-bold z-0">Projects</h1>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+  <div
+    class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
+  >
+    <div class="mt-52 w-full h-full flex items-center justify-center flex-col">
+      <h1 class="text text-6xl text-center font-bold">
+        <span class="word">Get to know</span>
+        <span class="word">Filip,</span>
+        <span class="word">your next</span>
+        <br />
+        <span
+          class="word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary via-primary to-violet-500 bg-cover"
+          >Front-end Developer</span
+        >
+      </h1>
+      <Arrow />
+    </div>
+    <div class="mt-52 h-full flex flex-col justify-center items-center gap-10">
+      <h1 class="projects text-5xl font-bold z-0">Projects</h1>
+      <div class="flex justify-center">
+        <Project bgGradientName="blurry-gradient-haikei.svg" />
+        <Project bgGradientName="blurry-gradient-haikei1.svg" />
+        <Project bgGradientName="blurry-gradient-haikei2.svg" />
+      </div>
+    </div>
   </div>
 </Layout>
 <style>
@@ -69,9 +38,9 @@ import Layout from "layouts/Layout.astro";
 </style>
 <script>
   import { gsap } from "gsap";
-  import {ScrollTrigger} from "gsap/ScrollTrigger";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  let timeline = gsap.timeline({delay: 0.5});
+  let timeline = gsap.timeline({ delay: 0.5 });
   gsap.registerPlugin(ScrollTrigger);
 
   timeline.fromTo(
@@ -95,25 +64,28 @@ import Layout from "layouts/Layout.astro";
     }
   );
 
-  timeline.fromTo(".projects", {
-    opacity: 0,
-    duration: 0.3,
-    y: -20,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      scrub: 1,
-      start: "top center",
-      end: "bottom center"
+  timeline.fromTo(
+    ".projects",
+    {
+      opacity: 0,
+      duration: 0.3,
+      y: -20,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        scrub: 1,
+        start: "top center",
+        end: "bottom center",
+      },
+    },
+    {
+      opacity: 1,
+      duration: 0.3,
+      y: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        scrub: 1,
+      },
     }
-  },
-  {
-    opacity: 1,
-    duration: 0.3,
-    y: 0,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      scrub: 1,
-    }
-  });
+  );
   // change fe text color to white then to gradient
 </script>

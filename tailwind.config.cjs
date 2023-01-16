@@ -11,6 +11,7 @@ module.exports = {
 				},
 				primary: "#68af73",
 				secondary: "#62aeef",
+				violet: "#8b5cf6"
 			}
 		},
 	},
