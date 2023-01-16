@@ -4,10 +4,10 @@ import Layout from "layouts/Layout.astro";
 ---
 
 <Layout title="Filip Ivanovic">
-  <div class="mt-52 w-full flex items-center justify-center flex-col">
+  <div class="mt-52 w-full h-full flex items-center justify-center flex-col">
     <h1 class="text text-6xl text-center font-bold">
       <span class="word">Get to know</span>
-      <span class="word">Filip</span>
+      <span class="word">Filip,</span>
       <span class="word">your next</span>
       <br />
       <span
@@ -17,15 +17,67 @@ import Layout from "layouts/Layout.astro";
     </h1>
     <Arrow />
   </div>
+  <div class="mt-52 w-full h-full flex flex-col justify-center">
+    <h1 class="projects text-5xl font-bold z-0">Projects</h1>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+  </div>
 </Layout>
-
+<style>
+  h1 span {
+  }
+</style>
 <script>
   import { gsap } from "gsap";
-  gsap.fromTo(
+  import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+  let timeline = gsap.timeline({delay: 0.5});
+  gsap.registerPlugin(ScrollTrigger);
+
+  timeline.fromTo(
     ".word",
     {
-      duration: 1,
-      y: 100,
+      duration: 0.3,
       opacity: 0,
       ease: "power1.inOut",
       stagger: {
@@ -33,7 +85,7 @@ import Layout from "layouts/Layout.astro";
       },
     },
     {
-      duration: 1,
+      duration: 0.3,
       y: 0,
       opacity: 1,
       ease: "power1.inOut",
@@ -42,4 +94,26 @@ import Layout from "layouts/Layout.astro";
       },
     }
   );
+
+  timeline.fromTo(".projects", {
+    opacity: 0,
+    duration: 0.3,
+    y: -20,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      scrub: 1,
+      start: "top center",
+      end: "bottom center"
+    }
+  },
+  {
+    opacity: 1,
+    duration: 0.3,
+    y: 0,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      scrub: 1,
+    }
+  });
+  // change fe text color to white then to gradient
 </script>
