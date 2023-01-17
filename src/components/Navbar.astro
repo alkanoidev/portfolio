@@ -1,6 +1,6 @@
 ---
 import PrimaryButton from "components/buttons/PrimaryButton.astro";
-import SecondaryButton from "components/buttons/SecondaryButton";
+import NavButton from "components/buttons/NavButton";
 import MobileNav from "components/MobileNav";
 ---
 
@@ -22,10 +22,10 @@ import MobileNav from "components/MobileNav";
       <li
         class="ring-2 rounded-lg ring-off-dark ring-offset-2 ring-offset-transparent"
       >
-        <SecondaryButton>Projects</SecondaryButton>
+        <NavButton>Projects</NavButton>
       </li>
-      <li><SecondaryButton>About</SecondaryButton></li>
-      <li><SecondaryButton>Blog</SecondaryButton></li>
+      <li><NavButton>About</NavButton></li>
+      <li><NavButton>Blog</NavButton></li>
       <li><PrimaryButton>Contact</PrimaryButton></li>
     </ul>
     <MobileNav client:visible />

@@ -12,7 +12,12 @@ module.exports = {
 				primary: "#68af73",
 				secondary: "#62aeef",
 				violet: "#8b5cf6"
-			}
+			},
+			backgroundImage: {
+				'gradient': "url('/assets/blurry-gradient-haikei.svg')",
+				'gradient1': "url('/assets/blurry-gradient-haikei1.svg')",
+				'gradient2': "url('/assets/blurry-gradient-haikei2.svg')",
+			  }
 		},
 	},
 	plugins: [],

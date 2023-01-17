@@ -1,7 +1,6 @@
 ---
 import Arrow from "components/Arrow.astro";
 import Project from "components/Project";
-import SecondaryButton from "components/buttons/SecondaryButton";
 import Layout from "layouts/Layout.astro";
 ---
 
@@ -25,10 +24,10 @@ import Layout from "layouts/Layout.astro";
     </div>
     <div class="mt-52 h-full flex flex-col justify-center items-center gap-10">
       <h1 class="projects text-5xl font-bold z-0">Projects</h1>
-      <div class="flex justify-center">
-        <Project bgGradientName="blurry-gradient-haikei.svg" />
-        <Project bgGradientName="blurry-gradient-haikei1.svg" />
-        <Project bgGradientName="blurry-gradient-haikei2.svg" />
+      <div class="w-full flex flex-wrap justify-center">
+        <Project background="bg-primary/30" />
+        <Project background="bg-secondary/30" />
+        <Project background="bg-violet/30" />
       </div>
     </div>
   </div>
