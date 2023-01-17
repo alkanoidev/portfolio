@@ -1,27 +1,18 @@
+import GrainSvg from "./GrainSvg";
 import SecondaryButton from "./buttons/SecondaryButton";
 
 export default function Project({ background }: { background: string }) {
   return (
     <div
-      className={`rounded-3xl ${background} bg-cover bg-center max-w-3xl relative mb-8`}
+      className={`project rounded-3xl ${background} bg-cover bg-center max-w-3xl md:mx-0 mx-5 relative mb-14 flex`}
     >
-      <svg className="pointer-events-none isolate opacity-70 mix-blend-soft-light w-full h-full absolute top-0 left-0 rounded-3xl">
-        <filter id="pedroduarteisalegend">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.80"
-            numOctaves="4"
-            stitchTiles="stitch"
-          ></feTurbulence>
-        </filter>
-        <rect
-          width="100%"
-          height="100%"
-          filter="url(#pedroduarteisalegend)"
-        ></rect>
-      </svg>
-      <div className="p-6 rounded-3xl flex sm:flex-row flex-col-reverse relative gap-2">
-        <div className="flex flex-col">
+      <GrainSvg
+        frequency={0.8}
+        borderRadius="rounded-3xl"
+        opacity="opacity-20"
+      />
+      <div className="rounded-3xl flex sm:flex-row flex-col-reverse relative gap-2">
+        <div className="flex flex-col py-6 pl-6">
           <svg
             width="52"
             height="13"
@@ -42,7 +33,7 @@ export default function Project({ background }: { background: string }) {
             Lorem ipsum dolor sit amet des kes dir hex adsadd da sd asdaasdasdas
             dasdasdasd dasdsad adasd
           </p>
-          <div className="mt-auto flex gap-2">
+          <div className="sm:mt-auto mt-4 flex gap-2">
             <SecondaryButton>Live</SecondaryButton>
             <SecondaryButton>Code</SecondaryButton>
             <SecondaryButton>More</SecondaryButton>
@@ -50,19 +41,10 @@ export default function Project({ background }: { background: string }) {
         </div>
         <img
           src="assets/blurry-gradient-haikei.svg"
-          className="h-full sm:w-1/2 w-full rounded-xl"
+          className="thumbnail h-full sm:w-1/2 w-full rounded-3xl"
           alt=""
         />
       </div>
     </div>
   );
 }
-
-// content: "";
-//     margin-bottom: 1rem;
-//     display: block;
-//     height: 0.75rem;
-//     width: 0.75rem;
-//     border-radius: 9999px;
-//     opacity: .3;
-//     box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;

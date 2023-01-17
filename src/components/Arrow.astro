@@ -43,24 +43,65 @@
 
 <script>
   import { gsap } from "gsap";
-  gsap.fromTo(
+  const timeline = gsap.timeline();
+  timeline.fromTo(
     document.querySelectorAll(".circle"),
     {
       duration: 1,
       fill: "none",
       ease: "power1.inOut",
-      repeat: -1,
       delay: 1.5,
+      opacity: 0,
       stagger: {
         amount: 1,
       },
     },
     {
       duration: 1,
-      fill: "#1a1a1a",
+      fill: "#212121",
+      ease: "power1.inOut",
+      delay: 1.5,
+      opacity: 1,
+      stagger: {
+        amount: 1,
+      },
+    }
+  );
+  timeline.fromTo(
+    document.querySelectorAll(".circle"),
+    {
+      duration: 1,
+      ease: "power1.inOut",
+      opacity: 1,
+      stagger: {
+        amount: 1,
+      },
+    },
+    {
+      duration: 1,
+      ease: "power1.inOut",
+      opacity: 0.2,
+      stagger: {
+        amount: 1,
+      },
+    }
+  );
+  timeline.fromTo(
+    document.querySelectorAll(".circle"),
+    {
+      duration: 1,
+      opacity: 0.2,
       ease: "power1.inOut",
       repeat: -1,
-      delay: 1.5,
+      stagger: {
+        amount: 1,
+      },
+    },
+    {
+      duration: 1,
+      opacity: 1,
+      ease: "power1.inOut",
+      repeat: -1,
       stagger: {
         amount: 1,
       },
