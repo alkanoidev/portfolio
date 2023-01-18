@@ -1,10 +1,9 @@
 import Project from "components/Project";
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import projectsData from "../data/projects.json";
 
 export default function ProjectsSection() {
-  const [projects, setProjects] = useState<any[]>(projectsData);
   useEffect(() => {
     const timeline = gsap.timeline({ delay: 0.5 });
     timeline.fromTo(
