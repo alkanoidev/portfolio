@@ -1,0 +1,47 @@
+---
+import Arrow from "components/Arrow.astro";
+---
+
+<div
+  class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
+>
+  <h1 class="text sm:text-6xl text-3xl text-center font-bold">
+    <span class="word">Get to know</span>
+    <span class="word">Filip,</span>
+    <br class="sm:hidden block" />
+    <span class="word">your next</span>
+    <br />
+    <span
+      class="word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary via-primary to-violet bg-cover"
+    >
+      Front-end Developer
+    </span>
+  </h1>
+  <Arrow />
+</div>
+
+<script>
+  import { gsap } from "gsap";
+
+  const timeline = gsap.timeline({ delay: 0.5 });
+  timeline.fromTo(
+    ".word",
+    {
+      duration: 0.3,
+      opacity: 0,
+      ease: "power1.inOut",
+      stagger: {
+        amount: 1,
+      },
+    },
+    {
+      duration: 0.3,
+      y: 0,
+      opacity: 1,
+      ease: "power1.inOut",
+      stagger: {
+        amount: 1,
+      },
+    }
+  );
+</script>

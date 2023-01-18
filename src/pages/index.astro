@@ -1,39 +1,16 @@
 ---
-import Arrow from "components/Arrow.astro";
-import GrainSvg from "components/GrainSvg";
-import Project from "components/Project";
 import Layout from "layouts/Layout.astro";
+import HomeSection from "sections/HomeSection.astro";
+import ProjectsSection from "sections/ProjectsSection";
 ---
 
 <Layout title="Filip Ivanovic">
   <div
     class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
   >
-    <div
-      class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
-    >
-      <h1 class="text sm:text-6xl text-3xl text-center font-bold">
-        <span class="word">Get to know</span>
-        <span class="word">Filip,</span>
-        <br class="sm:hidden block" />
-        <span class="word">your next</span>
-        <br />
-        <span
-          class="word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary via-primary to-violet bg-cover"
-        >
-          Front-end Developer
-        </span>
-      </h1>
-      <Arrow />
-    </div>
-    <div class="mt-52 h-full flex flex-col justify-center items-center gap-10">
-      <h1 class="section-title text-5xl font-bold z-0">Projects</h1>
-      <div class="projects underneath w-full flex flex-wrap justify-center">
-        <Project background="bg-primary/30" />
-        <Project background="bg-secondary/30" />
-        <Project background="bg-violet/30" />
-      </div>
-    </div>
+    <HomeSection />
+
+    <ProjectsSection client:load />
 
     <div class="h-full flex flex-col justify-center items-center gap-10">
       <h1 class="section-title text-5xl font-bold z-0">About</h1>
@@ -41,125 +18,9 @@ import Layout from "layouts/Layout.astro";
     </div>
   </div>
 </Layout>
-<style>
-  h1 span {
-  }
-</style>
+
 <script>
-  import { gsap } from "gsap";
+  import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  let timeline = gsap.timeline({ delay: 0.5 });
   gsap.registerPlugin(ScrollTrigger);
-
-  timeline.fromTo(
-    ".word",
-    {
-      duration: 0.3,
-      opacity: 0,
-      ease: "power1.inOut",
-      stagger: {
-        amount: 1,
-      },
-    },
-    {
-      duration: 0.3,
-      y: 0,
-      opacity: 1,
-      ease: "power1.inOut",
-      stagger: {
-        amount: 1,
-      },
-    }
-  );
-
-  // timeline.fromTo(
-  //   ".section-title",
-  //   {
-  //     opacity: 0,
-  //     duration: 0.3,
-  //     y: -20,
-  //     ease: "power1.inOut",
-  //     scrollTrigger: {
-  //       scrub: 1,
-  //       start: "20% center",
-  //       end: "40% center",
-  //     },
-  //   },
-  //   {
-  //     opacity: 1,
-  //     duration: 0.3,
-  //     y: 0,
-  //     ease: "power1.inOut",
-  //     scrollTrigger: {
-  //       scrub: 1,
-  //       start: "20% center",
-  //       end: "40% center",
-  //     },
-  //   }
-  // );
-  // timeline.fromTo(
-  //   ".project",
-  //   {
-  //     opacity: 0,
-  //     duration: 0.3,
-  //     y: -20,
-  //     ease: "power1.inOut",
-  //     scrollTrigger: {
-  //       scrub: 1,
-  //       start: "20% center",
-  //       end: "40% center",
-  //     },
-  //     stagger: {
-  //       amount: 1,
-  //     },
-  //   },
-  //   {
-  //     opacity: 1,
-  //     duration: 0.3,
-  //     y: 0,
-  //     ease: "power1.inOut",
-  //     scrollTrigger: {
-  //       scrub: 1,
-  //       start: "20% center",
-  //       end: "40% center",
-  //     },
-  //     stagger: {
-  //       amount: 1,
-  //     },
-  //   }
-  // );
-  timeline.fromTo(
-    ".thumbnail",
-    {
-      opacity: 0,
-      x: window.screen.width >= 600 ? -100 : 0,
-      y: window.screen.width >= 600 ? 0 : -100,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".projects",
-        scrub: 1,
-        start: "-20% center",
-        end: "80% center",
-      },
-      stagger: {
-        amount: 1,
-      },
-    },
-    {
-      opacity: 1,
-      x: 0,
-      y:0,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".projects",
-        scrub: 1,
-        start: "-20% center",
-        end: "80% center",
-      },
-      stagger: {
-        amount: 1,
-      },
-    }
-  );
 </script>
