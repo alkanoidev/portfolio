@@ -1,13 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-  <path fill="#000" d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"/>
-  <path fill="url(#gradient)" d="M18 28a7.63 7.63 0 0 1-5-2c-1.4 2.1-.35 4.35.6 5.55.14.17.41.07.47-.15.44-1.8 2.93-1.22 2.93.6 0 2.28.87 3.4 1.72 3.81.34.16.59-.2.49-.56-.31-1.05-.29-2.46 1.29-3.25 3-1.5 3.17-4.83 2.5-6-.67.67-2.6 2-5 2Z"/>
-  <defs>
-    <linearGradient id="gradient" x1="16" x2="16" y1="32" y2="24" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34 386.33C34 397.376 42.9543 406.33 54 406.33C65.0457 406.33 74 397.376 74 386.33L34 386.33ZM34 186L34 386.33L74 386.33L74 186L34 186Z" fill="white"/>
+<path d="M378 288C378 299.046 386.954 308 398 308C409.046 308 418 299.046 418 288L378 288ZM418 126L418 106L378 106L378 126L418 126ZM418 288L418 126L378 126L378 288L418 288Z" fill="white"/>
+<path d="M93 186H73V226H93V186ZM201.904 226C212.95 226 221.904 217.046 221.904 206C221.904 194.954 212.95 186 201.904 186V226ZM93 226H201.904V186H93V226Z" fill="white"/>
+<path d="M54 106L34 106L34 146L54 146L54 106ZM257.019 146C268.065 146 277.019 137.046 277.019 126C277.019 114.954 268.065 106 257.019 106L257.019 146ZM54 146L257.019 146L257.019 106L54 106L54 146Z" fill="white"/>
+<path d="M337 386L458.005 386" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M337 126L458.005 126" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
