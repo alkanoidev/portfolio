@@ -5,7 +5,7 @@ export default function GrainSvg({
 }: {
   frequency: number;
   opacity?: string;
-  borderRadius: string;
+  borderRadius?: string;
 }) {
   return (
     <svg

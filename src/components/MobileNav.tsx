@@ -4,7 +4,7 @@ import { Fragment } from "react";
 export default function MobileNav() {
   return (
     <Menu as="div" className="relative inline-block text-left sm:hidden">
-      <Menu.Button className="py-3 px-3 transition rounded-lg ring-2 ring-off-dark hover:bg-off-dark">
+      <Menu.Button className="py-3 px-3 transition rounded-lg ring-4 ring-off-dark hover:bg-off-dark focus:bg-off-dark">
         {({ open }) =>
           open ? (
             <svg
@@ -33,7 +33,7 @@ export default function MobileNav() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M3.75 9h16.5m-16.5 6.75h16.5"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
           )
