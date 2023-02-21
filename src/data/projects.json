@@ -12,37 +12,7 @@
             "framer-motion",
             "tailwindcss"
         ],
-        "image": "filipblog-screenshot.png"
-    },
-    {
-        "title": "nasa-apis",
-        "description": "Explore NASA apis such as Picture Of the Day, Mars Rover Photos and NASA Image and Video Library",
-        "image": "https://raw.githubusercontent.com/alkanoidev/nasa-apis/master/page2.jpeg",
-        "githubLink": "https://github.com/alkanoidev/nasa-apis",
-        "liveDemoLink": "https://nasa-apis.netlify.app/",
-        "technologies": [
-            "react",
-            "javascript",
-            "react router",
-            "framer motion",
-            "styled components"
-        ],
-        "comingSoon": false,
-        "repoName": "nasa-apis"
-    },
-    {
-        "title": "travel-app-landing-page",
-        "description": "Mobile Responsive Landing page for tour and travel project",
-        "image": "travelapplandingpagethumb.png",
-        "githubLink": "https://github.com/alkanoidev/travel-app-landing-page",
-        "liveDemoLink": "https://travel-app-landing-page.netlify.app/",
-        "technologies": [
-            "react",
-            "javascript",
-            "styled components",
-            "framer motion"
-        ],
-        "comingSoon": false,
-        "repoName": "travel-app-landing-page"
+        "image": "filipblog.netlify.app.png",
+        "year": "2022"
     }
 ]

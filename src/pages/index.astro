@@ -22,5 +22,17 @@ import ProjectsSection from "sections/ProjectsSection";
 <script>
   import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+
   gsap.registerPlugin(ScrollTrigger);
 </script>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: black;
+  }
+</style>

@@ -9,8 +9,7 @@ export default function ProjectsSection() {
     timeline.fromTo(
       ".project",
       {
-        opacity: 0,
-        x: -50,
+        scale: 0.9,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".projects",
@@ -23,39 +22,7 @@ export default function ProjectsSection() {
         },
       },
       {
-        opacity: 1,
-        x: 0,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".projects",
-          scrub: 1,
-          start: "-20% center",
-          end: "80% center",
-        },
-        stagger: {
-          amount: 1,
-        },
-      }
-    );
-    timeline.fromTo(
-      ".thumbnail",
-      {
-        opacity: 0,
-        x: -60,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".projects",
-          scrub: 1,
-          start: "-20% center",
-          end: "80% center",
-        },
-        stagger: {
-          amount: 1,
-        },
-      },
-      {
-        opacity: 1,
-        x: 0,
+        scale: 1,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".projects",

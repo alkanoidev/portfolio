@@ -9,6 +9,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alkanoidev.github.io',
-  base: '/portfoliov2',
+  base: '/',
   integrations: [tailwind(), react()]
 });
