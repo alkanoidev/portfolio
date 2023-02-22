@@ -4,7 +4,7 @@ export default function IconButton({
   children,
   classes,
   isLink,
-  href
+  href,
 }: {
   children: string | ReactNode | ReactNode[];
   classes?: string;
@@ -13,12 +13,17 @@ export default function IconButton({
 }) {
   if (isLink)
     return (
-      <a href={href} className={`p-3 transition text-center rounded-2xl font-semibold ${classes}`}>
+      <a
+        href={href}
+        className={`p-3 transition text-center rounded-2xl font-semibold ${classes}`}
+      >
         {children}
       </a>
     );
   return (
-    <button className={`p-3 transition text-center rounded-2xl font-semibold ${classes}`}>
+    <button
+      className={`p-3 transition text-center rounded-2xl font-semibold ${classes}`}
+    >
       {children}
     </button>
   );

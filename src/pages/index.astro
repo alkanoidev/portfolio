@@ -1,5 +1,7 @@
 ---
 import Layout from "layouts/Layout.astro";
+import AboutSection from "sections/AboutSection";
+import ContactSection from "sections/ContactSection";
 import HomeSection from "sections/HomeSection.astro";
 import ProjectsSection from "sections/ProjectsSection";
 ---
@@ -12,10 +14,9 @@ import ProjectsSection from "sections/ProjectsSection";
 
     <ProjectsSection client:load />
 
-    <div class="h-full flex flex-col justify-center items-center gap-10">
-      <h1 class="section-title text-5xl font-bold z-0">About</h1>
-      <div class="w-full h-screen bg-red-500"></div>
-    </div>
+    <AboutSection client:visible />
+
+    <ContactSection />
   </div>
 </Layout>
 
@@ -31,8 +32,8 @@ import ProjectsSection from "sections/ProjectsSection";
     scroll-behavior: smooth;
   }
   ::selection {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(75, 75, 75, 0.5);
     border-radius: 10px;
-    color: black;
+    color: white;
   }
 </style>
