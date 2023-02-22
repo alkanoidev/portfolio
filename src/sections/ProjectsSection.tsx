@@ -11,12 +11,6 @@ export default function ProjectsSection() {
       {
         scale: 0.9,
         ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".projects",
-          scrub: 1,
-          start: "-20% center",
-          end: "80% center",
-        },
         stagger: {
           amount: 1,
         },
@@ -27,8 +21,8 @@ export default function ProjectsSection() {
         scrollTrigger: {
           trigger: ".projects",
           scrub: 1,
-          start: "-20% center",
-          end: "80% center",
+          start: "top center",
+          end: "top center",
         },
         stagger: {
           amount: 1,
@@ -47,8 +41,12 @@ export default function ProjectsSection() {
     >
       <h1 className="text-5xl font-bold z-0">Projects</h1>
       <div className="projects w-full flex flex-wrap justify-center">
-        {projectsData.map((project) => (
-          <Project background="bg-off-dark" key={project.title} {...project} />
+        {projectsData.map((project, index) => (
+          <Project
+            key={project.title}
+            {...project}
+            reversed={index % 2 !== 0}
+          />
         ))}
       </div>
     </div>

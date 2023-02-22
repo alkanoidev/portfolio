@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import GrainSvg from "./GrainSvg";
+import Link from "./Link";
 import IconButton from "./buttons/IconButton";
 import SecondaryButton from "./buttons/SecondaryButton";
 
 export default function Project({
-  background,
   title,
   description,
   githubLink,
@@ -14,45 +13,33 @@ export default function Project({
   image,
   commingSoon,
   year,
+  reversed,
 }: Props) {
-  const [thumbnailHovered, setThumbnailHovered] = useState(false);
-
   return (
     <div
-      className={`project rounded-3xl ${background} bg-cover bg-center max-w-4xl md:mx-0 mx-5 relative mb-14 flex`}
+      className={`project bg-deep-violet rounded-3xl bg-cover bg-center max-w-4xl md:mx-0 mx-5 relative mb-14 flex`}
     >
       <GrainSvg
-        frequency={0.01}
+        frequency={0.1}
         borderRadius="rounded-3xl"
         opacity="opacity-20"
       />
-      <div className="rounded-3xl flex sm:flex-row flex-col-reverse relative z-0">
-        <div className={`flex flex-col p-6 transition ${thumbnailHovered && "blur-md"}`}>
-          <svg
-            width="52"
-            height="13"
-            viewBox="0 0 52 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="inline-block"
-          >
-            <circle cx="6.07108" cy="6.48529" r="6" className="fill-primary" />
-            <circle cx="26" cy="6" r="6" className="fill-secondary" />
-            <path
-              d="M52 6.00003C52 9.31373 49.3137 12 46 12C42.6863 12 40 9.31373 40 6.00003C40 2.68632 42.6863 2.51741e-05 46 2.51741e-05C49.3137 2.51741e-05 52 2.68632 52 6.00003Z"
-              className="fill-violet"
-            />
-          </svg>
-          <h1 className="text-2xl mt-2">{title}</h1>
-          <h2>{year}</h2>
-          <p className="text-base mt-2">
+      <div
+        className={`rounded-3xl flex ${
+          reversed ? "sm:flex-row-reverse" : "sm:flex-row"
+        } flex-col-reverse relative z-0`}
+      >
+        <div className={`flex flex-col gap-3 p-6 transition`}>
+          <div>
+            <h1 className="text-2xl">{title}</h1>
+            <h2>{year}</h2>
+          </div>
+          <p className="text-base">
             {description}
             <br />
-            <a href="" className="text-violet underline font-semibold">
-              View More...
-            </a>
+            <Link href="#">View More...</Link>
           </p>
-          <ul className="flex flex-wrap items-center gap-2 mt-2">
+          <ul className="flex flex-wrap items-center gap-2">
             {technologies.map((technology) => (
               <li className="bg-dark/50 py-1 rounded-lg px-2" key={technology}>
                 {technology}
@@ -88,30 +75,19 @@ export default function Project({
             </IconButton>
           </div>
         </div>
-          <img
-            src={image}
-            className="thumbnail transition cursor-pointer h-full sm:w-1/2 w-full rounded-r-3xl aspect-square object-cover hover:scale-150 hover:rounded-xl hover:shadow hover:z-10"
-            alt={title}
-            onMouseEnter={() => {
-              setThumbnailHovered(true)
-            }}
-            onMouseLeave={() => {
-              setThumbnailHovered(false)
-            }}
-            onFocus={() => {
-              setThumbnailHovered(true)
-            }}
-            onBlur={() => {
-              setThumbnailHovered(false)
-            }}
-          />
+        <img
+          src={image}
+          className={`thumbnail transition cursor-pointer h-full sm:w-1/2 ${
+            reversed ? "rounded-l-3xl" : "rounded-r-3xl"
+          } w-full aspect-square object-cover hover:scale-150 hover:rounded-xl hover:shadow hover:z-10`}
+          alt={title}
+        />
       </div>
     </div>
   );
 }
 
 type Props = {
-  background: string;
   title: string;
   description: string;
   githubLink: string;
@@ -121,4 +97,5 @@ type Props = {
   image: string;
   commingSoon?: true;
   year: string;
+  reversed?: boolean;
 };
