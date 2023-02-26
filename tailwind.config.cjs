@@ -11,9 +11,7 @@ module.exports = {
         },
         primary: "#68af73",
         secondary: "#62aeef",
-        violet: "#8b5cf6",
         "deep-blue": "#0a1118",
-        "deep-violet": "#0e0919",
       },
       backgroundImage: {
         gradient: "url('/assets/blurry-gradient-haikei.svg')",
