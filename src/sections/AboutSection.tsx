@@ -5,13 +5,13 @@ import SkillsTab from "./SkillsTab";
 export default function () {
   return (
     <div
-      className="h-full flex flex-col justify-center items-center gap-10 mt-32"
+      className="h-full flex flex-col justify-center items-center gap-10 mt-32 sm:px-0 px-2"
       id="about-section"
     >
       <h1 className="section-title text-5xl font-bold">About</h1>
-      <div className="flex justify-center gap-5">
+      <div className="flex sm:flex-row flex-col justify-center gap-5">
         <img src="AvatarBlueBg.png" className="h-80" alt="Me" />
-        <div className="w-1/3">
+        <div className="sm:w-1/3 w-full">
           <Tabs
             tabs={[
               {
