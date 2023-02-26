@@ -1,3 +1,4 @@
+import classNames from "utils/classNames";
 import GrainSvg from "./GrainSvg";
 import Link from "./Link";
 import IconButton from "./buttons/IconButton";
@@ -17,7 +18,9 @@ export default function Project({
 }: Props) {
   return (
     <div
-      className={`project bg-deep-violet rounded-3xl bg-cover bg-center max-w-4xl md:mx-0 mx-5 relative mb-14 flex`}
+      className={`project ${
+        reversed ? "sm:bg-gradient-to-l " : "sm:bg-gradient-to-r"
+      } from-deep-blue bg-gradient-to-t rounded-3xl bg-cover bg-center max-w-5xl md:mx-0 mx-5 relative flex`}
     >
       <GrainSvg
         frequency={0.1}
@@ -27,9 +30,9 @@ export default function Project({
       <div
         className={`rounded-3xl flex ${
           reversed ? "sm:flex-row-reverse" : "sm:flex-row"
-        } flex-col-reverse relative z-0`}
+        } flex-col-reverse relative z-0 gap-3 p-6`}
       >
-        <div className={`flex flex-col gap-3 p-6 transition`}>
+        <div className={`flex flex-col gap-3 transition`}>
           <div>
             <h1 className="text-2xl">{title}</h1>
             <h2>{year}</h2>
@@ -77,9 +80,9 @@ export default function Project({
         </div>
         <img
           src={image}
-          className={`thumbnail transition cursor-pointer h-full sm:w-1/2 ${
-            reversed ? "rounded-l-3xl" : "rounded-r-3xl"
-          } w-full aspect-square object-cover hover:scale-150 hover:rounded-xl hover:shadow hover:z-10`}
+          className={classNames(
+            `thumbnail transition cursor-pointer h-full sm:w-1/2 rounded-xl w-full aspect-square object-cover sm:hover:scale-150 hover:z-10 hover:rounded-xl`
+          )}
           alt={title}
         />
       </div>

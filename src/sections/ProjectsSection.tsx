@@ -40,7 +40,7 @@ export default function ProjectsSection() {
       className="mt-52 h-full flex flex-col justify-center items-center gap-10"
     >
       <h1 className="text-5xl font-bold z-0">Projects</h1>
-      <div className="projects w-full flex flex-wrap justify-center">
+      <div className="projects w-full flex flex-wrap justify-center gap-36">
         {projectsData.map((project, index) => (
           <Project
             key={project.title}
