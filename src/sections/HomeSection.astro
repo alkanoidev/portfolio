@@ -12,13 +12,28 @@ import Arrow from "components/Arrow.astro";
     <span class="word">your next</span>
     <br />
     <span
-      class="word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary via-primary to-violet bg-cover"
+      class="gradient-head word text-transparent font-bold bg-clip-text bg-gradient-to-r from-secondary to-primary bg-cover"
     >
       Front-end Developer
     </span>
   </h1>
   <Arrow />
 </div>
+
+<style>
+  .gradient-head {
+    @apply text-transparent font-bold
+         bg-gradient-to-r from-primary via-secondary to-primary 
+         bg-clip-text bg-[length:200%_auto];
+    animation: shine 2s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+</style>
 
 <script>
   import { gsap } from "gsap";

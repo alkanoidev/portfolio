@@ -16,7 +16,7 @@ import MobileNav from "components/MobileNav";
         id="avatar"
         src="/Avatar.png"
         alt="me"
-        class="max-w-[4rem] transition"
+        class="sm:max-w-[4rem] max-w-[3rem] transition"
       />
     </a>
     <div
@@ -30,7 +30,7 @@ import MobileNav from "components/MobileNav";
         <NavButton href="#projects-section">Projects</NavButton>
       </li>
       <li><NavButton href="#about-section">About</NavButton></li>
-      <li><NavButton>Blog</NavButton></li>
+      <li><NavButton href="https://filipblog.netlify.app">Blog</NavButton></li>
       <li><PrimaryButton href="#contact-section">Contact</PrimaryButton></li>
     </ul>
     <MobileNav client:visible />
