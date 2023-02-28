@@ -1,28 +1,31 @@
 import type { ReactNode } from "react";
+import classNames from "utils/classNames";
 
 export default function SecondaryButton({
   children,
-  classes,
-  isLink,
   href,
 }: {
   children: string | ReactNode | ReactNode[];
-  classes?: string;
-  isLink?: boolean;
   href?: string;
 }) {
-  if (isLink)
+  if (href)
     return (
       <a
         href={href}
-        className={`py-3 px-6 transition text-center rounded-2xl font-semibold ${classes}`}
+        className={classNames(
+          `bg-white/80 hover:ring-2 hover:ring-white/80 hover:ring-offset-4 hover:ring-offset-black`,
+          "p-3 transition text-center rounded-2xl font-semibold"
+        )}
       >
         {children}
       </a>
     );
   return (
     <button
-      className={`py-3 px-6 transition rounded-2xl font-semibold ${classes}`}
+      className={classNames(
+        `bg-white/80 hover:ring-2 hover:ring-white/80 hover:ring-offset-4 hover:ring-offset-black`,
+        "p-3 transition text-center rounded-2xl font-semibold"
+      )}
     >
       {children}
     </button>
