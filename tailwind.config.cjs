@@ -5,13 +5,10 @@ module.exports = {
     extend: {
       colors: {
         dark: "#000",
-        off: {
-          white: "#dcdcdc",
-          dark: "#1a1a1a",
-        },
-        primary: "#68af73",
-        secondary: "#62aeef",
-        "deep-blue": "#0a1118",
+        "off-dark": "#1a1a1a",
+        primary: "#8325FD",
+        secondary: "#0369a1",
+        "deep-secondary": "#000a10",
       },
       backgroundImage: {
         gradient: "url('/assets/blurry-gradient-haikei.svg')",
