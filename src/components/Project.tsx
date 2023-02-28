@@ -2,7 +2,7 @@ import classNames from "utils/classNames";
 import GrainSvg from "./GrainSvg";
 import Link from "./Link";
 import IconButton from "./buttons/IconButton";
-import SecondaryButton from "./buttons/SecondaryButton";
+import PrimaryButton from "./buttons/PrimaryButton";
 
 export default function Project({
   title,
@@ -15,15 +15,17 @@ export default function Project({
   commingSoon,
   year,
   reversed,
+  id,
 }: Props) {
   return (
     <div
+      id={id}
       className={`project ${
         reversed ? "sm:bg-gradient-to-l " : "sm:bg-gradient-to-r"
-      } from-deep-blue bg-gradient-to-t rounded-3xl bg-cover bg-center max-w-5xl md:mx-0 mx-5 relative flex`}
+      } bg-deep-secondary border-secondary/20 border-2 rounded-3xl bg-cover bg-center max-w-5xl md:mx-0 mx-5 relative flex`}
     >
       <GrainSvg
-        frequency={0.1}
+        frequency={0.4}
         borderRadius="rounded-3xl"
         opacity="opacity-20"
       />
@@ -50,18 +52,8 @@ export default function Project({
             ))}
           </ul>
           <div className="sm:mt-auto mt-4 flex gap-4">
-            <SecondaryButton
-              isLink
-              href={liveDemoLink}
-              classes="w-full bg-white text-black hover:ring-2 hover:ring-white hover:ring-offset-4 hover:ring-offset-black"
-            >
-              Live View
-            </SecondaryButton>
-            <IconButton
-              isLink
-              href={githubLink}
-              classes="bg-white/80 hover:ring-2 hover:ring-white/80 hover:ring-offset-4 hover:ring-offset-black"
-            >
+            <PrimaryButton href={liveDemoLink}>Live View</PrimaryButton>
+            <IconButton href={githubLink}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -101,4 +93,5 @@ type Props = {
   commingSoon?: true;
   year: string;
   reversed?: boolean;
+  id?: string;
 };

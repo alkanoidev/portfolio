@@ -14,7 +14,7 @@ export default function GrainSvg({
       ${borderRadius}
       mix-blend-soft-light w-full h-full absolute top-0 left-0`}
     >
-      <filter id="pedroduarteisalegend">
+      <filter id="filter">
         <feTurbulence
           type="fractalNoise"
           baseFrequency={frequency}
@@ -22,11 +22,7 @@ export default function GrainSvg({
           stitchTiles="stitch"
         ></feTurbulence>
       </filter>
-      <rect
-        width="100%"
-        height="100%"
-        filter="url(#pedroduarteisalegend)"
-      ></rect>
+      <rect width="100%" height="100%" filter="url(#filter)"></rect>
     </svg>
   );
 }

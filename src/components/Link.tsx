@@ -6,7 +6,7 @@ export default function Link({
   children: string;
 }) {
   return (
-    <a href={href} className="text-secondary underline font-semibold">
+    <a href={href} className="text-primary underline font-semibold">
       {children}
     </a>
   );
