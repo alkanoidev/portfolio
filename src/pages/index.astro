@@ -1,6 +1,5 @@
 ---
 import Layout from "layouts/Layout.astro";
-import AboutSection from "sections/AboutSection";
 import ContactSection from "sections/ContactSection";
 import HomeSection from "sections/HomeSection.astro";
 import ProjectsSection from "sections/ProjectsSection";
@@ -13,8 +12,6 @@ import ProjectsSection from "sections/ProjectsSection";
     <HomeSection />
 
     <ProjectsSection client:load />
-
-    <AboutSection client:visible />
 
     <ContactSection client:visible />
   </div>
@@ -32,7 +29,7 @@ import ProjectsSection from "sections/ProjectsSection";
     scroll-behavior: smooth;
   }
   ::selection {
-    background-color: rgba(75, 75, 75, 0.5);
+    background-color: gray;
     border-radius: 10px;
     color: white;
   }
