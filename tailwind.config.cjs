@@ -6,9 +6,12 @@ module.exports = {
       colors: {
         dark: "#000",
         "off-dark": "#313131",
-        primary: "#8325FD",
+        primary: "#0369a1",
         secondary: "#0369a1",
         "deep-secondary": "#000a10",
+        // primary: "#8325FD",
+        // secondary: "#0369a1",
+        // "deep-secondary": "#000a10",
       },
       backgroundImage: {
         gradient: "url('/assets/blurry-gradient-haikei.svg')",

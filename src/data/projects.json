@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "title": "Personal Blog",
     "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
     "githubLink": "https://github.com/alkanoidev/filipblog",
@@ -16,6 +17,7 @@
     "year": "2022"
   },
   {
+    "id": 1,
     "title": "nasa-apis",
     "description": "Explore NASA apis such as Picture Of the Day, Mars Rover Photos and NASA Image and Video Library",
     "image": "https://raw.githubusercontent.com/alkanoidev/nasa-apis/master/page2.jpeg",
@@ -33,6 +35,7 @@
     "year": "2022"
   },
   {
+    "id": 2,
     "title": "travel-app-landing-page",
     "description": "Mobile Responsive Landing page for tour and travel project",
     "image": "travel-app-landing-page.netlify.app.png",

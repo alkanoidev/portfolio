@@ -16,7 +16,7 @@ export default function Project({
   return (
     <div
       id={id}
-      className={`project bg-deep-secondary border-secondary/20 border-2 rounded-3xl bg-cover bg-center w-1/3 md:mx-0 mx-5 relative flex p-6`}
+      className={`project bg-deep-secondary border-secondary/20 border-2 rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6`}
     >
       <GrainSvg
         frequency={0.3}
