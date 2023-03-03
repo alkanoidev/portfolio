@@ -16,7 +16,6 @@ export default function Project({
 }: Props) {
   return (
     <div
-      id={id}
       className={classNames(
         `project border-2 rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
         selected
@@ -74,6 +73,6 @@ type Props = {
   commingSoon?: true;
   year: string;
   reversed?: boolean;
-  id?: string;
+  id?: number;
   selected?: boolean;
 };
