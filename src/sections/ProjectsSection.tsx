@@ -2,11 +2,10 @@ import Project from "components/Project";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import projectsData from "../data/projects.json";
-import PrimaryButton from "components/buttons/PrimaryButton";
 import classNames from "utils/classNames";
 
 export default function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState(projectsData[0]);
+  const [selectedProject, setSelectedProject] = useState(0);
 
   useEffect(() => {
     const timeline = gsap.timeline({});
@@ -51,7 +50,7 @@ export default function ProjectsSection() {
       <div className="projects w-full flex justify-center gap-10">
         {projectsData.map((project) => (
           <Project
-            id={"project" + project.id}
+            selected={project.id === selectedProject}
             key={project.title}
             {...project}
           />
@@ -59,6 +58,10 @@ export default function ProjectsSection() {
       </div>
       <div className="flex w-full h-24 gap-6">
         <button
+          onClick={() => {
+            setSelectedProject((prev) => (prev !== 0 ? --prev : 2));
+            console.log(selectedProject);
+          }}
           className={classNames(
             "bg-deep-secondary border-secondary/20 border-2 rounded-3xl flex w-full justify-center items-center",
             "hover:bg-secondary/20 hover:border-secondary transition arrows"
@@ -79,6 +82,10 @@ export default function ProjectsSection() {
           </svg>
         </button>
         <button
+          onClick={() => {
+            setSelectedProject((prev) => (prev !== 2 ? ++prev : 0));
+            console.log(selectedProject);
+          }}
           className={classNames(
             "bg-deep-secondary border-secondary/20 border-2 rounded-3xl flex w-full justify-center items-center",
             "hover:bg-secondary/20 hover:border-secondary transition arrows"

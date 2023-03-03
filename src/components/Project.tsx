@@ -1,4 +1,4 @@
-import GrainSvg from "./GrainSvg";
+import classNames from "utils/classNames";
 import PrimaryButton from "./buttons/PrimaryButton";
 import SecondaryButton from "./buttons/SecondaryButton";
 
@@ -12,23 +12,24 @@ export default function Project({
   commingSoon,
   year,
   id,
+  selected,
 }: Props) {
   return (
     <div
       id={id}
-      className={`project bg-deep-secondary border-secondary/20 border-2 rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6`}
+      className={classNames(
+        `project border-2 rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
+        selected
+          ? "bg-secondary/20 border-secondary"
+          : "bg-deep-secondary border-secondary/20"
+      )}
     >
-      <GrainSvg
-        frequency={0.3}
-        borderRadius="rounded-3xl"
-        opacity="opacity-100"
-      />
       <div className={`flex flex-col gap-3 transition`}>
         <div>
           <h1 className="text-2xl font-semibold">{title}</h1>
           <h2>{year}</h2>
         </div>
-        <p className="text-base text-white/80 ml-2">{description}</p>
+        <p className="text-base text-white/80">{description}</p>
         <ul className="flex flex-wrap items-center pb-4 -translate-x-2">
           {technologies.map((technology) => (
             <li
@@ -74,4 +75,5 @@ type Props = {
   year: string;
   reversed?: boolean;
   id?: string;
+  selected?: boolean;
 };
