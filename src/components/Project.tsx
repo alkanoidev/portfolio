@@ -13,14 +13,15 @@ export default function Project({
   year,
   id,
   selected,
+  onClick,
 }: Props) {
   return (
-    <div
+    <button
+      onClick={onClick}
       className={classNames(
-        `project border-2 rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
-        selected
-          ? "bg-secondary/20 border-secondary"
-          : "bg-deep-secondary border-secondary/20"
+        `project border-2 text-start rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
+        "hover:bg-secondary/20 hover:border-secondary",
+        "bg-deep-secondary border-secondary/20"
       )}
     >
       <div className={`flex flex-col gap-3 transition`}>
@@ -58,7 +59,7 @@ export default function Project({
           </SecondaryButton>
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
@@ -75,4 +76,5 @@ type Props = {
   reversed?: boolean;
   id?: number;
   selected?: boolean;
+  onClick?: () => void;
 };
