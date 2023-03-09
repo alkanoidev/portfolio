@@ -29,9 +29,31 @@ const { title } = Astro.props;
     color-scheme: dark;
   }
   html {
+    scroll-behavior: smooth;
     @apply scroll-pt-32;
   }
   body {
     @apply bg-dark transition duration-500;
+  }
+  ::selection {
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #383838;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999999;
   }
 </style>
