@@ -1,13 +1,16 @@
 import Project from "components/Project";
 import gsap from "gsap";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import projectsData from "../data/projects.json";
 import { Dialog, Transition } from "@headlessui/react";
 import classNames from "utils/classNames";
+import useIsElementInViewPort from "utils/hooks/useIsElementInViewPort";
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
+  const projectsSectionRef = useRef(null);
+  const isInViewPort = useIsElementInViewPort(projectsSectionRef);
 
   function closeModal() {
     setIsOpen(false);
@@ -19,6 +22,15 @@ export default function ProjectsSection() {
 
   useEffect(() => {
     const timeline = gsap.timeline({});
+
+    if (isInViewPort) {
+      document.body.classList.remove("bg-dark");
+      document.body.classList.add("bg-deep-primary");
+    } else {
+      document.body.classList.remove("bg-deep-primary");
+      document.body.classList.add("bg-dark");
+    }
+
     timeline.fromTo(
       ".project",
       {
@@ -46,11 +58,12 @@ export default function ProjectsSection() {
     return () => {
       timeline.clear();
     };
-  }, []);
+  }, [isInViewPort]);
 
   return (
     <div
       id="projects"
+      ref={projectsSectionRef}
       className={classNames(
         "mt-52 h-full flex flex-col justify-center items-center gap-10",
         isOpen ? "blur-md" : "blur-none"
