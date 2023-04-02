@@ -1,5 +1,6 @@
 ---
 import Layout from "layouts/Layout.astro";
+import AboutSection from "sections/AboutSection";
 import ContactSection from "sections/ContactSection";
 import HomeSection from "sections/HomeSection.astro";
 import ProjectsSection from "sections/ProjectsSection";
@@ -12,6 +13,8 @@ import ProjectsSection from "sections/ProjectsSection";
     <HomeSection />
 
     <ProjectsSection client:load />
+
+    <AboutSection />
 
     <ContactSection client:visible />
   </div>

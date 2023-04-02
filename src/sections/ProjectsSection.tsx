@@ -8,7 +8,7 @@ import useIsElementInViewPort from "utils/hooks/useIsElementInViewPort";
 
 export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState(0);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const projectsSectionRef = useRef(null);
   const isInViewPort = useIsElementInViewPort(projectsSectionRef);
 

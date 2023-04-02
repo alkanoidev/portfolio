@@ -20,20 +20,20 @@ export default function Project({
       onClick={onClick}
       className={classNames(
         `project border-2 text-start rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
-        "hover:bg-secondary/20 hover:border-secondary",
-        "bg-deep-secondary border-secondary/20"
+        "hover:bg-secondary/20",
+        "bg-dark/40 border-primary/50"
       )}
     >
-      <div className={`flex flex-col gap-3 transition`}>
+      <div className={`flex flex-col justify-between h-full gap-3 transition`}>
         <div>
-          <h1 className="text-2xl font-semibold">{title}</h1>
+          <h1 className="text-2xl font-semibold capitalize">{title}</h1>
           <h2>{year}</h2>
         </div>
         <p className="text-base text-white/80">{description}</p>
-        <ul className="flex flex-wrap items-center pb-4 -translate-x-2">
+        <ul className="flex flex-wrap items-center gap-1 pb-4 -translate-x-2">
           {technologies.map((technology) => (
             <li
-              className="bg-dark border-white/20 border py-1 rounded-lg px-2"
+              className="border-primary/50 border text-white/80 py-1 rounded-lg px-2"
               key={technology}
             >
               {technology}

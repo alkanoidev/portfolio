@@ -8,10 +8,7 @@ module.exports = {
         "off-dark": "#313131",
         primary: "#0369a1",
         secondary: "#0369a1",
-        "deep-primary": "#001019",
-        // primary: "#8325FD",
-        // secondary: "#0369a1",
-        // "deep-secondary": "#000a10",
+        "deep-primary": "#00080d",
       },
       backgroundImage: {
         gradient: "url('/assets/blurry-gradient-haikei.svg')",

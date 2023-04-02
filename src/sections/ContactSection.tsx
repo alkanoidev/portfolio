@@ -1,4 +1,5 @@
 import IconButton from "components/buttons/IconButton";
+import PrimaryButton from "components/buttons/PrimaryButton";
 import SecondaryButton from "components/buttons/SecondaryButton";
 import { useState } from "react";
 import classNames from "utils/classNames";
@@ -38,14 +39,15 @@ export default function ContactSection() {
 
   return (
     <div
-      className="h-full flex flex-col justify-center min-h-screen items-center gap-10 mt-32"
+      className="h-full flex flex-col justify-center items-center gap-10 mt-4"
       id="contact-section"
     >
-      <h1 className="section-title text-5xl font-bold">Contact</h1>
-      <div className="bg-deep-blue w-full max-w-5xl rounded-3xl h-[500px]">
+      <div className="w-full max-w-5xl rounded-3xl bg-deep-primary h-[500px] p-6">
+        <h1 className="section-title text-5xl font-bold">Contact</h1>
+
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 sm:gap-10 w-full p-6"
+          className="flex flex-col gap-5 sm:gap-10 w-full mt-4"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="sm:flex gap-5 block">
@@ -53,8 +55,8 @@ export default function ContactSection() {
               <label>name:</label>
               <input
                 className={classNames(
-                  "bg-off-dark px-3 py-2 rounded-lg hover:ring-2 hover:ring-white hover:ring-offset-4 hover:ring-offset-black",
-                  "focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
+                  "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
+                  "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
                 )}
                 type="text"
                 name="name"
@@ -67,8 +69,8 @@ export default function ContactSection() {
               <label>email:</label>
               <input
                 className={classNames(
-                  "bg-off-dark px-3 py-2 rounded-lg hover:ring-2 hover:ring-white hover:ring-offset-4 hover:ring-offset-black",
-                  "focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
+                  "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
+                  "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
                 )}
                 type="email"
                 name="email"
@@ -82,8 +84,8 @@ export default function ContactSection() {
             <label>message:</label>
             <textarea
               className={classNames(
-                "bg-off-dark px-3 py-2 rounded-lg hover:ring-2 hover:ring-white hover:ring-offset-4 hover:ring-offset-black",
-                "focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
+                "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
+                "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
               )}
               name="message"
               value={formValues?.message}
@@ -93,19 +95,17 @@ export default function ContactSection() {
             />
           </p>
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <IconButton href="https://www.linkedin.com/in/filip-ivanovic-60ab98242">
-                linkedin
-              </IconButton>
-              <IconButton href="https://github.com/alkanoidev">
-                github
-              </IconButton>
+            <div className="flex items-center gap-3">
+              <SecondaryButton href="https://www.linkedin.com/in/filip-ivanovic-60ab98242">
+                LinkedIn
+              </SecondaryButton>
+              <SecondaryButton href="https://github.com/alkanoidev">
+                GitHub
+              </SecondaryButton>
               <h1 className="text-lg">alkanoidev@gmail.com</h1>
             </div>
             <div>
-              <SecondaryButton classes="w-full bg-white text-black hover:ring-2 hover:ring-white hover:ring-offset-4 hover:ring-offset-black">
-                Submit
-              </SecondaryButton>
+              <PrimaryButton>Submit</PrimaryButton>
             </div>
           </div>
         </form>
