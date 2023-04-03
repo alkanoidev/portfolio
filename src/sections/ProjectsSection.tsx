@@ -73,7 +73,7 @@ export default function ProjectsSection() {
       <p className="text-3xl text-white/80">
         Things I’ve made trying to put my dent in the universe.
       </p>
-      <div className="projects w-full flex justify-center gap-10">
+      <div className="projects w-full flex flex-wrap justify-center gap-10">
         {projectsData.map((project) => (
           <Project
             selected={project.id === selectedProject}

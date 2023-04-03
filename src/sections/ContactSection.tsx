@@ -95,7 +95,7 @@ export default function ContactSection() {
             />
           </p>
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center flex-wrap gap-3">
               <SecondaryButton href="https://www.linkedin.com/in/filip-ivanovic-60ab98242">
                 LinkedIn
               </SecondaryButton>

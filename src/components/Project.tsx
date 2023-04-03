@@ -19,7 +19,7 @@ export default function Project({
     <button
       onClick={onClick}
       className={classNames(
-        `project border-2 text-start rounded-3xl w-1/3 md:mx-0 mx-5 relative flex p-6 transition`,
+        `project border-2 text-start rounded-3xl sm:w-1/3 w-full md:mx-0 mx-5 relative flex p-6 transition`,
         "hover:bg-secondary/20",
         "bg-dark/40 border-primary/50"
       )}

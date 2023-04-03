@@ -8,8 +8,8 @@ export default function () {
       className="h-full w-full flex flex-col justify-center items-center mt-96 sm:px-0 px-2"
       id="about-section"
     >
-      <div className="flex w-full max-w-5xl justify-center gap-4">
-        <div className="w-2/3 bg-deep-primary p-6 rounded-3xl">
+      <div className="flex sm:flex-row flex-col w-full max-w-5xl justify-center gap-4">
+        <div className="w-full sm:w-2/3 flex-col flex bg-deep-primary p-6 rounded-3xl">
           <h1 className="text-4xl font-bold leading-normal">
             I’m Spencer Sharp. I live in New York City, where I design the
             future.
@@ -34,34 +34,34 @@ export default function () {
           <h2>Technologies</h2>
 
           <p>Besides web dev i do android</p>
-          <div className="flex max-w-fit gap-4">
+          <div className="flex max-w-fit gap-4 mt-auto">
             <PrimaryButton>Contact Me</PrimaryButton>
             <SecondaryButton>Resume</SecondaryButton>
           </div>
         </div>
-        <div className="w-1/3 flex flex-col gap-4">
-          <div className="bg-deep-primary h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 items-center">
+        <div className="w-full sm:w-1/3 flex sm:flex-col gap-4 justify-evenly">
+          <div className="bg-deep-primary sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-4 items-center">
             <h1>Self Learner</h1>
             <img
               src="google.svg"
               alt="book with a title of google"
-              className="h-44 mx-auto"
+              className="h-36 sm:h-44 mx-auto"
             />
           </div>
-          <div className="bg-deep-primary h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 items-center">
+          <div className="bg-deep-primary sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-4 items-center">
             <h1>Passionate</h1>
             <img
               src="srce.svg"
               alt="book with a title of google"
-              className="h-40 mx-auto"
+              className="h-36 sm:h-40 mx-auto"
             />
           </div>
-          <div className="bg-deep-primary h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 items-center">
+          <div className="bg-deep-primary sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-4 items-center">
             <h1>Creativity</h1>
             <img
               src="lampa.svg"
               alt="book with a title of google"
-              className="h-52 mx-auto pb-4"
+              className="h-36 sm:h-52 mx-auto sm:pb-4"
             />
           </div>
         </div>
