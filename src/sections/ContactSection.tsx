@@ -39,53 +39,49 @@ export default function ContactSection() {
 
   return (
     <div
-      className="h-full flex flex-col justify-center items-center gap-10 mt-4"
+      className="h-full flex flex-col justify-center items-center gap-10 mt-52 sm:px-0 px-2"
       id="contact-section"
     >
-      <div className="w-full max-w-5xl rounded-3xl bg-deep-primary h-[500px] p-6">
+      <div className="w-full max-w-5xl rounded-3xl">
         <h1 className="section-title text-5xl font-bold">Contact</h1>
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 sm:gap-10 w-full mt-4"
+          className="flex flex-col gap-5 sm:gap-4 w-full mt-4"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="sm:flex gap-5 block">
-            <p className="flex flex-col gap-2">
-              <label>name:</label>
-              <input
-                className={classNames(
-                  "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
-                  "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
-                )}
-                type="text"
-                name="name"
-                value={formValues?.name}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p className="flex flex-col gap-2">
-              <label>email:</label>
-              <input
-                className={classNames(
-                  "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
-                  "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
-                )}
-                type="email"
-                name="email"
-                value={formValues?.email}
-                onChange={handleChange}
-                required
-              />
-            </p>
+          <div className="sm:flex w-full gap-4 block">
+            <input
+              className={classNames(
+                "bg-gray-800 px-8 py-6 rounded-3xl transition w-full",
+                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
+              )}
+              type="text"
+              name="name"
+              value={formValues?.name}
+              onChange={handleChange}
+              placeholder="Name"
+              required
+            />
+            <input
+              className={classNames(
+                "bg-gray-800 px-8 py-6 rounded-3xl transition w-full",
+                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
+              )}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formValues?.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <p className="flex flex-col gap-2">
-            <label>message:</label>
             <textarea
+              placeholder="Message"
               className={classNames(
-                "bg-gray-800 px-3 py-2 rounded-lg hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
-                "focus:ring-2 focus:ring-zinc-300 focus:ring-offset-4 focus:ring-offset-black focus:outline-none transition"
+                "bg-gray-800 px-8 py-6 rounded-3xl transition resize-none",
+                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
               )}
               name="message"
               value={formValues?.message}

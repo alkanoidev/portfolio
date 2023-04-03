@@ -65,7 +65,7 @@ export default function ProjectsSection() {
       id="projects"
       ref={projectsSectionRef}
       className={classNames(
-        "mt-52 h-full flex flex-col justify-center items-center gap-10",
+        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-2",
         isOpen ? "blur-md" : "blur-none"
       )}
     >
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
       <p className="text-3xl text-white/80">
         Things I’ve made trying to put my dent in the universe.
       </p>
-      <div className="projects w-full flex flex-wrap justify-center gap-10">
+      <div className="projects w-full flex sm:flex-nowrap flex-wrap justify-center gap-10">
         {projectsData.map((project) => (
           <Project
             selected={project.id === selectedProject}
