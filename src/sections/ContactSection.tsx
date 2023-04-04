@@ -39,7 +39,7 @@ export default function ContactSection() {
 
   return (
     <div
-      className="h-full flex flex-col justify-center items-center gap-10 mt-52 sm:px-0 px-2"
+      className="h-full flex flex-col justify-center items-center gap-10 mt-52 sm:px-0 px-2 mb-4"
       id="contact-section"
     >
       <div className="w-full max-w-5xl rounded-3xl">
@@ -53,8 +53,8 @@ export default function ContactSection() {
           <div className="sm:flex w-full gap-4 block">
             <input
               className={classNames(
-                "bg-gray-800 px-8 py-6 rounded-3xl transition w-full",
-                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
+                "bg-deep-primary px-8 py-8 rounded-3xl transition w-full",
+                "focus:ring-4 focus:ring-sky-900 focus:outline-none focus:placeholder:text-transparent"
               )}
               type="text"
               name="name"
@@ -65,8 +65,8 @@ export default function ContactSection() {
             />
             <input
               className={classNames(
-                "bg-gray-800 px-8 py-6 rounded-3xl transition w-full",
-                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
+                "bg-deep-primary px-8 py-8 rounded-3xl transition w-full",
+                "focus:ring-4 focus:ring-sky-900 focus:outline-none focus:placeholder:text-transparent"
               )}
               type="email"
               name="email"
@@ -80,17 +80,17 @@ export default function ContactSection() {
             <textarea
               placeholder="Message"
               className={classNames(
-                "bg-gray-800 px-8 py-6 rounded-3xl transition resize-none",
-                "focus:ring-2 focus:ring-zinc-300 focus:outline-none focus:placeholder:text-transparent"
+                "bg-deep-primary px-8 py-8 rounded-3xl transition resize-none",
+                "focus:ring-4 focus:ring-sky-900 focus:outline-none focus:placeholder:text-transparent"
               )}
               name="message"
               value={formValues?.message}
               onChange={handleChange}
-              rows={5}
+              rows={6}
               required
             />
           </p>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex items-center flex-wrap gap-3">
               <SecondaryButton href="https://www.linkedin.com/in/filip-ivanovic-60ab98242">
                 LinkedIn
