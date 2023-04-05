@@ -45,21 +45,24 @@ export default function () {
           </div>
         </div>
         <div className="w-full sm:w-1/3 flex sm:flex-col gap-4 justify-evenly">
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
+            <h1 className="sm:text-2xl">Self Learner</h1>
             <img
               src="google.svg"
               alt="book creature named Self Learn"
               className="h-36 sm:h-44 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
+            <h1 className="sm:text-2xl">Passionate</h1>
             <img
               src="srce.svg"
               alt="heart creature named Passion"
               className="h-36 sm:h-40 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
+            <h1 className="sm:text-2xl">Creativity</h1>
             <img
               src="lampa.svg"
               alt="light bulb creature named Creativity"
