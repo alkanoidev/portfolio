@@ -31,7 +31,7 @@ export default function PrimaryButton({
   }
   return (
     <button
-      id="btn-primary"
+      id={title}
       aria-label={title}
       className={classNames(
         "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
