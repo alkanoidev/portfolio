@@ -20,8 +20,8 @@ export default function Project({
       onClick={onClick}
       className={classNames(
         `project text-start rounded-3xl sm:w-1/3 w-full relative flex p-6 transition`,
-        " hover:ring-sky-600",
-        "bg-dark ring-4 ring-gray-700"
+        " hover:ring-sky-800 hover:ring-4",
+        "bg-dark"
       )}
     >
       <div className={`flex flex-col justify-between h-full gap-3 transition`}>
