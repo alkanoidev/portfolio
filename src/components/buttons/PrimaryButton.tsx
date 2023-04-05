@@ -13,6 +13,7 @@ export default function PrimaryButton({
   if (href) {
     return (
       <a
+        aria-label={href}
         href={href}
         className={classNames(
           "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
@@ -27,6 +28,8 @@ export default function PrimaryButton({
   }
   return (
     <button
+      id="btn-primary"
+      aria-label="primary button"
       className={classNames(
         "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
         "py-3 px-6 transition text-center rounded-2xl font-semibold",

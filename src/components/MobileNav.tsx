@@ -4,7 +4,11 @@ import { Fragment } from "react";
 export default function MobileNav() {
   return (
     <Menu as="div" className="relative inline-block text-left sm:hidden">
-      <Menu.Button className="py-3 px-3 transition rounded-lg ring-4 ring-off-dark hover:bg-off-dark focus:bg-off-dark">
+      <Menu.Button
+        id="openDropdown"
+        aria-label="Open Mobile Nav"
+        className="py-3 px-3 transition rounded-lg ring-4 ring-off-dark hover:bg-off-dark focus:bg-off-dark"
+      >
         {({ open }) =>
           open ? (
             <svg
@@ -51,22 +55,43 @@ export default function MobileNav() {
         <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-off-dark shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="p-1 flex items-center flex-col">
             <Menu.Item>
-              <a className={`group px-2 py-2 text-base text-white`}>Projects</a>
+              <a
+                aria-label="Projects"
+                className={`group px-2 py-2 text-base text-white`}
+              >
+                Projects
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <a className={`group px-2 py-2 text-base text-white`}>About</a>
+              <a
+                aria-label="About"
+                className={`group px-2 py-2 text-base text-white`}
+              >
+                About
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <a className={`group px-2 py-2 text-base text-white`}>Blog</a>
+              <a
+                aria-label="Blog"
+                className={`group px-2 py-2 text-base text-white`}
+              >
+                Blog
+              </a>
             </Menu.Item>
             <Menu.Item>
-              <a className={`group px-2 py-2 text-base text-white`}>Contact</a>
+              <a
+                aria-label="Contact"
+                className={`group px-2 py-2 text-base text-white`}
+              >
+                Contact
+              </a>
             </Menu.Item>
             <div className="flex items-center my-2 gap-4">
               <Menu.Item>
                 <a
                   href="https://www.linkedin.com/in/filip-ivanovic-60ab98242/"
                   target="_blank"
+                  aria-label="LinkedIn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +103,11 @@ export default function MobileNav() {
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a href="https://github.com/alkanoidev" target="_blank">
+                <a
+                  aria-label="GitHub"
+                  href="https://github.com/alkanoidev"
+                  target="_blank"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -93,7 +122,11 @@ export default function MobileNav() {
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a href="mailto:alkanoidev@gmail.com" target="_blank">
+                <a
+                  aria-label="Mail alkanoidev@gmail.com"
+                  href="mailto:alkanoidev@gmail.com"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

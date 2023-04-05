@@ -6,7 +6,11 @@ export default function Link({
   children: string;
 }) {
   return (
-    <a href={href} className="text-zinc-400 hover:underline font-semibold">
+    <a
+      href={href}
+      aria-label={href}
+      className="text-zinc-400 hover:underline font-semibold"
+    >
       {children}
     </a>
   );

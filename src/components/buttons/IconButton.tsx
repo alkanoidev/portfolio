@@ -12,6 +12,7 @@ export default function IconButton({
     return (
       <a
         href={href}
+        aria-label={href}
         className={classNames(
           "bg-zinc-300 text-black inline-flex gap-2 justify-center",
           "p-3 transition text-center rounded-full font-semibold",
