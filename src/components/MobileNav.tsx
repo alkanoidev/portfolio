@@ -57,6 +57,7 @@ export default function MobileNav() {
             <Menu.Item>
               <a
                 aria-label="Projects"
+                href="#projects"
                 className={`group px-2 py-2 text-base text-white`}
               >
                 Projects
@@ -65,6 +66,7 @@ export default function MobileNav() {
             <Menu.Item>
               <a
                 aria-label="About"
+                href="#about"
                 className={`group px-2 py-2 text-base text-white`}
               >
                 About
@@ -73,6 +75,7 @@ export default function MobileNav() {
             <Menu.Item>
               <a
                 aria-label="Blog"
+                href="https://filipblog.netlify.app"
                 className={`group px-2 py-2 text-base text-white`}
               >
                 Blog
@@ -81,6 +84,7 @@ export default function MobileNav() {
             <Menu.Item>
               <a
                 aria-label="Contact"
+                href="#contact"
                 className={`group px-2 py-2 text-base text-white`}
               >
                 Contact

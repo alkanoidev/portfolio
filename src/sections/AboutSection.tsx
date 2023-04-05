@@ -5,7 +5,7 @@ export default function () {
   return (
     <div
       className="h-full w-full flex flex-col justify-center items-center gap-10 mt-96 sm:px-0 px-2"
-      id="about-section"
+      id="about"
     >
       <div className="flex sm:flex-row flex-col w-full max-w-5xl justify-center gap-4">
         <div className="w-full sm:w-2/3 flex-col flex bg-deep-sky rounded-3xl p-8">
@@ -13,7 +13,7 @@ export default function () {
             I’m Spencer Sharp. I live in New York City, where I design the
             future.
           </h1>
-          <div className="mt-6 space-y-7 text-lg px-2">
+          <div className="mt-6 space-y-7 text-lg sm:px-2">
             <p className="text-zinc-400">
               I’ve loved making things for as long as I can remember, and wrote
               my first program when I was 6 years old, just two weeks after my
@@ -45,27 +45,24 @@ export default function () {
           </div>
         </div>
         <div className="w-full sm:w-1/3 flex sm:flex-col gap-4 justify-evenly">
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
-            <h1 className="sm:text-2xl">Self Learner</h1>
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
             <img
               src="google.svg"
-              alt="book with a title of google"
+              alt="book creature named Self Learn"
               className="h-36 sm:h-44 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
-            <h1 className="sm:text-2xl">Passionate</h1>
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
             <img
               src="srce.svg"
-              alt="book with a title of google"
+              alt="heart creature named Passion"
               className="h-36 sm:h-40 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
-            <h1 className="sm:text-2xl">Creativity</h1>
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky py-8 sm:px-0 px-2">
             <img
               src="lampa.svg"
-              alt="book with a title of google"
+              alt="light bulb creature named Creativity"
               className="h-36 sm:h-52 mx-auto sm:pb-4"
             />
           </div>

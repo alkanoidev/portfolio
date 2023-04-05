@@ -55,11 +55,11 @@ export default function ProjectsSection() {
       id="projects"
       ref={projectsSectionRef}
       className={classNames(
-        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-2"
+        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-3"
       )}
     >
       <h1 className="text-4xl sm:text-5xl font-bold">Projects</h1>
-      <p className="text-2xl sm:text-3xl text-white/80">
+      <p className="text-2xl sm:text-3xl text-white/80 text-center">
         Things I’ve made trying to put my dent in the universe.
       </p>
       <div className="projects w-full flex sm:flex-nowrap flex-wrap justify-center gap-10">

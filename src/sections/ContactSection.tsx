@@ -41,7 +41,7 @@ export default function ContactSection() {
   return (
     <div
       className="h-full flex flex-col justify-center items-center gap-10 mt-52 sm:px-0 px-2 mb-4"
-      id="contact-section"
+      id="contact"
     >
       <div className="w-full max-w-5xl">
         <div className="bg-deep-sky w-full rounded-3xl p-8 space-y-4 ring-4 ring-deep-sky">
@@ -88,7 +88,7 @@ export default function ContactSection() {
           className="flex flex-col gap-5 sm:gap-4 w-full mt-6"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-4">
+          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6">
             <input
               className={classNames(
                 "bg-deep-sky p-8 rounded-3xl transition w-full text-lg",
