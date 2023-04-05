@@ -20,8 +20,8 @@ export default function Project({
       onClick={onClick}
       className={classNames(
         `project text-start rounded-3xl sm:w-1/3 w-full relative flex p-6 transition`,
-        " hover:ring-sky-900",
-        "bg-dark ring-4 ring-gray-800"
+        " hover:ring-sky-600",
+        "bg-dark ring-4 ring-gray-700"
       )}
     >
       <div className={`flex flex-col justify-between h-full gap-3 transition`}>
@@ -30,12 +30,9 @@ export default function Project({
           <h2>{year}</h2>
         </div>
         <p className="text-lg text-white/80">{description}</p>
-        <ul className="flex flex-wrap items-center gap-2 pb-4 -translate-x-2">
+        <ul className="flex flex-wrap items-center gap-2 pb-4">
           {technologies.map((technology) => (
-            <li
-              className="border-gray-800 border-[3px] text-white/80 py-1 rounded-lg px-2"
-              key={technology}
-            >
+            <li className="text-sky-800 font-semibold" key={technology}>
               {technology}
             </li>
           ))}

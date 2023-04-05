@@ -8,8 +8,8 @@ export default function () {
       id="about-section"
     >
       <div className="flex sm:flex-row flex-col w-full max-w-5xl justify-center gap-4">
-        <div className="w-full sm:w-2/3 flex-col flex rounded-3xl">
-          <h1 className="text-4xl font-bold leading-normal">
+        <div className="w-full sm:w-2/3 flex-col flex bg-deep-sky rounded-3xl p-8">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-normal">
             I’m Spencer Sharp. I live in New York City, where I design the
             future.
           </h1>
@@ -45,7 +45,7 @@ export default function () {
           </div>
         </div>
         <div className="w-full sm:w-1/3 flex sm:flex-col gap-4 justify-evenly">
-          <div className="sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-0 items-center">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
             <h1 className="sm:text-2xl">Self Learner</h1>
             <img
               src="google.svg"
@@ -53,7 +53,7 @@ export default function () {
               className="h-36 sm:h-44 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-0 items-center">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
             <h1 className="sm:text-2xl">Passionate</h1>
             <img
               src="srce.svg"
@@ -61,7 +61,7 @@ export default function () {
               className="h-36 sm:h-40 mx-auto"
             />
           </div>
-          <div className="sm:h-1/3 w-full rounded-3xl flex flex-col gap-2 p-2 sm:p-0 items-center">
+          <div className="sm:h-1/3 w-full rounded-3xl bg-deep-sky flex flex-col gap-2 py-8 sm:px-0 px-2 items-center">
             <h1 className="sm:text-2xl">Creativity</h1>
             <img
               src="lampa.svg"
