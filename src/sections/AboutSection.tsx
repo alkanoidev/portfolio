@@ -40,8 +40,8 @@ export default function () {
 
           <p>Besides web dev i do android</p>
           <div className="flex max-w-fit gap-4 mt-auto">
-            <PrimaryButton>Contact Me</PrimaryButton>
-            <SecondaryButton>Resume</SecondaryButton>
+            <PrimaryButton title="Contact Me" />
+            <SecondaryButton title="Resume" />
           </div>
         </div>
         <div className="w-full sm:w-1/3 flex sm:flex-col gap-4 justify-evenly">

@@ -1,6 +1,6 @@
 import classNames from "utils/classNames";
 import PrimaryButton from "./buttons/PrimaryButton";
-import SecondaryButton from "./buttons/SecondaryButton";
+import IconButton from "./buttons/IconButton";
 
 export default function Project({
   title,
@@ -38,22 +38,26 @@ export default function Project({
           ))}
         </ul>
         <div className="mt-auto flex gap-4">
-          <PrimaryButton href={liveDemoLink}>Live View</PrimaryButton>
-          <SecondaryButton href={githubLink}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              className="w-6 h-6 stroke-white group-hover:stroke-black transition"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-              />
-            </svg>
-          </SecondaryButton>
+          <PrimaryButton href={liveDemoLink} title="Live View" />
+          <IconButton
+            href={githubLink}
+            title={githubLink}
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                className="w-6 h-6 stroke-white group-hover:stroke-black transition"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                />
+              </svg>
+            }
+          />
         </div>
       </div>
     </button>
