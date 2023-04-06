@@ -41,9 +41,7 @@ export default function ContactSection() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formValues }),
     })
-      .then(() => {
-        // navigate("/contact/success");
-      })
+      .then(() => {})
       .catch((error) => {});
   };
 
@@ -79,12 +77,12 @@ export default function ContactSection() {
   }, []);
   return (
     <div
-      className="h-full flex flex-col justify-center items-center mt-52 sm:px-0 px-2 mb-4"
+      className="h-full flex flex-col justify-center items-center mt-52 sm:px-0 px-1 mb-4"
       id="contact"
       ref={container}
     >
       <div className="w-full max-w-5xl">
-        <div className="box1 bg-deep-sky w-full rounded-5xl p-8 space-y-4 opacity-0 scale-95">
+        <div className="box1 bg-deep-sky w-full rounded-4xl md:rounded-5xl p-6 md:p-8 space-y-4 opacity-0 scale-95">
           <h1 className="text-3xl md:text-4xl font-bold text-sky-700">
             Get In Touch
           </h1>
@@ -92,7 +90,7 @@ export default function ContactSection() {
             I would love to hear from you and discuss any potential
             opportunities or collaborations.
           </p>
-          <div className="flex gap-4 items-center pt-10">
+          <div className="flex flex-wrap gap-4 items-center pt-10">
             <IconButton
               href="https://www.linkedin.com/in/filip-ivanovic-60ab98242"
               title="LinkedIn"
@@ -130,7 +128,7 @@ export default function ContactSection() {
           <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
             <input
               className={classNames(
-                "bg-deep-sky p-8 rounded-4xl transition w-full text-lg",
+                "bg-deep-sky p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "border-4 border-gray-800",
                 "focus:border-4 focus:border-sky-900 focus:outline-none focus:placeholder:text-transparent",
                 "box2 opacity-0 scale-95"
@@ -144,7 +142,7 @@ export default function ContactSection() {
             />
             <input
               className={classNames(
-                "bg-deep-sky p-8 rounded-4xl transition w-full text-lg",
+                "bg-deep-sky p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "border-4 border-gray-800",
                 "focus:border-4 focus:border-sky-900 focus:outline-none focus:placeholder:text-transparent",
                 "box3 opacity-0 scale-95"
@@ -159,7 +157,7 @@ export default function ContactSection() {
           </div>
           <div
             className={classNames(
-              "w-full relative z-0 bg-deep-sky pb-20 rounded-5xl transition",
+              "w-full relative z-0 bg-deep-sky pb-20 rounded-4xl md:rounded-5xl transition",
               "box4 opacity-0 scale-95",
               isTextareaFocused
                 ? "border-4 border-sky-900 outline-none"
@@ -168,7 +166,7 @@ export default function ContactSection() {
           >
             <textarea
               className={classNames(
-                "bg-deep-sky p-8 rounded-5xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
+                "bg-deep-sky p-6 md:p-8 rounded-4xl md:rounded-5xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
                 "focus:outline-none"
               )}
               name="message"
@@ -182,7 +180,7 @@ export default function ContactSection() {
             />
             <div
               className={classNames(
-                "absolute -right-1 -bottom-1 z-10 bg-dark rounded-tl-3xl p-4 transition",
+                "absolute -right-1 -bottom-1 z-10 bg-dark rounded-tl-4xl md:rounded-tl-3xl p-4 transition",
                 isTextareaFocused
                   ? "border-t-4 border-l-4 border-t-sky-900 border-l-sky-900 border-r-4 border-b-4 border-r-dark border-b-dark"
                   : "border-t-4 border-t-gray-800 border-l-4 border-l-gray-800 border-b-4 border-b-dark border-r-4 border-r-dark"

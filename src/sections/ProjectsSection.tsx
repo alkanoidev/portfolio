@@ -24,7 +24,7 @@ export default function ProjectsSection() {
       id="projects"
       ref={projectsSectionRef}
       className={classNames(
-        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-3"
+        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-2"
       )}
     >
       <h1 className="text-4xl sm:text-5xl font-bold">Projects</h1>

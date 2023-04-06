@@ -32,14 +32,14 @@ export default function AboutSection() {
 
   return (
     <div
-      className="h-full w-full flex flex-col justify-center items-center gap-10 mt-52 md:mt-96 md:px-0 px-2"
+      className="h-full w-full flex flex-col justify-center items-center gap-10 mt-52 md:mt-96 md:px-0 px-1"
       ref={container}
       id="about"
     >
       <div className="flex md:flex-row flex-col w-full max-w-5xl justify-center gap-4">
         <div
           className={classNames(
-            "box w-full md:w-2/3 flex-col flex bg-deep-sky rounded-5xl p-8",
+            "box w-full md:w-2/3 flex-col flex bg-deep-sky rounded-4xl md:rounded-5xl md:p-8 p-6",
             "opacity-0 scale-95"
           )}
         >
@@ -73,9 +73,9 @@ export default function AboutSection() {
           <h2>Technologies</h2>
 
           <p>Besides web dev i do android</p>
-          <div className="flex max-w-fit gap-4 mt-auto">
+          <div className="flex justify-center md:max-w-fit gap-4 mt-auto">
             <PrimaryButton
-              title="Contact Me"
+              title="Contact"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@ function CreatureCard({
   return (
     <div
       className={classNames(
-        "box md:h-1/3 md:w-full w-1/2 rounded-4xl md:rounded-5xl bg-deep-sky flex justify-center flex-col gap-4 text-center md:px-0 px-2 py-4",
+        "box md:h-1/3 md:w-full w-1/2 rounded-3xl md:rounded-5xl bg-deep-sky flex justify-center flex-col gap-4 text-center md:px-0 px-2 py-4",
         "opacity-0 scale-95"
       )}
     >
