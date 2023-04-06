@@ -1,5 +1,4 @@
 import Project from "components/Project";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import projectsData from "../data/projects.json";
 import classNames from "utils/classNames";
@@ -11,8 +10,6 @@ export default function ProjectsSection() {
   const isInViewPort = useIsElementInViewPort(projectsSectionRef);
 
   useEffect(() => {
-    const timeline = gsap.timeline({});
-
     if (isInViewPort) {
       document.body.classList.remove("bg-dark");
       document.body.classList.add("bg-deep-sky");
@@ -20,34 +17,6 @@ export default function ProjectsSection() {
       document.body.classList.remove("bg-deep-sky");
       document.body.classList.add("bg-dark");
     }
-
-    timeline.fromTo(
-      ".project",
-      {
-        scale: 0.9,
-        opacity: 0,
-        ease: "power1.inOut",
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".project",
-          scrub: 1,
-          start: "top 90%",
-          end: "top 90%",
-          // markers: true,
-        },
-        stagger: {
-          amount: 1,
-          repeat: 0,
-        },
-      }
-    );
-    return () => {
-      timeline.clear();
-    };
   }, [isInViewPort]);
 
   return (

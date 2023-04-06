@@ -40,11 +40,11 @@ export default function ContactSection() {
 
   return (
     <div
-      className="h-full flex flex-col justify-center items-center gap-10 mt-52 sm:px-0 px-2 mb-4"
+      className="h-full flex flex-col justify-center items-center mt-52 sm:px-0 px-2 mb-4"
       id="contact"
     >
       <div className="w-full max-w-5xl">
-        <div className="bg-deep-sky w-full rounded-3xl p-8 space-y-4 ring-4 ring-deep-sky">
+        <div className="bg-deep-sky w-full rounded-4xl p-8 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold">Get In Touch</h2>
           <p className="text-2xl sm:text-3xl text-zinc-400">
             I would love to hear from you and discuss any potential
@@ -83,12 +83,9 @@ export default function ContactSection() {
             />
           </div>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-5 sm:gap-4 w-full mt-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6 w-full">
           <input type="hidden" name="form-name" value="contact" />
-          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6">
+          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
             <input
               className={classNames(
                 "bg-deep-sky p-8 rounded-3xl transition w-full text-lg",
@@ -118,7 +115,7 @@ export default function ContactSection() {
           </div>
           <div
             className={classNames(
-              "w-full relative z-0 bg-deep-sky pb-20 rounded-3xl transition",
+              "w-full relative z-0 bg-deep-sky pb-20 rounded-4xl transition",
               isTextareaFocused
                 ? "border-4 border-sky-900 outline-none"
                 : "border-4 border-gray-800"
@@ -126,7 +123,7 @@ export default function ContactSection() {
           >
             <textarea
               className={classNames(
-                "bg-deep-sky p-8 rounded-3xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
+                "bg-deep-sky p-8 rounded-4xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
                 "focus:outline-none"
               )}
               name="message"

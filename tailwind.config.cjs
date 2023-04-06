@@ -15,6 +15,9 @@ module.exports = {
         gradient1: "url('/assets/blurry-gradient-haikei1.svg')",
         gradient2: "url('/assets/blurry-gradient-haikei2.svg')",
       },
+      borderRadius: {
+        "4xl": "3rem",
+      }
     },
   },
   plugins: [],

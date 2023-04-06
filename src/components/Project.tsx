@@ -19,7 +19,7 @@ export default function Project({
     <button
       onClick={onClick}
       className={classNames(
-        `project text-start rounded-3xl sm:w-1/3 w-full relative flex p-6 transition`,
+        `project text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
         " hover:ring-sky-800 hover:ring-4",
         "bg-dark"
       )}
