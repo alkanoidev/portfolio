@@ -39,7 +39,7 @@ export default function ContactSection() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formValues }),
+      body: JSON.stringify({ "form-name": "contact", ...formValues }),
     })
       .then(() => {})
       .catch((error) => {});
