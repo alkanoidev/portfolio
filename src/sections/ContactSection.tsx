@@ -1,7 +1,8 @@
 import IconButton from "components/buttons/IconButton";
 import PrimaryButton from "components/buttons/PrimaryButton";
 import SecondaryButton from "components/buttons/SecondaryButton";
-import { useState } from "react";
+import { gsap } from "gsap";
+import { useEffect, useRef, useState } from "react";
 import classNames from "utils/classNames";
 
 type FormValuesProps = {
@@ -17,6 +18,14 @@ export default function ContactSection() {
     message: "",
   });
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
+  const container = useRef<HTMLDivElement>(null);
+  const timeline = gsap.timeline({
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top top",
+    },
+  });
 
   const handleChange = (
     e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,15 +47,48 @@ export default function ContactSection() {
     //   .catch((error) => {});
   };
 
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      timeline.to(".box1", {
+        scale: 1,
+        opacity: 1,
+        ease: "power1.easeOut",
+        duration: 0.2,
+      });
+      timeline.to(".box2", {
+        scale: 1,
+        opacity: 1,
+        ease: "power2.easeOut",
+        duration: 0.1,
+      });
+      timeline.to(".box3", {
+        scale: 1,
+        opacity: 1,
+        ease: "power2.easeOut",
+        duration: 0.1,
+      });
+      timeline.to(".box4", {
+        scale: 1,
+        opacity: 1,
+        ease: "power2.easeOut",
+        duration: 0.1,
+      });
+    }, container);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <div
       className="h-full flex flex-col justify-center items-center mt-52 sm:px-0 px-2 mb-4"
       id="contact"
+      ref={container}
     >
       <div className="w-full max-w-5xl">
-        <div className="bg-deep-sky w-full rounded-4xl p-8 space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-bold">Get In Touch</h2>
-          <p className="text-2xl sm:text-3xl text-zinc-400">
+        <div className="box1 bg-deep-sky w-full rounded-5xl p-8 space-y-4 opacity-0 scale-95">
+          <h1 className="text-3xl md:text-4xl font-bold text-sky-700">
+            Get In Touch
+          </h1>
+          <p className="text-2xl sm:text-3xl text-zinc-300">
             I would love to hear from you and discuss any potential
             opportunities or collaborations.
           </p>
@@ -88,9 +130,10 @@ export default function ContactSection() {
           <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
             <input
               className={classNames(
-                "bg-deep-sky p-8 rounded-3xl transition w-full text-lg",
-                "ring-4 ring-gray-800",
-                "focus:ring-4 focus:ring-sky-900 focus:outline-none focus:placeholder:text-transparent"
+                "bg-deep-sky p-8 rounded-4xl transition w-full text-lg",
+                "border-4 border-gray-800",
+                "focus:border-4 focus:border-sky-900 focus:outline-none focus:placeholder:text-transparent",
+                "box2 opacity-0 scale-95"
               )}
               type="text"
               name="name"
@@ -101,9 +144,10 @@ export default function ContactSection() {
             />
             <input
               className={classNames(
-                "bg-deep-sky p-8 rounded-3xl transition w-full text-lg",
-                "ring-4 ring-gray-800",
-                "focus:ring-4 focus:ring-sky-900 focus:outline-none focus:placeholder:text-transparent"
+                "bg-deep-sky p-8 rounded-4xl transition w-full text-lg",
+                "border-4 border-gray-800",
+                "focus:border-4 focus:border-sky-900 focus:outline-none focus:placeholder:text-transparent",
+                "box3 opacity-0 scale-95"
               )}
               type="email"
               name="email"
@@ -115,7 +159,8 @@ export default function ContactSection() {
           </div>
           <div
             className={classNames(
-              "w-full relative z-0 bg-deep-sky pb-20 rounded-4xl transition",
+              "w-full relative z-0 bg-deep-sky pb-20 rounded-5xl transition",
+              "box4 opacity-0 scale-95",
               isTextareaFocused
                 ? "border-4 border-sky-900 outline-none"
                 : "border-4 border-gray-800"
@@ -123,7 +168,7 @@ export default function ContactSection() {
           >
             <textarea
               className={classNames(
-                "bg-deep-sky p-8 rounded-4xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
+                "bg-deep-sky p-8 rounded-5xl transition resize-none text-lg w-full focus:placeholder:text-transparent mb-1",
                 "focus:outline-none"
               )}
               name="message"
