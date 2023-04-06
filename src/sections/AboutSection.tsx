@@ -32,7 +32,7 @@ export default function AboutSection() {
 
   return (
     <div
-      className="h-full w-full flex flex-col justify-center items-center gap-10 mt-96 md:px-0 px-2"
+      className="h-full w-full flex flex-col justify-center items-center gap-10 mt-52 md:mt-96 md:px-0 px-2"
       ref={container}
       id="about"
     >

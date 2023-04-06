@@ -37,7 +37,7 @@ export default function ProjectCard({
             </li>
           ))}
         </ul>
-        <div className="mt-auto flex gap-4">
+        <div className="mt-10 md:mt-auto flex gap-4">
           <PrimaryButton href={liveDemoLink} title="Live View" />
           <IconButton
             href={githubLink}

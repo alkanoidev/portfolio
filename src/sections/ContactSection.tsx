@@ -36,15 +36,15 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "contact", ...formValues }),
-    // })
-    //   .then(() => {
-    //     // navigate("/contact/success");
-    //   })
-    //   .catch((error) => {});
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formValues }),
+    })
+      .then(() => {
+        // navigate("/contact/success");
+      })
+      .catch((error) => {});
   };
 
   useEffect(() => {
