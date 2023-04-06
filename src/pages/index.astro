@@ -12,15 +12,15 @@ import ProjectsSection from "sections/ProjectsSection";
   >
     <HomeSection />
 
-    <ProjectsSection client:load />
+    <ProjectsSection client:visible />
 
-    <AboutSection />
+    <AboutSection client:visible />
 
     <ContactSection client:visible />
   </div>
 </Layout>
 
-<script>
+<script type="module">
   import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 

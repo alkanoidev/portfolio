@@ -16,7 +16,8 @@ module.exports = {
         gradient2: "url('/assets/blurry-gradient-haikei2.svg')",
       },
       borderRadius: {
-        "4xl": "3rem",
+        "4xl": "2rem",
+        "5xl": "3rem",
       }
     },
   },

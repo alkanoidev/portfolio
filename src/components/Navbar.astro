@@ -6,7 +6,8 @@ import MobileNav from "components/MobileNav";
 
 <div class="py-4 w-full mt-10">
   <nav
-    class="flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl px-2 sm:px-0"
+    id="navbar"
+    class="flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl px-2 sm:px-0 -translate-y-32 opacity-0 scale-x-95"
   >
     <a
       href="/"
@@ -34,6 +35,6 @@ import MobileNav from "components/MobileNav";
       <li><NavButton href="https://filipblog.netlify.app">Blog</NavButton></li>
       <li><PrimaryButton title="Contact" href="#contact" /></li>
     </ul>
-    <MobileNav client:visible />
+    <MobileNav client:media="(max-width: 640px)" />
   </nav>
 </div>

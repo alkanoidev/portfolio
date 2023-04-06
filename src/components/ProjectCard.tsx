@@ -2,7 +2,7 @@ import classNames from "utils/classNames";
 import PrimaryButton from "./buttons/PrimaryButton";
 import IconButton from "./buttons/IconButton";
 
-export default function Project({
+export default function ProjectCard({
   title,
   description,
   githubLink,
@@ -21,7 +21,7 @@ export default function Project({
       className={classNames(
         `project text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
         " hover:ring-sky-800 hover:ring-4",
-        "bg-dark"
+        "bg-[#0C2737]"
       )}
     >
       <div className={`flex flex-col justify-between h-full gap-3 transition`}>
@@ -32,7 +32,7 @@ export default function Project({
         <p className="text-lg text-white/80">{description}</p>
         <ul className="flex flex-wrap items-center gap-2 pb-4">
           {technologies.map((technology) => (
-            <li className="text-sky-800 font-semibold" key={technology}>
+            <li className="text-sky-700 font-semibold" key={technology}>
               {technology}
             </li>
           ))}

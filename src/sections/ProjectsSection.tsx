@@ -1,5 +1,5 @@
-import Project from "components/Project";
 import { useEffect, useRef } from "react";
+import ProjectCard from "components/ProjectCard";
 import projectsData from "../data/projects.json";
 import classNames from "utils/classNames";
 import useIsElementInViewPort from "utils/hooks/useIsElementInViewPort";
@@ -33,7 +33,7 @@ export default function ProjectsSection() {
       </p>
       <div className="projects w-full flex sm:flex-nowrap flex-wrap justify-center gap-10">
         {projectsData.map((project) => (
-          <Project key={project.title} {...project} />
+          <ProjectCard key={project.title} {...project} />
         ))}
       </div>
 
