@@ -1,20 +1,22 @@
 import PrimaryButton from "components/buttons/PrimaryButton";
 import SecondaryButton from "components/buttons/SecondaryButton";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import classNames from "utils/classNames";
 
 export default function AboutSection() {
   const container = useRef<HTMLDivElement>(null);
-  const timeline = gsap.timeline({
-    delay: 0.5,
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top top",
-    },
-  });
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top top",
+      },
+    });
     let ctx = gsap.context(() => {
       timeline.to(".box", {
         scale: 1,

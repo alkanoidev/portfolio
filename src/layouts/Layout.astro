@@ -43,6 +43,13 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
     <title>{title}</title>
+
+    <script type="module">
+      import { gsap } from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      gsap.registerPlugin(ScrollTrigger);
+    </script>
   </head>
   <body>
     <Navbar />

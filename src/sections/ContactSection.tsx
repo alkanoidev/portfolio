@@ -2,30 +2,13 @@ import IconButton from "components/buttons/IconButton";
 import PrimaryButton from "components/buttons/PrimaryButton";
 import SecondaryButton from "components/buttons/SecondaryButton";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import classNames from "utils/classNames";
 
-type FormValuesProps = {
-  name: string | undefined;
-  email: string | undefined;
-  message: string | undefined;
-};
-
 export default function ContactSection() {
-  const [formValues, setFormValues] = useState<FormValuesProps | null>({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const container = useRef<HTMLDivElement>(null);
-  const timeline = gsap.timeline({
-    delay: 0.5,
-    scrollTrigger: {
-      trigger: "#contact",
-      start: "top top",
-    },
-  });
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -45,6 +28,14 @@ export default function ContactSection() {
   };
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top top",
+      },
+    });
     let ctx = gsap.context(() => {
       timeline.to(".box1", {
         scale: 1,
@@ -80,7 +71,7 @@ export default function ContactSection() {
       id="contact"
       ref={container}
     >
-      <div className="w-full max-w-5xl space-y-6">
+      <div className="w-full max-w-5xl">
         <div className="box1 bg-deep-sky w-full rounded-4xl md:rounded-5xl p-6 md:p-8 space-y-4 opacity-0 scale-95">
           <h1 className="text-3xl md:text-4xl font-bold text-sky-700">
             Get In Touch
