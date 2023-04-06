@@ -6,12 +6,14 @@ import Arrow from "components/Arrow.astro";
   class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
 >
   <h1 class="text sm:text-6xl text-3xl text-center font-bold">
-    <span class="word">Get to know</span>
-    <span class="word">Filip,</span>
+    <span class="word opacity-0">Get to know</span>
+    <span class="word opacity-0">Filip,</span>
     <br class="sm:hidden block" />
-    <span class="word">your next</span>
+    <span class="word opacity-0">your next</span>
     <br />
-    <span class="gradient-head word text-transparent font-bold bg-cover">
+    <span
+      class="gradient-head word opacity-0 text-transparent font-bold bg-cover"
+    >
       Front-end Developer
     </span>
   </h1>
@@ -37,26 +39,15 @@ import Arrow from "components/Arrow.astro";
   import { gsap } from "gsap";
 
   const timeline = gsap.timeline({ delay: 0.5 });
-  timeline.fromTo(
-    ".word",
-    {
-      duration: 0.3,
-      opacity: 0,
-      ease: "power2.easeOut",
-      stagger: {
-        amount: 1,
-      },
+  timeline.to(".word", {
+    duration: 0.3,
+    opacity: 1,
+    ease: "power2.easeOut",
+    stagger: {
+      amount: 1,
     },
-    {
-      duration: 0.3,
-      y: 0,
-      opacity: 1,
-      ease: "power2.easeOut",
-      stagger: {
-        amount: 1,
-      },
-    }
-  );
+  });
+
   timeline.to("#navbar", {
     duration: 0.3,
     scaleX: 1,
@@ -67,6 +58,7 @@ import Arrow from "components/Arrow.astro";
       amount: 1,
     },
   });
+
   gsap.context(() => {
     timeline.fromTo(
       document.querySelectorAll(".circle"),
