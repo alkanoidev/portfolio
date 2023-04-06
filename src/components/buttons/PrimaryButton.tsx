@@ -6,11 +6,13 @@ export default function PrimaryButton({
   href,
   icon,
   title,
+  type,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   icon?: ReactElement;
   title: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }) {
   if (href) {
     return (
@@ -33,6 +35,7 @@ export default function PrimaryButton({
     <button
       id={title}
       aria-label={title}
+      type={type ? type : "button"}
       className={classNames(
         "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
         "py-3 px-6 transition text-center rounded-2xl font-semibold",

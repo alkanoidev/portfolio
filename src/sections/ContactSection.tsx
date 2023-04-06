@@ -81,7 +81,7 @@ export default function ContactSection() {
       id="contact"
       ref={container}
     >
-      <div className="w-full max-w-5xl">
+      <div className="w-full max-w-5xl space-y-6">
         <div className="box1 bg-deep-sky w-full rounded-4xl md:rounded-5xl p-6 md:p-8 space-y-4 opacity-0 scale-95">
           <h1 className="text-3xl md:text-4xl font-bold text-sky-700">
             Get In Touch
@@ -123,8 +123,13 @@ export default function ContactSection() {
             />
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-6 w-full">
-          <input type="hidden" name="form-name" value="contact" />
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          className="space-y-6 w-full"
+        >
+          {/* <input type="hidden" name="form-name" value="contact" /> */}
           <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
             <input
               className={classNames(
@@ -135,8 +140,8 @@ export default function ContactSection() {
               )}
               type="text"
               name="name"
-              value={formValues?.name}
-              onChange={handleChange}
+              // value={formValues?.name}
+              // onChange={handleChange}
               placeholder="Name"
               required
             />
@@ -150,8 +155,8 @@ export default function ContactSection() {
               type="email"
               name="email"
               placeholder="Email"
-              value={formValues?.email}
-              onChange={handleChange}
+              // value={formValues?.email}
+              // onChange={handleChange}
               required
             />
           </div>
@@ -171,8 +176,8 @@ export default function ContactSection() {
               )}
               name="message"
               placeholder="Message"
-              value={formValues?.message}
-              onChange={handleChange}
+              // value={formValues?.message}
+              // onChange={handleChange}
               onFocus={() => setIsTextareaFocused(true)}
               onBlur={() => setIsTextareaFocused(false)}
               rows={6}
@@ -188,6 +193,7 @@ export default function ContactSection() {
             >
               <PrimaryButton
                 title="Send"
+                type="submit"
                 icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
