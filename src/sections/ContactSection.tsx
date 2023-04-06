@@ -27,22 +27,21 @@ export default function ContactSection() {
     },
   });
 
-  const handleChange = (
-    e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
-    const { name, value } = e.currentTarget;
-    setFormValues((prev: any) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
+
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({ "form-name": "contact", ...formValues }),
+      body: new URLSearchParams(formData).toString(),
     })
-      .then(() => {})
-      .catch((error) => {});
+      .then(() => {
+        console.log("Success");
+      })
+      .catch((error) => alert(error));
   };
 
   useEffect(() => {
@@ -123,13 +122,19 @@ export default function ContactSection() {
             />
           </div>
         </div>
+        <form name="contact" method="POST" data-netlify="true" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
         <form
           name="contact"
-          method="POST"
+          onSubmit={handleSubmit}
           data-netlify="true"
           className="space-y-6 w-full"
         >
-          {/* <input type="hidden" name="form-name" value="contact" /> */}
+          <input type="hidden" name="form-name" value="contact" />
+
           <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
             <input
               className={classNames(
@@ -140,8 +145,6 @@ export default function ContactSection() {
               )}
               type="text"
               name="name"
-              // value={formValues?.name}
-              // onChange={handleChange}
               placeholder="Name"
               required
             />
@@ -155,8 +158,6 @@ export default function ContactSection() {
               type="email"
               name="email"
               placeholder="Email"
-              // value={formValues?.email}
-              // onChange={handleChange}
               required
             />
           </div>
@@ -176,8 +177,6 @@ export default function ContactSection() {
               )}
               name="message"
               placeholder="Message"
-              // value={formValues?.message}
-              // onChange={handleChange}
               onFocus={() => setIsTextareaFocused(true)}
               onBlur={() => setIsTextareaFocused(false)}
               rows={6}
