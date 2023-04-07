@@ -4,6 +4,7 @@ import Arrow from "components/Arrow.astro";
 
 <div
   class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
+  id="home"
 >
   <h1 class="text sm:text-6xl text-3xl text-center font-bold">
     <span class="word opacity-0">Get to know</span>
@@ -38,7 +39,9 @@ import Arrow from "components/Arrow.astro";
 <script>
   import { gsap } from "gsap";
 
-  const timeline = gsap.timeline({ delay: 0.5 });
+  const timeline = gsap.timeline({
+    delay: 0.5,
+  });
   timeline.to(".word", {
     duration: 0.3,
     opacity: 1,

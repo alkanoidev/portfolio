@@ -2,6 +2,7 @@
 import PrimaryButton from "components/buttons/PrimaryButton";
 import NavButton from "components/buttons/NavButton";
 import MobileNav from "components/MobileNav";
+import classNames from "utils/classNames";
 ---
 
 <div class="py-4 w-full mt-10">
@@ -12,12 +13,15 @@ import MobileNav from "components/MobileNav";
     <a
       href="/"
       aria-label="Home"
-      class="ring-4 ring-off-dark p-1 rounded-full hover:bg-off-dark transition sm:ml-0 ml-2"
+      class={classNames(
+        "ring-4 ring-off-dark p-1 rounded-full transition sm:ml-0 ml-2",
+        "hover:scale-105 focus:scale-105 focus:ring-4 focus:ring-zinc-700 focus:outline-none"
+      )}
     >
       <img
         id="avatar"
-        src="/avatar.webp"
         alt="me"
+        src="/Avatar.webp"
         class="sm:max-w-[4rem] max-w-[3rem] transition"
       />
     </a>

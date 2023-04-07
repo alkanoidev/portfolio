@@ -1,15 +1,16 @@
 ---
-import AboutSection from "sections/AboutSection.astro";
-import ContactSection from "sections/ContactSection";
+import Navbar from "components/Navbar.astro";
 import HomeSection from "sections/HomeSection.astro";
 import ProjectsSection from "sections/ProjectsSection";
-import Navbar from "components/Navbar.astro";
+import AboutSection from "sections/AboutSection.astro";
+import ContactSection from "sections/ContactSection";
+import Footer from "components/Footer.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/avatar.png" />
+    <link rel="icon" type="image/svg+xml" href="/Avatar.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <!-- Primary Meta Tags -->
@@ -46,13 +47,6 @@ import Navbar from "components/Navbar.astro";
       rel="stylesheet"
     />
     <title>Filip Ivanovic</title>
-
-    <script type="module">
-      import { gsap } from "gsap";
-      import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-      gsap.registerPlugin(ScrollTrigger);
-    </script>
   </head>
   <body>
     <Navbar />
@@ -65,7 +59,9 @@ import Navbar from "components/Navbar.astro";
 
       <AboutSection />
 
-      <ContactSection client:visible />
+      <ContactSection client:load />
+
+      <Footer />
     </div>
   </body>
 </html>

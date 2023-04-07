@@ -9,7 +9,7 @@ export default function Link({
     <a
       href={href}
       aria-label={href}
-      className="text-zinc-400 hover:underline font-semibold"
+      className="text-zinc-400 hover:underline focus:outline-none focus:underline font-semibold"
     >
       {children}
     </a>

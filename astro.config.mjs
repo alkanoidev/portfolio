@@ -10,5 +10,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://alkanoidev.github.io",
   base: "/",
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react()]
 });

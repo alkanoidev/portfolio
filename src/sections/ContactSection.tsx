@@ -45,6 +45,7 @@ export default function ContactSection() {
         opacity: 1,
         ease: "power2.easeOut",
         duration: 0.1,
+        delay: 0.1,
         scrollTrigger: {
           trigger: container.current,
           start: "top 20%",
@@ -55,6 +56,7 @@ export default function ContactSection() {
         opacity: 1,
         ease: "power2.easeOut",
         duration: 0.1,
+        delay: 0.1,
         scrollTrigger: {
           trigger: container.current,
           start: "top 20%",
@@ -65,6 +67,7 @@ export default function ContactSection() {
         opacity: 1,
         ease: "power2.easeOut",
         duration: 0.1,
+        delay: 0.1,
         scrollTrigger: {
           trigger: container.current,
           start: "top 20%",

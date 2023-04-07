@@ -20,9 +20,10 @@ export default function PrimaryButton({
         aria-label={title}
         href={href}
         className={classNames(
-          "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
+          "w-full bg-zinc-300 text-black inline-flex gap-2 justify-center",
+          "hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
           "py-3 px-6 transition text-center rounded-2xl font-semibold",
-          "focus:ring-zinc-300 focus:ring-2 focus:ring-offset-4 active:ring-2 active:ring-zinc-300 active:ring-offset-4 focus:ring-offset-black active:offset-black"
+          "focus:ring-zinc-300 focus:ring-2 focus:ring-offset-4 focus:ring-offset-black"
         )}
       >
         {title}
@@ -37,9 +38,10 @@ export default function PrimaryButton({
       aria-label={title}
       type={type ? type : "button"}
       className={classNames(
-        "w-full bg-zinc-300 text-black hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black inline-flex gap-2 justify-center",
+        "w-full bg-zinc-300 text-black inline-flex gap-2 justify-center",
+        "hover:ring-2 hover:ring-zinc-300 hover:ring-offset-4 hover:ring-offset-black",
         "py-3 px-6 transition text-center rounded-2xl font-semibold",
-        "focus:ring-zinc-300 focus:ring-2 focus:ring-offset-4 active:ring-2 active:ring-zinc-300 active:ring-offset-4 focus:ring-offset-black active:offset-black"
+        "focus:ring-zinc-300 focus:ring-2 focus:ring-offset-4 focus:ring-offset-black"
       )}
     >
       {title}
