@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from "react";
 import classNames from "utils/classNames";
 
-export default function SecondaryButton({
+export default function OutlinedButton({
   children,
   href,
   title,
@@ -18,10 +18,11 @@ export default function SecondaryButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "hover:bg-zinc-300 ring-2 ring-zinc-300 group rounded-2xl inline-flex gap-2 justify-center",
-          "p-3 transition text-center font-semibold hover:text-dark",
-          "focus:bg-zinc-300 focus:text-dark",
-          "active:bg-zinc-300 active:text-dark"
+          "text-primary group rounded-full ring-2 ring-outline",
+          "inline-flex gap-2 justify-center",
+          "py-3 px-6 transition text-center font-semibold",
+          "hover:bg-primary hover:bg-opacity-[8%]",
+          "focus:bg-primary focus:bg-opacity-[12%]"
         )}
       >
         {title}
@@ -34,10 +35,11 @@ export default function SecondaryButton({
       id="secondary-btn"
       aria-label={title}
       className={classNames(
-        "hover:bg-zinc-300 ring-2 ring-zinc-300 group rounded-2xl inline-flex gap-2 justify-center",
-        "p-3 transition text-center font-semibold hover:text-dark",
-        "focus:bg-zinc-300 focus:text-dark",
-        "active:bg-zinc-300 active:text-dark"
+        "text-primary group rounded-full ring-2 ring-outline",
+        "inline-flex gap-2 justify-center",
+        "py-3 px-6 transition text-center font-semibold",
+        "hover:bg-primary hover:bg-opacity-[8%]",
+        "focus:bg-primary focus:bg-opacity-[12%]"
       )}
     >
       {title}

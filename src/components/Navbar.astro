@@ -1,5 +1,5 @@
 ---
-import PrimaryButton from "components/buttons/PrimaryButton";
+import OutlinedButton from "./buttons/OutlinedButton";
 import NavButton from "components/buttons/NavButton";
 import MobileNav from "components/MobileNav";
 import classNames from "utils/classNames";
@@ -26,18 +26,18 @@ import classNames from "utils/classNames";
       />
     </a>
     <div
-      class="line bg-gradient-to-r h-[4px] from-off-dark via-black to-off-dark w-full"
+      class="line bg-gradient-to-r h-[4px] from-off-dark via-dark to-off-dark w-full"
     >
     </div>
     <ul class="sm:flex hidden gap-4 items-center">
       <li
-        class="rounded-lg ring-2 ring-off-dark ring-offset-2 ring-offset-transparent py-3"
+        class="rounded-full ring-2 ring-off-dark ring-offset-2 ring-offset-transparent py-3"
       >
         <NavButton href="#projects">Projects</NavButton>
       </li>
       <li><NavButton href="#about">About</NavButton></li>
       <li><NavButton href="https://filipblog.netlify.app">Blog</NavButton></li>
-      <li><PrimaryButton title="Contact" href="#contact" /></li>
+      <li><OutlinedButton title="Contact" href="#contact" /></li>
     </ul>
     <MobileNav client:media="(max-width: 640px)" />
   </nav>

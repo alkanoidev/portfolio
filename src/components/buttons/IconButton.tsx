@@ -16,10 +16,11 @@ export default function IconButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "hover:bg-zinc-300 ring-2 ring-zinc-300 rounded-2xl inline-flex gap-2 justify-center group",
-          "p-3 transition text-center font-semibold hover:text-dark",
-          "focus:bg-zinc-300 focus:text-dark",
-          "active:bg-zinc-300 active:text-dark"
+          "text-primary group rounded-full ring-2 ring-outline",
+          "inline-flex gap-2 justify-center",
+          "p-3 transition text-center font-semibold",
+          "hover:bg-primary hover:bg-opacity-[8%]",
+          "focus:bg-primary focus:bg-opacity-[12%]"
         )}
       >
         {icon ? icon : null}
@@ -30,10 +31,11 @@ export default function IconButton({
       id="icon-btn"
       aria-label={title}
       className={classNames(
-        "hover:bg-zinc-300 ring-2 ring-zinc-300 rounded-2xl inline-flex gap-2 justify-center group",
-        "p-3 transition text-center font-semibold hover:text-dark",
-        "focus:bg-zinc-300 focus:text-dark",
-        "active:bg-zinc-300 active:text-dark"
+        "text-primary group rounded-full ring-2 ring-outline",
+        "inline-flex gap-2 justify-center",
+        "p-3 transition text-center font-semibold",
+        "hover:bg-primary hover:bg-opacity-[8%]",
+        "focus:bg-primary focus:bg-opacity-[12%]"
       )}
     >
       {icon ? icon : null}
