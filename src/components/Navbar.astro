@@ -1,8 +1,8 @@
 ---
-import OutlinedButton from "./buttons/OutlinedButton";
 import NavButton from "components/buttons/NavButton";
 import MobileNav from "components/MobileNav";
 import classNames from "utils/classNames";
+import FilledButton from "./buttons/FilledButton";
 ---
 
 <div class="py-4 w-full mt-10">
@@ -37,7 +37,7 @@ import classNames from "utils/classNames";
       </li>
       <li><NavButton href="#about">About</NavButton></li>
       <li><NavButton href="https://filipblog.netlify.app">Blog</NavButton></li>
-      <li><OutlinedButton title="Contact" href="#contact" /></li>
+      <li><FilledButton title="Contact" href="#contact" /></li>
     </ul>
     <MobileNav client:media="(max-width: 640px)" />
   </nav>

@@ -12,11 +12,12 @@ import classNames from "utils/classNames";
   <div class="flex md:flex-row flex-col w-full max-w-5xl justify-center gap-4">
     <div
       class={classNames(
-        "box w-full md:w-2/3 flex-col flex bg-surface border-4 border-gray-800 rounded-4xl md:rounded-5xl md:p-8 p-6",
+        "box w-full md:w-2/3 flex flex-col gap-5 rounded-4xl md:rounded-5xl md:p-8 p-6",
+        "bg-surface text-on-surface",
         "opacity-0 scale-95"
       )}
     >
-      <h1 class="text-sky-700 text-3xl md:text-4xl font-bold">
+      <h1 class="text-3xl md:text-4xl font-bold">
         I’m Filip, a passionate and creative individual who thrives on
         self-learning and exploring new ideas.
       </h1>
@@ -54,7 +55,7 @@ import classNames from "utils/classNames";
             viewBox="0 0 24 24"
             stroke-width={1.5}
             stroke="currentColor"
-            class="w-6 h-6 stroke-black"
+            class="w-6 h-6 stroke-on-primary"
           >
             <path
               stroke-linecap="round"
@@ -70,7 +71,7 @@ import classNames from "utils/classNames";
             viewBox="0 0 24 24"
             stroke-width={1.5}
             stroke="currentColor"
-            class="w-6 h-6 stroke-white group-hover:stroke-black group-focus:stroke-black"
+            class="w-6 h-6 stroke-primary"
           >
             <path
               stroke-linecap="round"

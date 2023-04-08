@@ -1,6 +1,6 @@
 import classNames from "utils/classNames";
-import PrimaryButton from "./buttons/PrimaryButton";
 import IconButton from "./buttons/IconButton";
+import FilledButton from "./buttons/FilledButton";
 
 export default function ProjectCard({
   title,
@@ -19,9 +19,8 @@ export default function ProjectCard({
     <button
       onClick={onClick}
       className={classNames(
-        `project text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
-        " hover:ring-sky-800 hover:ring-4 focus:ring-sky-800 focus:ring-4 focus:outline-none",
-        "bg-[#0C2737]"
+        `project bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
+        " hover:ring-sky-800 hover:ring-4 focus:ring-sky-800 focus:ring-4 focus:outline-none"
       )}
     >
       <div className={`flex flex-col justify-between h-full gap-3 transition`}>
@@ -38,7 +37,7 @@ export default function ProjectCard({
           ))}
         </ul>
         <div className="mt-10 md:mt-auto flex gap-4">
-          <PrimaryButton
+          <FilledButton
             href={liveDemoLink}
             title="Live View"
             icon={
@@ -48,7 +47,7 @@ export default function ProjectCard({
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 stroke-black"
+                className="w-6 h-6 stroke-on-primary"
               >
                 <path
                   strokeLinecap="round"
@@ -67,7 +66,7 @@ export default function ProjectCard({
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                className="w-6 h-6 stroke-white group-hover:stroke-black group-focus:stroke-black transition"
+                className="w-6 h-6 stroke-primary"
               >
                 <path
                   strokeLinecap="round"

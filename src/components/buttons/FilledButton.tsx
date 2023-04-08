@@ -20,9 +20,9 @@ export default function FilledButton({
         aria-label={title}
         href={href}
         className={classNames(
-          "w-full bg-primary text-black inline-flex gap-2 justify-center",
+          "w-full bg-primary text-on-primary inline-flex gap-2 justify-center",
           "py-3 px-6 transition text-center rounded-full font-semibold",
-          " hover:bg-[#62b2f2]",
+          "hover:bg-[#62b2f2]",
           "focus:bg-[#4397d6]"
         )}
       >
@@ -38,9 +38,9 @@ export default function FilledButton({
       aria-label={title}
       type={type ? type : "button"}
       className={classNames(
-        "w-full bg-primary text-black inline-flex gap-2 justify-center",
+        "w-full bg-primary text-on-primary inline-flex gap-2 justify-center",
         "py-3 px-6 transition text-center rounded-full font-semibold",
-        " hover:bg-[#62b2f2]",
+        "hover:bg-[#62b2f2]",
         "focus:bg-[#4397d6]"
       )}
     >
