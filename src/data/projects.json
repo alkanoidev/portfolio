@@ -18,7 +18,7 @@
   },
   {
     "id": 1,
-    "title": "nasa-apis",
+    "title": "nasa apis",
     "description": "Explore NASA apis such as Picture Of the Day, Mars Rover Photos and NASA Image and Video Library",
     "image": "https://raw.githubusercontent.com/alkanoidev/nasa-apis/master/page2.jpeg",
     "githubLink": "https://github.com/alkanoidev/nasa-apis",
@@ -36,7 +36,7 @@
   },
   {
     "id": 2,
-    "title": "travel-app-landing-page",
+    "title": "travel app landing page",
     "description": "Mobile Responsive Landing page for tour and travel project",
     "image": "travel-app-landing-page.netlify.app.png",
     "githubLink": "https://github.com/alkanoidev/travel-app-landing-page",

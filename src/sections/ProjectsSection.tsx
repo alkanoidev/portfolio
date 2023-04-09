@@ -13,9 +13,13 @@ export default function ProjectsSection() {
     if (isInViewPort) {
       document.body.classList.remove("bg-light");
       document.body.classList.remove("dark:bg-dark");
-      document.body.classList.add("bg-deep-sky");
+
+      document.body.classList.add("dark:bg-deep-sky");
+      document.body.classList.add("bg-deep-sky-light");
     } else {
-      document.body.classList.remove("bg-deep-sky");
+      document.body.classList.remove("dark:bg-deep-sky");
+      document.body.classList.remove("bg-deep-sky-light");
+
       document.body.classList.add("bg-light");
       document.body.classList.add("dark:bg-dark");
     }
@@ -30,7 +34,7 @@ export default function ProjectsSection() {
       )}
     >
       <h1 className="text-4xl sm:text-5xl font-bold">Projects</h1>
-      <p className="text-2xl sm:text-3xl text-white/80 text-center">
+      <p className="text-2xl sm:text-3xl text-zinc-700 dark:text-zinc-300 text-center">
         Things I’ve made trying to put my dent in the universe.
       </p>
       <div className="projects w-full flex sm:flex-nowrap flex-wrap justify-center gap-10">

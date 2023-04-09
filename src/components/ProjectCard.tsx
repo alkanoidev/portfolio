@@ -19,7 +19,7 @@ export default function ProjectCard({
     <button
       onClick={onClick}
       className={classNames(
-        `project bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
+        `project bg-primary-dark dark:bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
         " hover:ring-sky-800 hover:ring-4 focus:ring-sky-800 focus:ring-4 focus:outline-none"
       )}
     >
@@ -28,10 +28,15 @@ export default function ProjectCard({
           <h1 className="text-2xl font-semibold capitalize">{title}</h1>
           <h2>{year}</h2>
         </div>
-        <p className="text-lg text-white/80">{description}</p>
+        <p className="text-lg text-zinc-800 dark:text-zinc-300">
+          {description}
+        </p>
         <ul className="flex flex-wrap items-center gap-2 pb-4">
           {technologies.map((technology) => (
-            <li className="text-sky-700 font-semibold" key={technology}>
+            <li
+              className="text-primary-light dark:text-sky-700 font-semibold"
+              key={technology}
+            >
               {technology}
             </li>
           ))}
@@ -47,7 +52,7 @@ export default function ProjectCard({
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 stroke-on-primary-dark"
+                className="w-6 h-6 stroke-on-primary-light dark:stroke-on-primary-dark"
               >
                 <path
                   strokeLinecap="round"
@@ -66,7 +71,7 @@ export default function ProjectCard({
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                className="w-6 h-6 stroke-primary-dark"
+                className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
               >
                 <path
                   strokeLinecap="round"

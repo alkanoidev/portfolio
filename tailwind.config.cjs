@@ -19,6 +19,7 @@ module.exports = {
         "on-primary-box": { dark: "#cde5ff", light: "#001d32" },
 
         "deep-sky": "#041621",
+        "deep-sky-light": "#cde5ff",
 
         secondary: { dark: "#6adbae", light: "#006c4e" },
         "on-secondary": "#003827",
