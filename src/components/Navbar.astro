@@ -14,8 +14,9 @@ import FilledButton from "./buttons/FilledButton";
       href="/"
       aria-label="Home"
       class={classNames(
-        "ring-4 ring-off-dark p-1 rounded-full transition sm:ml-0 ml-2",
-        "hover:scale-105 focus:scale-105 focus:ring-4 focus:ring-zinc-700 focus:outline-none"
+        "ring-4 p-1 rounded-full transition sm:ml-0 ml-2",
+        "ring-outline-light dark:ring-outline-dark focus:ring-outline-light dark:focus:ring-outline-dark",
+        "focus:ring-4 focus:outline-none"
       )}
     >
       <img
@@ -26,19 +27,60 @@ import FilledButton from "./buttons/FilledButton";
       />
     </a>
     <div
-      class="line bg-gradient-to-r h-[4px] from-off-dark via-dark to-off-dark w-full"
+      class={classNames(
+        "line bg-gradient-to-r h-[4px] w-full",
+        "from-outline-light via-light to-outline-light dark:from-outline-dark dark:via-dark dark:to-outline-dark"
+      )}
     >
     </div>
     <ul class="sm:flex hidden gap-4 items-center">
-      <li
-        class="rounded-full ring-2 ring-off-dark ring-offset-2 ring-offset-transparent py-3"
-      >
-        <NavButton href="#projects">Projects</NavButton>
+      <li>
+        <a
+          href="#projects"
+          aria-label="Blog"
+          class={classNames(
+            "py-3 px-6 transition rounded-full",
+            "ring-4 hover:cursor-pointer ring-outline-light dark:ring-outline-dark",
+            "focus:outline-none",
+            "hover:bg-off-light dark:hover:bg-off-dark",
+            "focus:bg-off-light dark:focus:bg-off-dark"
+          )}
+        >
+          Projects
+        </a>
       </li>
-      <li><NavButton href="#about">About</NavButton></li>
-      <li><NavButton href="https://filipblog.netlify.app">Blog</NavButton></li>
+      <li>
+        <a
+          href="#about"
+          aria-label="About section"
+          class={classNames(
+            "py-3 px-6 transition rounded-full",
+            "hover:ring-4 hover:cursor-pointer",
+            "focus:outline-none focus:ring-4",
+            "hover:bg-off-light dark:hover:bg-off-dark hover:ring-off-light dark:hover:ring-off-dark",
+            "focus:bg-off-light dark:focus:bg-off-dark focus:ring-off-light dark:focus:ring-off-dark"
+          )}
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://filipblog.netlify.app"
+          aria-label="Blog"
+          class={classNames(
+            "py-3 px-6 transition rounded-full",
+            "hover:ring-4 hover:cursor-pointer",
+            "focus:outline-none focus:ring-4",
+            "hover:bg-off-light dark:hover:bg-off-dark hover:ring-off-light dark:hover:ring-off-dark",
+            "focus:bg-off-light dark:focus:bg-off-dark focus:ring-off-light dark:focus:ring-off-dark"
+          )}
+        >
+          Blog
+        </a>
+      </li>
       <li><FilledButton title="Contact" href="#contact" /></li>
     </ul>
-    <MobileNav client:media="(max-width: 640px)" />
+    <MobileNav client:media="(max-width: 768px)" />
   </nav>
 </div>
