@@ -47,7 +47,7 @@ export default function ProjectCard({
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 stroke-on-primary"
+                className="w-6 h-6 stroke-on-primary-dark"
               >
                 <path
                   strokeLinecap="round"
@@ -66,7 +66,7 @@ export default function ProjectCard({
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
-                className="w-6 h-6 stroke-primary"
+                className="w-6 h-6 stroke-primary-dark"
               >
                 <path
                   strokeLinecap="round"

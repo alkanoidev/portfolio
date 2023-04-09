@@ -1,5 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import classNames from "utils/classNames";
 
 export default function MobileNav() {
   return (
@@ -7,7 +8,11 @@ export default function MobileNav() {
       <Menu.Button
         id="openDropdown"
         aria-label="Open Mobile Nav"
-        className="py-3 px-3 transition rounded-lg ring-4 ring-off-dark hover:bg-off-dark focus:bg-off-dark"
+        className={classNames(
+          "py-3 px-3 transition rounded-lg ring-4",
+          "dark:ring-off-dark dark:hover:bg-off-dark dark:focus:bg-off-dark",
+          "ring-off-light hover:bg-off-light focus:bg-off-light"
+        )}
       >
         {({ open }) =>
           open ? (
@@ -52,13 +57,13 @@ export default function MobileNav() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-off-dark shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-surface-light dark:bg-surface-dark shadow-lg ring-1 ring-light dark:ring-dark ring-opacity-5 focus:outline-none">
           <div className="p-1 flex items-center flex-col">
             <Menu.Item>
               <a
                 aria-label="Projects"
                 href="#projects"
-                className={`group px-2 py-2 text-base text-white`}
+                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
               >
                 Projects
               </a>
@@ -67,7 +72,7 @@ export default function MobileNav() {
               <a
                 aria-label="About"
                 href="#about"
-                className={`group px-2 py-2 text-base text-white`}
+                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
               >
                 About
               </a>
@@ -76,7 +81,7 @@ export default function MobileNav() {
               <a
                 aria-label="Blog"
                 href="https://filipblog.netlify.app"
-                className={`group px-2 py-2 text-base text-white`}
+                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
               >
                 Blog
               </a>
@@ -85,7 +90,7 @@ export default function MobileNav() {
               <a
                 aria-label="Contact"
                 href="#contact"
-                className={`group px-2 py-2 text-base text-white`}
+                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
               >
                 Contact
               </a>
@@ -99,7 +104,7 @@ export default function MobileNav() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 fill-white"
+                    className="h-5 w-5 fill-on-surface-light dark:fill-on-surface-dark"
                     viewBox="0 0 24 24"
                   >
                     <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
@@ -115,7 +120,7 @@ export default function MobileNav() {
                   <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
-                    className="h-6 w-6 fill-white"
+                    className="h-6 w-6 fill-on-surface-light dark:fill-on-surface-dark"
                   >
                     <path
                       fillRule="evenodd"
@@ -134,7 +139,7 @@ export default function MobileNav() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="w-6 h-6 fill-white"
+                    className="w-6 h-6 fill-on-surface-light dark:fill-on-surface-dark"
                   >
                     <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                     <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />

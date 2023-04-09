@@ -13,7 +13,7 @@ import Footer from "components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/Avatar.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <!-- Primary Meta Tags -->
+    <!-- primary-dark Meta Tags -->
     <title>Filip Ivanovic</title>
     <meta name="title" content="Filip Ivanovic" />
     <meta
@@ -68,7 +68,7 @@ import Footer from "components/Footer.astro";
 
 <style is:global>
   * {
-    @apply text-on-dark;
+    @apply text-on-light dark:text-on-dark;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-display: optional;
@@ -80,7 +80,7 @@ import Footer from "components/Footer.astro";
     @apply scroll-pt-32;
   }
   body {
-    @apply bg-dark transition duration-500;
+    @apply bg-light dark:bg-dark transition duration-500;
   }
   ::selection {
     background-color: gray;

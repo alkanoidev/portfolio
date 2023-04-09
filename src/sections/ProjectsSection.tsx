@@ -11,11 +11,13 @@ export default function ProjectsSection() {
 
   useEffect(() => {
     if (isInViewPort) {
-      document.body.classList.remove("bg-dark");
+      document.body.classList.remove("bg-light");
+      document.body.classList.remove("dark:bg-dark");
       document.body.classList.add("bg-deep-sky");
     } else {
       document.body.classList.remove("bg-deep-sky");
-      document.body.classList.add("bg-dark");
+      document.body.classList.add("bg-light");
+      document.body.classList.add("dark:bg-dark");
     }
   }, [isInViewPort]);
 

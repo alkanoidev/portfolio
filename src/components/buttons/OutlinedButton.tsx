@@ -18,11 +18,12 @@ export default function OutlinedButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "text-primary group rounded-full ring-2 ring-outline",
-          "inline-flex gap-2 justify-center",
           "py-3 px-6 transition text-center font-semibold",
-          "hover:bg-primary hover:bg-opacity-[8%]",
-          "focus:bg-primary focus:bg-opacity-[12%]"
+          "group rounded-full ring-2",
+          "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
+          "inline-flex gap-2 justify-center",
+          "hover:bg-primary-light dark:hover:bg-primary-dark hover:bg-opacity-[8%] dark:hover:bg-opacity-[8%]",
+          "focus:bg-primary-light dark:focus:bg-primary-dark focus:bg-opacity-[12%] dark:focus:bg-opacity-[12%]"
         )}
       >
         {title}
@@ -35,11 +36,12 @@ export default function OutlinedButton({
       id="secondary-btn"
       aria-label={title}
       className={classNames(
-        "text-primary group rounded-full ring-2 ring-outline",
-        "inline-flex gap-2 justify-center",
         "py-3 px-6 transition text-center font-semibold",
-        "hover:bg-primary hover:bg-opacity-[8%]",
-        "focus:bg-primary focus:bg-opacity-[12%]"
+        "group rounded-full ring-2",
+        "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
+        "inline-flex gap-2 justify-center",
+        "hover:bg-primary-light dark:hover:bg-primary-dark hover:bg-opacity-[8%] dark:hover:bg-opacity-[8%]",
+        "focus:bg-primary-light dark:focus:bg-primary-dark focus:bg-opacity-[12%] dark:focus:bg-opacity-[12%]"
       )}
     >
       {title}
