@@ -146,8 +146,8 @@ export default function ContactSection() {
               className={classNames(
                 "p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
-                "border-2 border-outline-light dark:border-outline-dark",
-                "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
+                "border-4 border-outline-light dark:border-outline-dark",
+                "focus:border-4 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
                 "box2 opacity-0 scale-95"
               )}
               type="text"
@@ -159,8 +159,8 @@ export default function ContactSection() {
               className={classNames(
                 "p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
-                "border-2 border-outline-light dark:border-outline-dark",
-                "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
+                "border-4 border-outline-light dark:border-outline-dark",
+                "focus:border-4 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
                 "box2 opacity-0 scale-95"
               )}
               type="email"
@@ -175,8 +175,8 @@ export default function ContactSection() {
               "bg-surface-light dark:bg-surface-dark",
               "box4 opacity-0 scale-95",
               isTextareaFocused
-                ? "border-2 border-primary-light dark:border-primary-dark outline-none"
-                : "border-2 border-outline-light dark:border-outline-dark"
+                ? "border-4 border-primary-light dark:border-primary-dark outline-none"
+                : "border-4 border-outline-light dark:border-outline-dark"
             )}
           >
             <textarea
@@ -194,10 +194,10 @@ export default function ContactSection() {
             />
             <div
               className={classNames(
-                "absolute -right-[3px] -bottom-[3px] md:-right-[2px] md:-bottom:-[3px] z-10 bg-light dark:bg-dark rounded-tl-4xl md:rounded-tl-3xl p-4 transition",
+                "absolute -right-1 -bottom-1 z-10 bg-light dark:bg-dark rounded-tl-4xl md:rounded-tl-3xl p-4 transition",
                 isTextareaFocused
-                  ? "border-t-2 border-l-2 border-t-primary-light border-l-primary-light dark:border-t-primary-dark dark:border-l-primary-dark border-b-2 border-r-2 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
-                  : "border-t-2 border-l-2 border-t-outline-light border-l-outline-light dark:border-t-outline-dark dark:border-l-outline-dark border-b-2 border-r-2 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
+                  ? "border-t-4 border-l-4 border-t-primary-light border-l-primary-light dark:border-t-primary-dark dark:border-l-primary-dark border-b-4 border-r-4 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
+                  : "border-t-4 border-l-4 border-t-outline-light border-l-outline-light dark:border-t-outline-dark dark:border-l-outline-dark border-b-4 border-r-4 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
               )}
             >
               <FilledButton
