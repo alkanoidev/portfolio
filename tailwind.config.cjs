@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "media",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
@@ -8,22 +9,27 @@ module.exports = {
         "on-dark": "#e2e2e5",
         "off-dark": "#2a2a2a",
 
-        primary: "#94ccff",
-        "on-primary": "#003352",
-        "primary-box": "#004b74",
-        "on-primary-box": "#cde5ff",
+        light: "#fcfcff",
+        "on-light": "#1a1c1e",
+        "off-light": "#bebebe",
+
+        primary: { dark: "#94ccff", light: "#006399" },
+        "on-primary": { dark: "#003352", light: "#ffffff" },
+        "primary-box": { dark: "#004b74", light: "#cde5ff" },
+        "on-primary-box": { dark: "#cde5ff", light: "#001d32" },
 
         "deep-sky": "#041621",
 
-        secondary: "#6adbae",
+        secondary: { dark: "#6adbae", light: "#006c4e" },
         "on-secondary": "#003827",
         "secondary-box": "#00513a",
         "on-secondary-box": "#87f8c9",
 
-        surface: "#1a1c1e",
-        "on-surface": "#e2e2e5",
+        surface: { dark: "#1a1c1e", light: "#f0f0f4" },
+        "on-surface": { dark: "#e2e2e5", light: "#1a1c1e" },
 
-        outline: "#8c9198"
+        outline: { dark: "#8c9198", light: "#72787e" },
+
       },
       borderRadius: {
         "4xl": "2rem",
