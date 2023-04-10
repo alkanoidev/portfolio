@@ -166,7 +166,7 @@ export default function ContactSection() {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6 px-1">
+          <div className="sm:inline-flex w-full sm:space-x-4 space-x-0 block sm:space-y-0 space-y-6">
             <input
               className={classNames(
                 "p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
