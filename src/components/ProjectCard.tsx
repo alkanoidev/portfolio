@@ -59,6 +59,7 @@ export default function ProjectCard({
           <OutlinedButton
             href={githubLink}
             title="Source"
+            full
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

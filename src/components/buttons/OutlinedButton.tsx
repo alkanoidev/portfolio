@@ -7,11 +7,13 @@ export default function OutlinedButton({
   title,
   icon,
   onClick,
+  full,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   title: string;
   icon?: ReactElement;
+  full?: boolean;
   onClick?: () => void;
 }) {
   if (href)
@@ -21,10 +23,11 @@ export default function OutlinedButton({
         onClick={onClick}
         aria-label={title}
         className={classNames(
-          "py-3 px-6 transition text-center font-semibold focus:outline-none w-full",
+          "py-3 px-6 transition text-center font-semibold focus:outline-none",
           "group rounded-full ring-2",
           "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
           "inline-flex gap-2 justify-center",
+          full ? "w-full" : "",
           // hover
           "hover:bg-primary-light dark:hover:bg-primary-dark",
           "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",
@@ -43,10 +46,11 @@ export default function OutlinedButton({
       id="secondary-btn"
       aria-label={title}
       className={classNames(
-        "py-3 px-6 transition text-center font-semibold focus:outline-none w-full",
+        "py-3 px-6 transition text-center font-semibold focus:outline-none",
         "group rounded-full ring-2",
         "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
         "inline-flex gap-2 justify-center",
+        full ? "w-full" : "",
         // hover
         "hover:bg-primary-light dark:hover:bg-primary-dark",
         "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",
