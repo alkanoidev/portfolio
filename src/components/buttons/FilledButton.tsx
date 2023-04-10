@@ -7,12 +7,14 @@ export default function FilledButton({
   icon,
   title,
   type,
+  onClick,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   icon?: ReactElement;
   title: string;
   type?: "button" | "submit" | "reset" | undefined;
+  onClick?: () => void;
 }) {
   if (href) {
     return (
@@ -36,6 +38,7 @@ export default function FilledButton({
   return (
     <button
       id={title}
+      onClick={onClick}
       aria-label={title}
       type={type ? type : "button"}
       className={classNames(

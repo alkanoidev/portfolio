@@ -6,19 +6,22 @@ export default function OutlinedButton({
   href,
   title,
   icon,
+  onClick,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   title: string;
   icon?: ReactElement;
+  onClick?: () => void;
 }) {
   if (href)
     return (
       <a
         href={href}
+        onClick={onClick}
         aria-label={title}
         className={classNames(
-          "py-3 px-6 transition text-center font-semibold focus:outline-none",
+          "py-3 px-6 transition text-center font-semibold focus:outline-none w-full",
           "group rounded-full ring-2",
           "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
           "inline-flex gap-2 justify-center",
@@ -40,7 +43,7 @@ export default function OutlinedButton({
       id="secondary-btn"
       aria-label={title}
       className={classNames(
-        "py-3 px-6 transition text-center font-semibold focus:outline-none",
+        "py-3 px-6 transition text-center font-semibold focus:outline-none w-full",
         "group rounded-full ring-2",
         "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
         "inline-flex gap-2 justify-center",

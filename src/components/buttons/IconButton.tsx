@@ -5,10 +5,12 @@ export default function IconButton({
   href,
   title,
   icon,
+  onClick,
 }: {
   href?: string;
   title: string;
   icon: ReactElement;
+  onClick?: () => void;
 }) {
   if (href)
     return (
@@ -34,6 +36,7 @@ export default function IconButton({
   return (
     <button
       id="icon-btn"
+      onClick={onClick}
       aria-label={title}
       className={classNames(
         "p-3 transition text-center font-semibold focus:outline-none",

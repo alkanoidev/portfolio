@@ -1,6 +1,5 @@
-import classNames from "utils/classNames";
-import IconButton from "./buttons/IconButton";
 import FilledButton from "./buttons/FilledButton";
+import OutlinedButton from "./buttons/OutlinedButton";
 
 export default function ProjectCard({
   title,
@@ -13,28 +12,23 @@ export default function ProjectCard({
   year,
   id,
   selected,
-  onClick,
 }: Props) {
   return (
-    <button
-      onClick={onClick}
-      className={classNames(
-        `project bg-primary-dark dark:bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 transition`,
-        " hover:ring-sky-800 hover:ring-4 focus:ring-sky-800 focus:ring-4 focus:outline-none"
-      )}
-    >
+    <article className="project bg-primary-dark dark:bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 px-4 transition">
       <div className={`flex flex-col justify-between h-full gap-3 transition`}>
         <div>
           <h1 className="text-2xl font-semibold capitalize">{title}</h1>
           <h2>{year}</h2>
         </div>
-        <p className="text-lg text-zinc-800 dark:text-zinc-300">
-          {description}
-        </p>
+        <div>
+          <p className="text-lg text-zinc-800 dark:text-zinc-300">
+            {description}
+          </p>
+        </div>
         <ul className="flex flex-wrap items-center gap-2 pb-4">
           {technologies.map((technology) => (
             <li
-              className="text-primary-light dark:text-sky-700 font-semibold"
+              className="text-primary-light dark:text-primary-dark/80 font-semibold"
               key={technology}
             >
               {technology}
@@ -62,9 +56,9 @@ export default function ProjectCard({
               </svg>
             }
           />
-          <IconButton
+          <OutlinedButton
             href={githubLink}
-            title={githubLink}
+            title="Source"
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +77,7 @@ export default function ProjectCard({
           />
         </div>
       </div>
-    </button>
+    </article>
   );
 }
 
