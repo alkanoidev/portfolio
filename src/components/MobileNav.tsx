@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import classNames from "utils/classNames";
+import TextButton from "./buttons/TextButton";
 
 export default function MobileNav() {
   return (
@@ -10,8 +11,10 @@ export default function MobileNav() {
         aria-label="Open Mobile Nav"
         className={classNames(
           "py-3 px-3 transition rounded-lg ring-4",
-          "dark:ring-off-dark dark:hover:bg-off-dark dark:focus:bg-off-dark",
-          "ring-off-light hover:bg-off-light focus:bg-off-light"
+          "dark:ring-outline-dark ring-outline-light focus:outline-none",
+          // hover
+          "hover:bg-primary-light dark:hover:bg-primary-dark",
+          "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]"
         )}
       >
         {({ open }) =>
@@ -57,13 +60,13 @@ export default function MobileNav() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-surface-light dark:bg-surface-dark shadow-lg ring-1 ring-light dark:ring-dark ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-surface-light dark:bg-surface-dark shadow-lg focus:outline-none">
           <div className="p-1 flex items-center flex-col">
             <Menu.Item>
               <a
                 aria-label="Projects"
                 href="#projects"
-                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
+                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
               >
                 Projects
               </a>
@@ -72,7 +75,7 @@ export default function MobileNav() {
               <a
                 aria-label="About"
                 href="#about"
-                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
+                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
               >
                 About
               </a>
@@ -81,7 +84,7 @@ export default function MobileNav() {
               <a
                 aria-label="Blog"
                 href="https://filipblog.netlify.app"
-                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
+                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
               >
                 Blog
               </a>
@@ -90,7 +93,7 @@ export default function MobileNav() {
               <a
                 aria-label="Contact"
                 href="#contact"
-                className={`group px-2 py-2 text-base text-on-surface-light dark:text-on-surface-dark`}
+                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
               >
                 Contact
               </a>

@@ -6,12 +6,15 @@ export default function TextButton({
   href,
   title,
   icon,
+  full,
   onClick,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   title: string;
   icon?: ReactElement;
+  full?: boolean;
+
   onClick?: () => void;
 }) {
   if (href)
@@ -31,7 +34,8 @@ export default function TextButton({
           "focus:bg-primary-light dark:focus:bg-primary-dark",
           "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
           "focus:ring-primary-light dark:focus:ring-primary-dark",
-          "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]"
+          "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]",
+          full ? "w-full" : ""
         )}
       >
         {title}
@@ -56,7 +60,8 @@ export default function TextButton({
         "focus:bg-primary-light dark:focus:bg-primary-dark",
         "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
         "focus:ring-primary-light dark:focus:ring-primary-dark",
-        "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]"
+        "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]",
+        full ? "w-full" : ""
       )}
     >
       {title}
