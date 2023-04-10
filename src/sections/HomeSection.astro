@@ -42,9 +42,7 @@ import classNames from "utils/classNames";
 <script>
   import { gsap } from "gsap";
 
-  const timeline = gsap.timeline({
-    delay: 0.5,
-  });
+  const timeline = gsap.timeline();
 
   timeline.to(".word", {
     duration: 0.3,
@@ -69,10 +67,9 @@ import classNames from "utils/classNames";
   timeline.to("#arrow", { opacity: 1, ease: "power0.easeNone" });
 
   const arrowTimeline = gsap.timeline({
-    delay: 3,
+    delay: 1.5,
   });
   const arrowCircle = document.querySelectorAll(".circle");
-  timeline.addLabel("arrow");
 
   arrowTimeline
     .to(arrowCircle, {
