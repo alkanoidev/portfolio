@@ -2,19 +2,21 @@ import IconButton from "components/buttons/IconButton";
 import SecondaryButton from "components/buttons/OutlinedButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import classNames from "utils/classNames";
 import FilledButton from "components/buttons/FilledButton";
+import DialogBasic from "components/DialogBasic";
 
 export default function ContactSection() {
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const container = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const myForm = e.target;
-    const formData = new FormData(myForm);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
 
     fetch("/", {
       method: "POST",
@@ -22,9 +24,10 @@ export default function ContactSection() {
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        console.log("Success");
+        setIsOpen(true);
+        form.reset();
       })
-      .catch((error) => alert(error));
+      .catch((error) => {});
   };
 
   useEffect(() => {
@@ -83,6 +86,28 @@ export default function ContactSection() {
       id="contact"
       ref={container}
     >
+      <DialogBasic
+        title="Message Sent!"
+        body="Thanks for reaching out to me. I'll get back to you as soon as possible."
+        icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-8 h-8 mx-auto stroke-secondary-light dark:stroke-secondary-dark"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        }
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       <div className="w-full max-w-5xl">
         <div
           className={classNames(
@@ -91,7 +116,7 @@ export default function ContactSection() {
           )}
         >
           <h1 className="text-3xl md:text-4xl font-bold">Get In Touch</h1>
-          <p className="text-xl sm:text-2xl text-zinc-800 dark:text-zinc-400">
+          <p className="text-xl md:text-2xl text-zinc-800 dark:text-zinc-400">
             I would love to hear from you and discuss any potential
             opportunities or collaborations.
           </p>
