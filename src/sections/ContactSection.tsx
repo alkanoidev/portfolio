@@ -186,7 +186,7 @@ export default function ContactSection() {
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 "border-4 border-outline-light dark:border-outline-dark",
                 "focus:border-4 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
-                "box2 opacity-0 scale-95"
+                "box3 opacity-0 scale-95"
               )}
               type="email"
               name="email"
