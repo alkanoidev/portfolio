@@ -4,7 +4,7 @@ import classNames from "utils/classNames";
 
 export default function MobileNav() {
   return (
-    <Menu as="div" className="relative inline-block text-left sm:hidden">
+    <Menu as="div" className="relative inline-block text-left md:hidden">
       <Menu.Button
         id="openDropdown"
         aria-label="Open Mobile Nav"

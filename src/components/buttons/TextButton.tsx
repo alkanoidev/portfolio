@@ -20,7 +20,7 @@ export default function TextButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none",
+          "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none font-semibold",
           "text-primary-light dark:text-primary-dark",
           // hover
           "hover:bg-primary-light dark:hover:bg-primary-dark",
@@ -45,7 +45,7 @@ export default function TextButton({
       onClick={onClick}
       aria-label={title}
       className={classNames(
-        "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none",
+        "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none font-semibold",
         "text-primary-light dark:text-primary-dark",
         // hover
         "hover:bg-primary-light dark:hover:bg-primary-dark",

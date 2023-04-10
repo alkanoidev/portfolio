@@ -37,7 +37,7 @@ export default function ProjectsSection() {
       <p className="text-2xl sm:text-3xl text-zinc-700 dark:text-zinc-300 text-center">
         Things I’ve made trying to put my dent in the universe.
       </p>
-      <div className="projects w-full flex sm:flex-nowrap flex-wrap justify-center gap-10">
+      <div className="projects w-full flex flex-col flex-wrap justify-center gap-24">
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

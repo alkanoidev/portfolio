@@ -13,14 +13,15 @@
       "framer-motion",
       "tailwindcss"
     ],
-    "image": "filipblog.netlify.app.png",
-    "year": "2022"
+    "image": "projects/filipblog.webp",
+    "year": "2022",
+    "readMoreLink": "#"
   },
   {
     "id": 1,
     "title": "nasa apis",
     "description": "Explore NASA apis such as Picture Of the Day, Mars Rover Photos and NASA Image and Video Library",
-    "image": "https://raw.githubusercontent.com/alkanoidev/nasa-apis/master/page2.jpeg",
+    "image": "https://source.unsplash.com/random/600x300",
     "githubLink": "https://github.com/alkanoidev/nasa-apis",
     "liveDemoLink": "https://nasa-apis.netlify.app/",
     "technologies": [
@@ -32,13 +33,14 @@
     ],
     "comingSoon": false,
     "repoName": "nasa-apis",
-    "year": "2022"
+    "year": "2022",
+    "readMoreLink": "#"
   },
   {
     "id": 2,
     "title": "travel app landing page",
     "description": "Mobile Responsive Landing page for tour and travel project",
-    "image": "travel-app-landing-page.netlify.app.png",
+    "image": "https://source.unsplash.com/random/600x300",
     "githubLink": "https://github.com/alkanoidev/travel-app-landing-page",
     "liveDemoLink": "https://travel-app-landing-page.netlify.app/",
     "technologies": [
@@ -49,6 +51,7 @@
     ],
     "comingSoon": false,
     "repoName": "travel-app-landing-page",
-    "year": "2022"
+    "year": "2022",
+    "readMoreLink": "#"
   }
 ]
