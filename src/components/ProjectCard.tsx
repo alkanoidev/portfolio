@@ -93,7 +93,7 @@ export default function ProjectCard({
           "dark:before:w-[70%] dark:before:h-[70%]",
           "before:w-[90%] before:h-[90%]",
           "before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2",
-          "before:bg-on-light dark:before:bg-on-dark",
+          "before:bg-on-primary-dark dark:before:bg-primary-light",
           "md:before:blur-[52px] before:blur-[38px]",
           "md:darK:before:blur-[52px] dark:before:blur-[32px]"
         )}
