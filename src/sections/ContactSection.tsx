@@ -41,7 +41,6 @@ export default function ContactSection() {
         scrollTrigger: {
           trigger: container.current,
           start: "top 80%",
-          markers: true,
         },
       });
       gsap.to(".box2", {
