@@ -7,13 +7,13 @@ export default function OutlinedButton({
   title,
   icon,
   onClick,
-  full,
+  fullWidth,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   title: string;
   icon?: ReactElement;
-  full?: boolean;
+  fullWidth?: boolean;
   onClick?: () => void;
 }) {
   if (href)
@@ -27,7 +27,7 @@ export default function OutlinedButton({
           "group rounded-full ring-2",
           "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
           "inline-flex gap-2 justify-center",
-          full ? "w-full" : "",
+          fullWidth ? "w-full" : "w-fit",
           // hover
           "hover:bg-primary-light dark:hover:bg-primary-dark",
           "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",
@@ -50,7 +50,7 @@ export default function OutlinedButton({
         "group rounded-full ring-2",
         "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
         "inline-flex gap-2 justify-center",
-        full ? "w-full" : "",
+        fullWidth ? "w-full" : "w-fit",
         // hover
         "hover:bg-primary-light dark:hover:bg-primary-dark",
         "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",

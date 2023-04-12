@@ -14,8 +14,8 @@ export default function ProjectCard({
   readMoreLink,
 }: Props) {
   return (
-    <div className="flex flex-col md:flex-row md:even:flex-row-reverse justify-center gap-10 w-full">
-      <article className="project bg-[#94ccff] dark:bg-[#0C2737] text-start rounded-3xl w-full md:w-80 lg:w-96 flex p-6 px-4 transition">
+    <div className="flex flex-col lg:flex-row lg:even:flex-row-reverse justify-center gap-10 w-full">
+      <article className="project bg-[#94ccff] dark:bg-[#0C2737] text-start rounded-3xl w-full min-w-[22.5rem] lg:w-96 flex p-6 px-4 transition">
         <div
           className={`flex flex-col justify-between h-full gap-3 transition`}
         >
@@ -41,10 +41,11 @@ export default function ProjectCard({
               </li>
             ))}
           </ul>
-          <div className="mt-10 md:mt-auto flex gap-4">
+          <div className="mt-10 md:mt-auto md:max-w-max md:ml-auto lg:max-w-full lg:ml-0 flex gap-4">
             <FilledButton
               href={liveDemoLink}
               title="Live View"
+              fullWidth
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +66,7 @@ export default function ProjectCard({
             <OutlinedButton
               href={githubLink}
               title="Source"
-              full
+              fullWidth
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +88,7 @@ export default function ProjectCard({
       </article>
       <div
         className={classNames(
-          "md:w-[600px] w-full relative z-0",
+          "lg:w-[600px] min-w-[600px] w-full relative z-0",
           "before:absolute before:-z-10",
           "dark:before:w-[70%] dark:before:h-[70%]",
           "before:w-[90%] before:h-[90%]",
