@@ -90,27 +90,12 @@ import Creativity from "components/_creatures/Creativity.astro";
       class="w-full md:w-1/3 flex md:flex-col flex-row md:gap-4 gap-2 justify-evenly"
     >
       <CreatureCard title="Self-Learner">
-        <!-- <img
-          src="google.svg"
-          alt="book creature named Self Learn"
-          class="h-36 md:h-40 creature opacity-0 -translate-y-5"
-        /> -->
         <SelfLearner />
       </CreatureCard>
       <CreatureCard title="Passionate">
-        <!-- <img
-          src="srce.svg"
-          alt="heart creature named Passion"
-          class="h-36 md:h-40 creature opacity-0 -translate-y-5"
-        /> -->
         <Passionate />
       </CreatureCard>
       <CreatureCard title="Creative">
-        <!-- <img
-          src="lampa.svg"
-          alt="light bulb creature named Creativity"
-          class="h-36 md:h-40 md:pb-4 creature opacity-0 -translate-y-5"
-        /> -->
         <Creativity />
       </CreatureCard>
     </div>
@@ -121,6 +106,7 @@ import Creativity from "components/_creatures/Creativity.astro";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
+  const scrollTriggerEl = document.getElementById("about");
   const ctx = gsap.context(() => {
     gsap.to(".box", {
       scale: 1,
@@ -128,8 +114,8 @@ import Creativity from "components/_creatures/Creativity.astro";
       ease: "power2.easeOut",
       duration: 0.25,
       scrollTrigger: {
-        trigger: document.getElementById("about"),
-        start: "top 20%",
+        trigger: scrollTriggerEl,
+        start: "top 80%",
       },
       stagger: {
         amount: 0.3,
@@ -142,8 +128,8 @@ import Creativity from "components/_creatures/Creativity.astro";
       duration: 0.5,
       delay: 0.5,
       scrollTrigger: {
-        trigger: document.getElementById("about"),
-        start: "top 20%",
+        trigger: scrollTriggerEl,
+        start: "top 80%",
       },
       stagger: {
         amount: 0.5,

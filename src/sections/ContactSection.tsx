@@ -40,7 +40,8 @@ export default function ContactSection() {
         duration: 0.2,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 20%",
+          start: "top 80%",
+          markers: true,
         },
       });
       gsap.to(".box2", {
@@ -51,7 +52,7 @@ export default function ContactSection() {
         delay: 0.1,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 20%",
+          start: "top 60%",
         },
       });
       gsap.to(".box3", {
@@ -62,7 +63,7 @@ export default function ContactSection() {
         delay: 0.2,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 20%",
+          start: "top 60%",
         },
       });
       gsap.to(".box4", {
@@ -73,7 +74,7 @@ export default function ContactSection() {
         delay: 0.3,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 20%",
+          start: "top 40%",
         },
       });
     }, container);

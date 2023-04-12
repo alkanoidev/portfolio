@@ -7,7 +7,10 @@ import FilledButton from "./buttons/FilledButton";
 <div class="py-4 w-full mt-10">
   <nav
     id="navbar"
-    class="flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl px-2 sm:px-0 -translate-y-32 opacity-0 scale-x-95"
+    class={classNames(
+      "flex justify-between items-center mx-auto 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-full sm:max-w-xl px-2 lg:px-0",
+      "-translate-y-36 scale-x-90"
+    )}
   >
     <a
       href="/"

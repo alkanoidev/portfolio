@@ -88,7 +88,7 @@ export default function ProjectCard({
       </article>
       <div
         className={classNames(
-          "lg:w-[600px] min-w-[600px] w-full relative z-0",
+          "lg:w-[600px] sm:min-w-[600px] relative z-0",
           "before:absolute before:-z-10",
           "dark:before:w-[70%] dark:before:h-[70%]",
           "before:w-[90%] before:h-[90%]",
