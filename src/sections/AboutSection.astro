@@ -16,30 +16,49 @@ import Creativity from "components/_creatures/Creativity.astro";
   <div class="flex md:flex-row flex-col w-full max-w-5xl justify-center gap-4">
     <div
       class={classNames(
-        "box w-full md:w-2/3 flex flex-col gap-5 rounded-4xl md:rounded-5xl md:p-8 p-6",
-        "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
-        "opacity-0 scale-95"
+        "w-full md:w-2/3 flex flex-col gap-5 rounded-4xl md:rounded-5xl md:p-8 p-6",
+        "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark"
       )}
     >
-      <h1 class="text-3xl md:text-4xl font-bold">
+      <h1
+        class={classNames(
+          "text-3xl md:text-4xl font-bold",
+          "paragraph opacity-0 -translate-y-5"
+        )}
+      >
         I’m Filip, a passionate and creative individual who thrives on
         self-learning and exploring new ideas.
       </h1>
       <div class="mt-6 space-y-7 text-base md:text-lg md:px-2">
-        <p class="text-zinc-800 dark:text-zinc-400">
+        <p
+          class={classNames(
+            "text-zinc-800 dark:text-zinc-400",
+            "paragraph opacity-0 -translate-y-5"
+          )}
+        >
           I’ve loved making things for as long as I can remember, and wrote my
           first program when I was 6 years old, just two weeks after my mom
           brought home the brand new Macintosh LC 550 that I taught myself to
           type on.
         </p>
-        <p class="text-zinc-800 dark:text-zinc-400">
+        <p
+          class={classNames(
+            "text-zinc-800 dark:text-zinc-400",
+            "paragraph opacity-0 -translate-y-5"
+          )}
+        >
           The only thing I loved more than computers as a kid was space. When I
           was 8, I climbed the 40-foot oak tree at the back of our yard while
           wearing my older sister’s motorcycle helmet, counted down from three,
           and jumped — hoping the tree was tall enough that with just a bit of
           momentum I’d be able to get to orbit.
         </p>
-        <p class="text-zinc-800 dark:text-zinc-400">
+        <p
+          class={classNames(
+            "text-zinc-800 dark:text-zinc-400",
+            "paragraph opacity-0 -translate-y-5"
+          )}
+        >
           I spent the next few summers indoors working on a rocket design, while
           I recovered from the multiple surgeries it took to fix my badly broken
           legs. It took nine iterations, but when I was 15 I sent my dad’s
@@ -87,7 +106,7 @@ import Creativity from "components/_creatures/Creativity.astro";
       </div>
     </div>
     <div
-      class="w-full md:w-1/3 flex md:flex-col flex-row md:gap-4 gap-2 justify-evenly"
+      class="creatures w-full md:w-1/3 flex md:flex-col flex-row md:gap-4 gap-2 justify-evenly"
     >
       <CreatureCard title="Self-Learner">
         <SelfLearner />
@@ -108,17 +127,53 @@ import Creativity from "components/_creatures/Creativity.astro";
 
   const scrollTriggerEl = document.getElementById("about");
   const ctx = gsap.context(() => {
-    gsap.to(".box", {
-      scale: 1,
+    // gsap
+    //   .matchMedia()
+    //   .add("(min-width: 1024px)", () => {
+    //     // Desktop
+    //     gsap.to(".box", {
+    //       scale: 1,
+    //       opacity: 1,
+    //       ease: "power2.easeOut",
+    //       duration: 0.25,
+    //       scrollTrigger: {
+    //         trigger: scrollTriggerEl,
+    //         start: "top 80%",
+    //       },
+    //       stagger: {
+    //         amount: 0.3,
+    //       },
+    //     });
+    //     gsap.to(".creature", {
+    //       opacity: 1,
+    //       y: 0,
+    //       ease: "power1.easeIn",
+    //       duration: 0.5,
+    //       delay: 0.5,
+    //       scrollTrigger: {
+    //         trigger: scrollTriggerEl,
+    //         start: "top 80%",
+    //       },
+    //       stagger: {
+    //         amount: 0.5,
+    //       },
+    //     });
+    //   })
+    //   .add("(max-width: 799px)", () => {
+    //     // Mobile
+    //   });
+    gsap.to(".paragraph", {
       opacity: 1,
-      ease: "power2.easeOut",
-      duration: 0.25,
+      y: 0,
+      ease: "power1.easeIn",
+      duration: 0.5,
       scrollTrigger: {
         trigger: scrollTriggerEl,
         start: "top 80%",
+        end: "70% 80%",
       },
       stagger: {
-        amount: 0.3,
+        amount: 0.5,
       },
     });
     gsap.to(".creature", {
@@ -128,7 +183,7 @@ import Creativity from "components/_creatures/Creativity.astro";
       duration: 0.5,
       delay: 0.5,
       scrollTrigger: {
-        trigger: scrollTriggerEl,
+        trigger: ".creatures",
         start: "top 80%",
       },
       stagger: {

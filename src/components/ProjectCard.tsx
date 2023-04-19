@@ -34,7 +34,7 @@ export default function ProjectCard({
           <ul className="flex flex-wrap items-center gap-3 pb-4">
             {technologies.map((technology) => (
               <li
-                className="text-primary-light text-sm dark:text-primary-dark font-semibold ring-2 dark:ring-outline-dark/60 ring-outline-light/60 px-2 py-1 rounded-full"
+                className="text-primary-light text-sm dark:text-primary-dark font-semibold ring-2 dark:ring-primary-dark/50 ring-primary-light/50 px-2 py-1 rounded-full"
                 key={technology}
               >
                 {technology}
@@ -67,6 +67,7 @@ export default function ProjectCard({
               href={githubLink}
               title="Source"
               fullWidth
+              isInProjectCard
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
