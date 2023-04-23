@@ -33,8 +33,10 @@ export default function ProjectsSection() {
         "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-2"
       )}
     >
-      <h1 className="text-4xl sm:text-5xl font-bold">Projects</h1>
-      <p className="text-2xl sm:text-3xl text-zinc-700 dark:text-zinc-300 text-center">
+      <h1 className="text-4xl sm:text-5xl font-bold text-on-primary-box-light dark:text-on-primary-box-dark">
+        Projects
+      </h1>
+      <p className="text-2xl sm:text-3xl text-on-primary-box-light dark:text-on-primary-box-dark text-center">
         Things I’ve made trying to put my dent in the universe.
       </p>
       <div className="projects w-full flex flex-col flex-wrap justify-center gap-24">

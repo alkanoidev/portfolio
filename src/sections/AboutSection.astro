@@ -32,7 +32,7 @@ import Creativity from "components/_creatures/Creativity.astro";
       <div class="mt-6 space-y-7 text-base md:text-lg md:px-2">
         <p
           class={classNames(
-            "text-zinc-800 dark:text-zinc-400",
+            "text-on-surface-light dark:text-on-surface-dark/70",
             "paragraph opacity-0 -translate-y-5"
           )}
         >
@@ -43,7 +43,7 @@ import Creativity from "components/_creatures/Creativity.astro";
         </p>
         <p
           class={classNames(
-            "text-zinc-800 dark:text-zinc-400",
+            "text-on-surface-light dark:text-on-surface-dark/70",
             "paragraph opacity-0 -translate-y-5"
           )}
         >
@@ -55,7 +55,7 @@ import Creativity from "components/_creatures/Creativity.astro";
         </p>
         <p
           class={classNames(
-            "text-zinc-800 dark:text-zinc-400",
+            "text-on-surface-light dark:text-on-surface-dark/70",
             "paragraph opacity-0 -translate-y-5"
           )}
         >
@@ -70,7 +70,7 @@ import Creativity from "components/_creatures/Creativity.astro";
       <h2>Technologies</h2>
 
       <p>Besides web dev i do android</p>
-      <div class="flex justify-center md:max-w-fit gap-4 mt-auto">
+      <div class="flex justify-center items-center md:max-w-fit gap-4 mt-auto">
         <FilledButton title="Contact">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -127,41 +127,6 @@ import Creativity from "components/_creatures/Creativity.astro";
 
   const scrollTriggerEl = document.getElementById("about");
   const ctx = gsap.context(() => {
-    // gsap
-    //   .matchMedia()
-    //   .add("(min-width: 1024px)", () => {
-    //     // Desktop
-    //     gsap.to(".box", {
-    //       scale: 1,
-    //       opacity: 1,
-    //       ease: "power2.easeOut",
-    //       duration: 0.25,
-    //       scrollTrigger: {
-    //         trigger: scrollTriggerEl,
-    //         start: "top 80%",
-    //       },
-    //       stagger: {
-    //         amount: 0.3,
-    //       },
-    //     });
-    //     gsap.to(".creature", {
-    //       opacity: 1,
-    //       y: 0,
-    //       ease: "power1.easeIn",
-    //       duration: 0.5,
-    //       delay: 0.5,
-    //       scrollTrigger: {
-    //         trigger: scrollTriggerEl,
-    //         start: "top 80%",
-    //       },
-    //       stagger: {
-    //         amount: 0.5,
-    //       },
-    //     });
-    //   })
-    //   .add("(max-width: 799px)", () => {
-    //     // Mobile
-    //   });
     gsap.to(".paragraph", {
       opacity: 1,
       y: 0,

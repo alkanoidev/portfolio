@@ -20,11 +20,15 @@ export default function ProjectCard({
           className={`flex flex-col justify-between h-full gap-3 transition`}
         >
           <div>
-            <h1 className="text-2xl font-semibold capitalize">{title}</h1>
-            <h2 className="font-semibold">{year}</h2>
+            <h1 className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark">
+              {title}
+            </h1>
+            <h2 className="font-semibold text-on-primary-box-light dark:text-on-primary-box-dark">
+              {year}
+            </h2>
           </div>
           <div>
-            <p className="text-base md:text-lg text-zinc-800 dark:text-zinc-300">
+            <p className="text-base md:text-lg text-on-primary-box-light dark:text-on-primary-box-dark">
               {description}
             </p>
             <div className="-ml-3 max-w-fit">

@@ -66,7 +66,7 @@ export default function DialogBasic({
                   {title}
                 </Dialog.Title>
                 <div className="mt-4">
-                  <p className="text-base text-zinc-800 dark:text-zinc-400">
+                  <p className="text-base text-on-surface-light/90 dark:text-on-surface-dark/50">
                     {body}
                   </p>
                 </div>
