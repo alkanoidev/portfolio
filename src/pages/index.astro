@@ -66,13 +66,13 @@ import Footer from "components/Footer.astro";
   </body>
 </html>
 
-<style is:global>
+<style is:global type="scss">
   * {
     @apply text-on-light dark:text-on-dark;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-display: optional;
-    color-scheme: dark;
+    color-scheme: light dark;
   }
   html {
     -webkit-tap-highlight-color: transparent;
@@ -83,24 +83,8 @@ import Footer from "components/Footer.astro";
     @apply bg-light dark:bg-dark transition duration-500;
   }
   ::selection {
-    background-color: gray;
+    @apply bg-primary-light text-on-primary-light;
+    @apply dark:bg-primary-dark dark:text-on-primary-dark;
     border-radius: 10px;
-    color: white;
-  }
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #383838;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #999999;
   }
 </style>

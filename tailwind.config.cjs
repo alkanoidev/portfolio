@@ -30,7 +30,6 @@ module.exports = {
         "on-surface": { dark: "#e2e2e5", light: "#1a1c1e" },
 
         outline: { dark: "#8c9198", light: "#72787e" },
-
       },
       borderRadius: {
         "4xl": "2rem",
