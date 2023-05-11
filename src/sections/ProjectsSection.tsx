@@ -30,22 +30,22 @@ export default function ProjectsSection() {
       id="projects"
       ref={projectsSectionRef}
       className={classNames(
-        "mt-52 h-full flex flex-col justify-center items-center gap-10 sm:px-0 px-2"
+        "mt-52 h-full flex flex-col justify-center items-center sm:px-0 px-2"
       )}
     >
       <h1 className="text-4xl sm:text-5xl font-bold text-on-primary-box-light dark:text-on-primary-box-dark">
         Projects
       </h1>
-      <p className="text-2xl sm:text-3xl text-on-primary-box-light dark:text-on-primary-box-dark text-center">
+      <p className="text-2xl sm:text-3xl text-on-primary-box-light dark:text-on-primary-box-dark text-center mt-5">
         Things I’ve made trying to put my dent in the universe.
       </p>
-      <div className="projects w-full flex flex-col flex-wrap justify-center gap-24">
+      <div className="projects w-full flex flex-col flex-wrap justify-center gap-24 mt-10">
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
       </div>
 
-      <p>
+      <p className="text-on-primary-box-light dark:text-on-primary-box-dark mt-5">
         <Link href="https://github.com/alkanoidev">
           check out my other projects on github.
         </Link>
