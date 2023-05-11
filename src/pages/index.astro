@@ -1,7 +1,7 @@
 ---
 import Navbar from "components/Navbar.astro";
 import HomeSection from "sections/HomeSection.astro";
-import ProjectsSection from "sections/ProjectsSection";
+import ProjectsSection from "sections/ProjectsSection.astro";
 import AboutSection from "sections/AboutSection.astro";
 import ContactSection from "sections/ContactSection";
 import Footer from "components/Footer.astro";
@@ -46,7 +46,6 @@ import Footer from "components/Footer.astro";
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-    <title>Filip Ivanovic</title>
   </head>
   <body>
     <Navbar />
@@ -55,7 +54,7 @@ import Footer from "components/Footer.astro";
     >
       <HomeSection />
 
-      <ProjectsSection client:visible />
+      <ProjectsSection />
 
       <AboutSection />
 
