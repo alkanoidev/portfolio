@@ -1,0 +1,20 @@
+* {
+  @apply text-on-light dark:text-on-dark;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-display: optional;
+  color-scheme: light dark;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  @apply scroll-pt-32;
+}
+body {
+  @apply bg-light dark:bg-dark transition duration-500;
+}
+::selection {
+  @apply bg-primary-light text-on-primary-light;
+  @apply dark:bg-primary-dark dark:text-on-primary-dark;
+  border-radius: 10px;
+}

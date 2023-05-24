@@ -1,89 +1,17 @@
 ---
-import Navbar from "components/Navbar.astro";
-import HomeSection from "sections/HomeSection.astro";
-import ProjectsSection from "sections/ProjectsSection.astro";
+import BaseLayout from "layouts/BaseLayout.astro";
 import AboutSection from "sections/AboutSection.astro";
 import ContactSection from "sections/ContactSection";
-import Footer from "components/Footer.astro";
+import HomeSection from "sections/HomeSection.astro";
+import ProjectsSection from "sections/ProjectsSection.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/Avatar.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <!-- primary-dark Meta Tags -->
-    <title>Filip Ivanovic</title>
-    <meta name="title" content="Filip Ivanovic" />
-    <meta
-      name="description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
+<BaseLayout title="Filip Ivanovic">
+  <HomeSection />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://filipivanovic.netlify.app/" />
-    <meta property="og:title" content="Filip Ivanovic" />
-    <meta
-      property="og:description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
-    <meta property="og:image" content="/thumbnail.png" />
+  <ProjectsSection />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://filipivanovic.netlify.app/" />
-    <meta property="twitter:title" content="Filip Ivanovic" />
-    <meta
-      property="twitter:description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
-    <meta property="twitter:image" content="/thumbnail.png" />
+  <AboutSection />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com/" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <Navbar />
-    <div
-      class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
-    >
-      <HomeSection />
-
-      <ProjectsSection />
-
-      <AboutSection />
-
-      <ContactSection client:load />
-
-      <Footer />
-    </div>
-  </body>
-</html>
-
-<style is:global type="scss">
-  * {
-    @apply text-on-light dark:text-on-dark;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-display: optional;
-    color-scheme: light dark;
-  }
-  html {
-    -webkit-tap-highlight-color: transparent;
-    scroll-behavior: smooth;
-    @apply scroll-pt-32;
-  }
-  body {
-    @apply bg-light dark:bg-dark transition duration-500;
-  }
-  ::selection {
-    @apply bg-primary-light text-on-primary-light;
-    @apply dark:bg-primary-dark dark:text-on-primary-dark;
-    border-radius: 10px;
-  }
-</style>
+  <ContactSection client:load />
+</BaseLayout>
