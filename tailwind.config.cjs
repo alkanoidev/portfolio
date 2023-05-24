@@ -37,6 +37,10 @@ module.exports = {
         "4xl": "2rem",
         "5xl": "3rem",
       },
+      backgroundOpacity: {
+        "hover": "12%",
+        "focus": "16%"
+      },
     },
   },
   plugins: [],

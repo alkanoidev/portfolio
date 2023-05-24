@@ -10,7 +10,7 @@ import Creativity from "components/_creatures/Creativity.astro";
 ---
 
 <div
-  class="h-full w-full flex flex-col justify-center items-center gap-10 mt-44 md:mt-56 md:px-0 px-1"
+  class="h-full w-full flex flex-col justify-center items-center gap-10 mt-6 md:mt-10 md:px-0 px-1"
   id="about"
 >
   <div class="flex md:flex-row flex-col w-full max-w-5xl justify-center gap-4">
@@ -29,17 +29,18 @@ import Creativity from "components/_creatures/Creativity.astro";
         I’m Filip, a passionate and creative individual who thrives on
         self-learning and exploring new ideas.
       </h1>
-      <div class="mt-6 space-y-7 text-base md:text-lg md:px-2">
+      <div class="space-y-7 text-base md:text-lg">
         <p
           class={classNames(
             "text-on-surface-light dark:text-on-surface-dark/70",
             "paragraph opacity-0 -translate-y-5"
           )}
         >
-          I’ve loved making things for as long as I can remember, and wrote my
-          first program when I was 6 years old, just two weeks after my mom
-          brought home the brand new Macintosh LC 550 that I taught myself to
-          type on.
+          My passion for self-learning, creativity, and exploration drives me to
+          constantly seek out new experiences and push the boundaries of my own
+          potential. I am excited to embark on new adventures, collaborate with
+          like-minded individuals, and contribute my unique perspectives and
+          talents to the world around me.
         </p>
         <p
           class={classNames(
@@ -47,29 +48,43 @@ import Creativity from "components/_creatures/Creativity.astro";
             "paragraph opacity-0 -translate-y-5"
           )}
         >
-          The only thing I loved more than computers as a kid was space. When I
-          was 8, I climbed the 40-foot oak tree at the back of our yard while
-          wearing my older sister’s motorcycle helmet, counted down from three,
-          and jumped — hoping the tree was tall enough that with just a bit of
-          momentum I’d be able to get to orbit.
-        </p>
-        <p
-          class={classNames(
-            "text-on-surface-light dark:text-on-surface-dark/70",
-            "paragraph opacity-0 -translate-y-5"
-          )}
-        >
-          I spent the next few summers indoors working on a rocket design, while
-          I recovered from the multiple surgeries it took to fix my badly broken
-          legs. It took nine iterations, but when I was 15 I sent my dad’s
-          Blackberry into orbit and was able to transmit a photo back down to
-          our family computer from space.
+          I'm constantly seeking ways to expand my knowledge and push the
+          boundaries of my understanding. I find immense joy in the process of
+          acquiring new skills and discovering innovative concepts.
         </p>
       </div>
+      <h2 class="text-lg">Tools & Technologies</h2>
+      <ul class="flex flex-wrap items-center gap-3 pb-4">
+        {
+          [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "NextJS",
+            "TailwindCSS",
+            "SASS",
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "Git",
+            "Android",
+            "Java",
+          ].map((technology) => (
+            <li
+              class={classNames(
+                "text-on-surface-light dark:text-on-surface-dark text-sm font-semibold",
+                "ring-2 ring-outline-light dark:ring-outline-dark ring-opacity-70 dark:ring-opacity-70",
+                "px-2 py-1 rounded-full"
+              )}
+            >
+              {technology}
+            </li>
+          ))
+        }
+      </ul>
 
-      <h2>Technologies</h2>
-
-      <p>Besides web dev i do android</p>
       <div class="flex justify-center items-center md:max-w-fit gap-4 mt-auto">
         <FilledButton title="Contact">
           <svg
