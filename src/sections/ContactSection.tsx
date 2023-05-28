@@ -171,12 +171,8 @@ export default function ContactSection() {
               className={classNames(
                 "p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
-                // hover
-                "hover:bg-primary-light dark:hover:bg-primary-dark",
-                "hover:bg-opacity-hover dark:hover:bg-opacity-hover",
-                // focus
-                "focus:bg-primary-light dark:focus:bg-primary-dark",
-                "focus:bg-opacity-focus dark:focus:bg-opacity-focus focus:outline-none",
+                "border-2 border-outline-light dark:border-outline-dark",
+                "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
                 "box2 opacity-0 scale-95"
               )}
               type="text"
@@ -188,12 +184,8 @@ export default function ContactSection() {
               className={classNames(
                 "p-6 md:p-8 rounded-3xl md:rounded-4xl transition w-full text-lg",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
-                // hover
-                "hover:bg-primary-light dark:hover:bg-primary-dark",
-                "hover:bg-opacity-hover dark:hover:bg-opacity-hover",
-                // focus
-                "focus:bg-primary-light dark:focus:bg-primary-dark",
-                "focus:bg-opacity-focus dark:focus:bg-opacity-focus focus:outline-none",
+                "border-2 border-outline-light dark:border-outline-dark",
+                "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
                 "box3 opacity-0 scale-95"
               )}
               type="email"
@@ -205,20 +197,18 @@ export default function ContactSection() {
           <div
             className={classNames(
               "w-full relative z-0 pb-20 rounded-4xl md:rounded-5xl transition",
-              // hover
-              "hover:bg-primary-light dark:hover:bg-primary-dark",
-              "hover:bg-opacity-hover dark:hover:bg-opacity-hover",
-              // focus
+              "bg-surface-light dark:bg-surface-dark",
               isTextareaFocused
-                ? "bg-primary-light dark:bg-primary-dark bg-opacity-focus dark:bg-opacity-focus"
-                : "bg-surface-light dark:bg-surface-dark",
+                ? "border-2 border-primary-light dark:border-primary-dark outline-none"
+                : "border-2 border-outline-light dark:border-outline-dark",
               "box4 opacity-0 scale-95"
             )}
           >
             <textarea
               className={classNames(
                 "p-6 md:p-8 rounded-4xl md:rounded-5xl transition resize-none text-lg w-full mb-1",
-                "bg-transparent focus:outline-none"
+                "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
+                "focus:outline-none focus:placeholder:text-transparent"
               )}
               name="message"
               placeholder="Message"
@@ -229,7 +219,10 @@ export default function ContactSection() {
             />
             <div
               className={classNames(
-                "absolute -right-1 -bottom-1 z-10 bg-light dark:bg-dark rounded-tl-4xl md:rounded-tl-3xl p-4 transition"
+                "absolute -right-[2px] -bottom-[2px] z-10 bg-light dark:bg-dark rounded-tl-4xl md:rounded-tl-3xl p-4 transition",
+                isTextareaFocused
+                  ? "border-t-2 border-l-2 border-t-primary-light border-l-primary-light dark:border-t-primary-dark dark:border-l-primary-dark border-b-2 border-r-2 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
+                  : "border-t-2 border-l-2 border-t-outline-light border-l-outline-light dark:border-t-outline-dark dark:border-l-outline-dark border-b-2 border-r-2 border-b-light border-r-light dark:border-b-dark dark:border-r-dark"
               )}
             >
               <FilledButton
