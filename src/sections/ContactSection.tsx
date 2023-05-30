@@ -33,47 +33,17 @@ export default function ContactSection() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
-      gsap.to(".box1", {
+      gsap.to(".box", {
         scale: 1,
         opacity: 1,
-        ease: "power1.easeOut",
-        duration: 0.2,
+        ease: "power1.easeIn",
+        duration: 0.5,
         scrollTrigger: {
           trigger: container.current,
           start: "top 80%",
         },
-      });
-      gsap.to(".box2", {
-        scale: 1,
-        opacity: 1,
-        ease: "power2.easeOut",
-        duration: 0.1,
-        delay: 0.1,
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 60%",
-        },
-      });
-      gsap.to(".box3", {
-        scale: 1,
-        opacity: 1,
-        ease: "power2.easeOut",
-        duration: 0.1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 60%",
-        },
-      });
-      gsap.to(".box4", {
-        scale: 1,
-        opacity: 1,
-        ease: "power2.easeOut",
-        duration: 0.1,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 40%",
+        stagger: {
+          amount: 1,
         },
       });
     }, container);
@@ -82,7 +52,7 @@ export default function ContactSection() {
   }, []);
   return (
     <div
-      className="h-full flex flex-col justify-center items-center mt-6 md:mt-10 sm:px-0 px-1 mb-4"
+      className="h-full flex flex-col justify-center items-center mt-8 sm:px-0 px-1 mb-4"
       id="contact"
       ref={container}
     >
@@ -111,7 +81,7 @@ export default function ContactSection() {
       <div className="w-full max-w-5xl">
         <div
           className={classNames(
-            "box1 w-full rounded-4xl md:rounded-5xl p-6 md:p-8 space-y-4 opacity-0 scale-95",
+            "box w-full rounded-4xl md:rounded-5xl p-6 md:p-8 space-y-4 opacity-0 scale-95",
             "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark"
           )}
         >
@@ -192,7 +162,7 @@ export default function ContactSection() {
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 "border-2 border-outline-light dark:border-outline-dark",
                 "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
-                "box2 opacity-0 scale-95"
+                "box opacity-0 scale-95 duration-[0ms]"
               )}
               type="text"
               name="name"
@@ -205,7 +175,7 @@ export default function ContactSection() {
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 "border-2 border-outline-light dark:border-outline-dark",
                 "focus:border-2 focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:placeholder:text-transparent",
-                "box3 opacity-0 scale-95"
+                "box opacity-0 scale-95 duration-[0ms]"
               )}
               type="email"
               name="email"
@@ -220,7 +190,7 @@ export default function ContactSection() {
               isTextareaFocused
                 ? "border-2 border-primary-light dark:border-primary-dark outline-none"
                 : "border-2 border-outline-light dark:border-outline-dark",
-              "box4 opacity-0 scale-95"
+              "box opacity-0 scale-95 duration-[0ms]"
             )}
           >
             <textarea

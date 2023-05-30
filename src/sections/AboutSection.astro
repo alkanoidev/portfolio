@@ -10,30 +10,25 @@ import Creativity from "components/_creatures/Creativity.astro";
 ---
 
 <div
-  class="h-full w-full flex flex-col justify-center items-center gap-10 mt-6 md:mt-10 md:px-0 px-1"
+  class="h-full w-full flex flex-col justify-center items-center mt-24 md:px-0 px-1"
   id="about"
 >
   <div class="flex md:flex-row flex-col w-full max-w-5xl justify-center gap-4">
     <div
       class={classNames(
         "w-full md:w-2/3 flex flex-col gap-5 rounded-4xl md:rounded-5xl md:p-8 p-6",
-        "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark"
+        "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
+        "box opacity-0 scale-95"
       )}
     >
-      <h1
-        class={classNames(
-          "text-3xl md:text-4xl font-bold",
-          "paragraph opacity-0 -translate-y-5"
-        )}
-      >
+      <h1 class={classNames("text-3xl md:text-4xl font-bold")}>
         I’m Filip, a passionate and creative individual who thrives on
         self-learning and exploring new ideas.
       </h1>
       <div class="space-y-7 text-base md:text-lg">
         <p
           class={classNames(
-            "text-on-surface-light dark:text-on-surface-dark/70",
-            "paragraph opacity-0 -translate-y-5"
+            "text-on-surface-light dark:text-on-surface-dark/70"
           )}
         >
           My passion for self-learning, creativity, and exploration drives me to
@@ -44,8 +39,7 @@ import Creativity from "components/_creatures/Creativity.astro";
         </p>
         <p
           class={classNames(
-            "text-on-surface-light dark:text-on-surface-dark/70",
-            "paragraph opacity-0 -translate-y-5"
+            "text-on-surface-light dark:text-on-surface-dark/70"
           )}
         >
           I'm constantly seeking ways to expand my knowledge and push the
@@ -53,37 +47,39 @@ import Creativity from "components/_creatures/Creativity.astro";
           acquiring new skills and discovering innovative concepts.
         </p>
       </div>
-      <h2 class="text-lg">Tools & Technologies</h2>
-      <ul class="flex flex-wrap items-center gap-3 pb-4">
-        {
-          [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "NextJS",
-            "TailwindCSS",
-            "SASS",
-            "PHP",
-            "Laravel",
-            "MySQL",
-            "Git",
-            "Android",
-            "Java",
-          ].map((technology) => (
-            <li
-              class={classNames(
-                "text-on-surface-light dark:text-on-surface-dark text-sm font-semibold",
-                "ring-2 ring-outline-light dark:ring-outline-dark ring-opacity-70 dark:ring-opacity-70",
-                "px-2 py-1 rounded-full"
-              )}
-            >
-              {technology}
-            </li>
-          ))
-        }
-      </ul>
+      <div>
+        <h2 class="text-lg">Tools & Technologies</h2>
+        <ul class="flex flex-wrap items-center gap-3 pb-4 mt-2">
+          {
+            [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "NextJS",
+              "TailwindCSS",
+              "SASS",
+              "PHP",
+              "Laravel",
+              "MySQL",
+              "Git",
+              "Android",
+              "Java",
+            ].map((technology) => (
+              <li
+                class={classNames(
+                  "text-on-surface-light dark:text-on-surface-dark text-sm font-semibold",
+                  "ring-2 ring-outline-light dark:ring-outline-dark ring-opacity-70 dark:ring-opacity-70",
+                  "px-2 py-1 rounded-full"
+                )}
+              >
+                {technology}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
       <div class="flex justify-center items-center md:max-w-fit gap-4 mt-auto">
         <FilledButton title="Contact">
@@ -138,36 +134,22 @@ import Creativity from "components/_creatures/Creativity.astro";
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+
   gsap.registerPlugin(ScrollTrigger);
 
   const scrollTriggerEl = document.getElementById("about");
   const ctx = gsap.context(() => {
-    gsap.to(".paragraph", {
+    gsap.to(".box", {
       opacity: 1,
-      y: 0,
+      scale: 1,
       ease: "power1.easeIn",
       duration: 0.5,
       scrollTrigger: {
         trigger: scrollTriggerEl,
         start: "top 80%",
-        end: "70% 80%",
       },
       stagger: {
-        amount: 0.5,
-      },
-    });
-    gsap.to(".creature", {
-      opacity: 1,
-      y: 0,
-      ease: "power1.easeIn",
-      duration: 0.5,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".creatures",
-        start: "top 80%",
-      },
-      stagger: {
-        amount: 0.5,
+        amount: 1,
       },
     });
   }, "#about");
