@@ -15,7 +15,7 @@ function CreatureCard({
         "box opacity-0 scale-95"
       )}
     >
-      <h1 className="md:text-2xl font-semibold">{title}</h1>
+      <h1 className="text-xl md:text-2xl">{title}</h1>
       {children}
     </div>
   );
