@@ -2,6 +2,9 @@
 import MobileNav from "components/MobileNav";
 import classNames from "utils/classNames";
 import FilledButton from "./buttons/FilledButton";
+import OutlinedButton from "./buttons/OutlinedButton";
+
+const props = Astro.props;
 ---
 
 <div class="py-4 w-full mt-10">
@@ -12,29 +15,56 @@ import FilledButton from "./buttons/FilledButton";
       "opacity-0 -translate-y-10"
     )}
   >
-    <a
-      href="/"
-      aria-label="Home"
-      class={classNames(
-        "ring-4 p-1 rounded-full transition sm:ml-0 ml-2",
-        "ring-outline-light dark:ring-outline-dark focus:ring-outline-light dark:focus:ring-outline-dark",
-        "focus:ring-4 focus:outline-none"
-      )}
-    >
-      <img
-        id="avatar"
-        alt="me"
-        src="/Avatar.webp"
-        class="sm:max-w-[4rem] max-w-[3rem] transition"
-      />
-    </a>
-    <div
-      class={classNames(
-        "line bg-gradient-to-r h-[4px] w-full",
-        "from-outline-light via-light to-outline-light dark:from-outline-dark dark:via-dark dark:to-outline-dark"
-      )}
-    >
-    </div>
+    {
+      !props.isOutlineHidden ? (
+        <a
+          href="/"
+          aria-label="Home"
+          class={classNames(
+            "ring-4 p-1 rounded-full transition sm:ml-0 ml-2",
+            "ring-outline-light dark:ring-outline-dark focus:ring-outline-light dark:focus:ring-outline-dark",
+            "focus:ring-4 focus:outline-none"
+          )}
+        >
+          <img
+            id="avatar"
+            alt="me"
+            src="/Avatar.webp"
+            class="sm:max-w-[4rem] max-w-[3rem] transition"
+          />
+        </a>
+      ) : null
+    }
+    {
+      props.isOutlineHidden ? (
+        <OutlinedButton title="Back" href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            class="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+            />
+          </svg>
+        </OutlinedButton>
+      ) : null
+    }
+    {
+      !props.isOutlineHidden ? (
+        <div
+          class={classNames(
+            "line bg-gradient-to-r h-[4px] w-full",
+            "from-outline-light via-light to-outline-light dark:from-outline-dark dark:via-dark dark:to-outline-dark"
+          )}
+        />
+      ) : null
+    }
+
     <ul class="md:flex hidden gap-4 items-center">
       <li>
         <a
@@ -42,8 +72,11 @@ import FilledButton from "./buttons/FilledButton";
           aria-label="Projects Section"
           class={classNames(
             "py-3 px-6 transition rounded-full",
-            "ring-4 hover:cursor-pointer ring-outline-light dark:ring-outline-dark",
-            "focus:outline-none focus:ring-4",
+            " hover:cursor-pointer ring-outline-light dark:ring-outline-dark",
+            "focus:outline-none",
+            props.isOutlineHidden
+              ? "ring-0 focus:ring-0"
+              : "focus:ring-4 ring-4",
             // hover
             "hover:bg-primary-light dark:hover:bg-primary-dark",
             "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",

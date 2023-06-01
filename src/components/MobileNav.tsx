@@ -13,8 +13,8 @@ export default function MobileNav() {
           "py-3 px-3 transition rounded-lg ring-4",
           "dark:ring-outline-dark ring-outline-light focus:outline-none",
           // hover
-          "hover:bg-primary-light dark:hover:bg-primary-dark",
-          "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]"
+          "hover:bg-surface-light dark:hover:bg-surface-dark",
+          "focus:bg-surface-light dark:focus:bg-surface-dark"
         )}
       >
         {({ open }) =>
