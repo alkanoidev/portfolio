@@ -1,7 +1,5 @@
 ---
 layout: ../../layouts/ProjectPageLayout.astro
 title: My Blog Post
-draft: true
+id: 0
 ---
-
-Comming Soon!

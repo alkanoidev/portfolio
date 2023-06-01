@@ -86,7 +86,7 @@ export default function ContactSection() {
           )}
         >
           <h1 className="text-3xl md:text-4xl font-bold">Get In Touch</h1>
-          <p className="text-xl md:text-2xl text-on-surface-light dark:text-on-surface-dark/70">
+          <p className="text-xl md:text-2xl">
             I would love to hear from you and discuss any potential
             opportunities or collaborations.
           </p>

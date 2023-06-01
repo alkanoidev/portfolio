@@ -15,43 +15,42 @@
     ],
     "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "#"
+    "readMoreLink": "/project/filip-blog"
   },
   {
-    "id": 1,
-    "title": "nasa apis",
-    "description": "Explore NASA apis such as Picture Of the Day, Mars Rover Photos and NASA Image and Video Library",
-    "image": "https://source.unsplash.com/random/600x300",
-    "githubLink": "https://github.com/alkanoidev/nasa-apis",
-    "liveDemoLink": "https://nasa-apis.netlify.app/",
+    "id": 0,
+    "title": "Personal Blog",
+    "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
+    "githubLink": "https://github.com/alkanoidev/filipblog",
+    "liveDemoLink": "https://filipblog.netlify.app/",
+    "repoName": "filipblog",
     "technologies": [
-      "react",
-      "javascript",
-      "react router",
-      "framer motion",
-      "styled components"
+      "next-js",
+      "typescript",
+      "mdx",
+      "framer-motion",
+      "tailwindcss"
     ],
-    "comingSoon": false,
-    "repoName": "nasa-apis",
+    "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "#"
+    "readMoreLink": "/project/filip-blog"
   },
   {
-    "id": 2,
-    "title": "travel app landing page",
-    "description": "Mobile Responsive Landing page for tour and travel project",
-    "image": "https://source.unsplash.com/random/600x300",
-    "githubLink": "https://github.com/alkanoidev/travel-app-landing-page",
-    "liveDemoLink": "https://travel-app-landing-page.netlify.app/",
+    "id": 0,
+    "title": "Personal Blog",
+    "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
+    "githubLink": "https://github.com/alkanoidev/filipblog",
+    "liveDemoLink": "https://filipblog.netlify.app/",
+    "repoName": "filipblog",
     "technologies": [
-      "react",
-      "javascript",
-      "styled components",
-      "framer motion"
+      "next-js",
+      "typescript",
+      "mdx",
+      "framer-motion",
+      "tailwindcss"
     ],
-    "comingSoon": false,
-    "repoName": "travel-app-landing-page",
+    "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "#"
+    "readMoreLink": "/project/filip-blog"
   }
 ]

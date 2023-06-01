@@ -120,18 +120,14 @@ export default function ProjectCard({
 }
 
 type Props = {
+  id?: number;
   title: string;
   description: string;
   githubLink: string;
   liveDemoLink: string;
-  repoName: string;
   technologies: string[];
-  image: string;
-  commingSoon?: true;
   year: string;
-  reversed?: boolean;
-  id?: number;
-  selected?: boolean;
+  image: string;
   readMoreLink?: string;
   onClick?: () => void;
 };

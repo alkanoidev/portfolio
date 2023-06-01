@@ -1,7 +1,12 @@
 ---
 const { frontmatter } = Astro.props;
 
+import Navbar from "components/Navbar.astro";
 import "../styles/global.css";
+
+import projects from "../data/projects.json";
+import classNames from "utils/classNames";
+const project = projects.find((project) => project.id === frontmatter.id);
 ---
 
 <html>
@@ -10,7 +15,7 @@ import "../styles/global.css";
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <!-- primary-dark Meta Tags -->
-  <title>{frontmatter.title}</title>
+  <title>Filip - {project?.title}</title>
   <meta name="title" content={frontmatter.title} />
   <meta
     name="description"
@@ -43,9 +48,61 @@ import "../styles/global.css";
     rel="stylesheet"
   />
 
-  <body
-    class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
-  >
-    <slot />
+  <body class="project-page">
+    <Navbar isOutlineHidden={true} />
+
+    <main
+      class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
+    >
+      <div class="w-full mt-96">
+        <img
+          src="logo.png"
+          alt={project?.title + " Logo"}
+          width="100px"
+          height="100px"
+          class="border-2"
+        />
+        <h1 class="text-3xl md:text-4xl font-bold mt-2">
+          {project?.title}
+        </h1>
+        <span
+          class="font-semibold text-xl md:text-2xl text-on-light/70 dark:text-on-dark/70"
+        >
+          {project?.year}
+        </span>
+        <p class="text-xl md:text-2xl w-1/2 mt-2">
+          {project?.description}
+        </p>
+        <ul class="flex flex-wrap items-center gap-3 mt-4">
+          {
+            project?.technologies.map((technology) => (
+              <li
+                class={classNames(
+                  "text-on-surface-light dark:text-on-surface-dark text-sm",
+                  "ring-2 ring-outline-light dark:ring-outline-dark ring-opacity-70 dark:ring-opacity-70",
+                  "px-2 py-1 rounded-full"
+                )}
+              >
+                {technology}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <br />
+      <br />
+      here goes a floating menu for live view and github repo
+      <slot />
+    </main>
+    <script>
+      import { gsap } from "gsap";
+      const timeline = gsap.timeline({ delay: 0.3 });
+      timeline.to("#navbar", {
+        duration: 0.3,
+        opacity: 1,
+        y: 0,
+        ease: "power2.easeOut",
+      });
+    </script>
   </body>
 </html>

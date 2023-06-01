@@ -13,6 +13,14 @@ html {
 body {
   @apply bg-light dark:bg-dark transition duration-500;
 }
+body,
+.project-page {
+  @apply dark:bg-deep-sky bg-deep-sky-light;
+}
+body,
+.project-page * {
+  @apply text-on-primary-box-light dark:text-on-primary-box-dark;
+}
 ::selection {
   @apply bg-primary-light text-on-primary-light;
   @apply dark:bg-primary-dark dark:text-on-primary-dark;
