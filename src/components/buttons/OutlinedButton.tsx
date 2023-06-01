@@ -41,8 +41,8 @@ export default function OutlinedButton({
           "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]"
         )}
       >
-        {title}
         {children}
+        {title}
         {icon ? icon : null}
       </a>
     );
@@ -64,8 +64,8 @@ export default function OutlinedButton({
         "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]"
       )}
     >
-      {title}
       {children}
+      {title}
       {icon ? icon : null}
     </button>
   );
