@@ -36,29 +36,26 @@ import Link from "components/Link";
 
 <script>
   const target = document.querySelector("#projects") as HTMLElement;
-  function callback(
-    entries: IntersectionObserverEntry[],
-    _observer: IntersectionObserver
-  ) {
-    entries.map((entry) => {
-      if (entry.isIntersecting) {
-        document.body.classList.remove("bg-light");
-        document.body.classList.remove("dark:bg-dark");
 
-        document.body.classList.add("dark:bg-deep-sky");
-        document.body.classList.add("bg-deep-sky-light");
-      } else {
-        document.body.classList.remove("dark:bg-deep-sky");
-        document.body.classList.remove("bg-deep-sky-light");
+  const observer = new IntersectionObserver(
+    (entries: IntersectionObserverEntry[]) => {
+      entries.map((entry) => {
+        if (entry.isIntersecting) {
+          document.body.classList.remove("bg-light");
+          document.body.classList.remove("dark:bg-dark");
 
-        document.body.classList.add("bg-light");
-        document.body.classList.add("dark:bg-dark");
-      }
-    });
-  }
-  const observer = new IntersectionObserver(callback, {
-    root: null,
-    threshold: 0.5,
-  });
+          document.body.classList.add("dark:bg-deep-sky");
+          document.body.classList.add("bg-deep-sky-light");
+        } else {
+          document.body.classList.remove("dark:bg-deep-sky");
+          document.body.classList.remove("bg-deep-sky-light");
+
+          document.body.classList.add("bg-light");
+          document.body.classList.add("dark:bg-dark");
+        }
+      });
+    }
+  );
+
   observer.observe(target);
 </script>
