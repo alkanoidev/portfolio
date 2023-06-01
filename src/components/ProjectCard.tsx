@@ -35,11 +35,11 @@ export default function ProjectCard({
               <TextButton href={readMoreLink} title="Read More" />
             </div>
           </div>
-          <ul className="flex flex-wrap items-center gap-3 pb-4">
+          <ul className="flex flex-wrap items-center gap-3">
             {technologies.map((technology) => (
               <li
                 className={classNames(
-                  "text-on-primary-box-light dark:text-on-primary-box-dark text-sm font-semibold",
+                  "text-on-primary-box-light dark:text-on-primary-box-dark text-sm",
                   "ring-2 ring-primary-light dark:ring-primary-dark ring-opacity-70 dark:ring-opacity-70",
                   "px-2 py-1 rounded-full"
                 )}
@@ -49,7 +49,7 @@ export default function ProjectCard({
               </li>
             ))}
           </ul>
-          <div className="mt-10 md:mt-auto md:max-w-max md:ml-auto lg:max-w-full lg:ml-0 flex gap-4">
+          <div className="mt-4 md:mt-auto md:max-w-max md:ml-auto lg:max-w-full lg:ml-0 flex gap-4">
             <FilledButton
               href={liveDemoLink}
               title="Live View"
