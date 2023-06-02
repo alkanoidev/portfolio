@@ -50,7 +50,7 @@ const project = projects.find((project) => project.id === frontmatter.id);
   />
 
   <body class="dark:bg-deep-sky bg-deep-sky-light">
-    <NavbarSecondary />
+    <NavbarSecondary backId={project?.id} />
 
     <main
       class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto md:px-0 px-2"

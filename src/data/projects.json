@@ -18,7 +18,7 @@
     "readMoreLink": "/project/filip-blog"
   },
   {
-    "id": 0,
+    "id": 1,
     "title": "Personal Blog",
     "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
     "githubLink": "https://github.com/alkanoidev/filipblog",
@@ -36,7 +36,7 @@
     "readMoreLink": "/project/filip-blog"
   },
   {
-    "id": 0,
+    "id": 2,
     "title": "Personal Blog",
     "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
     "githubLink": "https://github.com/alkanoidev/filipblog",

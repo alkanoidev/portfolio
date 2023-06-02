@@ -4,6 +4,7 @@ import OutlinedButton from "./buttons/OutlinedButton";
 import TextButton from "./buttons/TextButton";
 
 export default function ProjectCard({
+  id,
   title,
   description,
   githubLink,
@@ -14,7 +15,10 @@ export default function ProjectCard({
   readMoreLink,
 }: Props) {
   return (
-    <div className="flex flex-col lg:flex-row lg:even:flex-row-reverse justify-center sm:gap-16 gap-5 w-full">
+    <div
+      id={"project__" + id}
+      className="flex flex-col lg:flex-row lg:even:flex-row-reverse justify-center sm:gap-16 gap-5 w-full"
+    >
       <article className="project bg-[#94ccff] dark:bg-[#0C2737] text-start rounded-3xl w-full min-w-[22.5rem] lg:w-[26rem] flex p-6 px-4 transition">
         <div
           className={`flex flex-col justify-between h-full gap-3 transition`}
