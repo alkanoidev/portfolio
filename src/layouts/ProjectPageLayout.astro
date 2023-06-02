@@ -49,13 +49,13 @@ const project = projects.find((project) => project.id === frontmatter.id);
     rel="stylesheet"
   />
 
-  <body class="project-page">
+  <body class="dark:bg-deep-sky bg-deep-sky-light">
     <NavbarSecondary />
 
     <main
-      class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
+      class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto md:px-0 px-2"
     >
-      <div class="w-full mt-96">
+      <div class="w-full mt-40 md:mt-48 lg:mt-64 xl:mt-72">
         <img
           src="logo.png"
           alt={project?.title + " Logo"}
@@ -71,10 +71,10 @@ const project = projects.find((project) => project.id === frontmatter.id);
         >
           {project?.year}
         </span>
-        <p class="text-xl md:text-2xl w-1/2 mt-2">
+        <p class="text-xl md:text-2xl w-2/3 md:w-1/2 mt-2">
           {project?.description}
         </p>
-        <ul class="flex flex-wrap items-center gap-3 mt-4">
+        <ul class="flex flex-wrap items-center gap-3 mt-4 w-full">
           {
             project?.technologies.map((technology) => (
               <li
@@ -107,3 +107,9 @@ const project = projects.find((project) => project.id === frontmatter.id);
     </script>
   </body>
 </html>
+
+<style>
+  * {
+    @apply text-on-primary-box-light dark:text-on-primary-box-dark;
+  }
+</style>
