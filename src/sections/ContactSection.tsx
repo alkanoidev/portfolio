@@ -52,7 +52,7 @@ export default function ContactSection() {
   }, []);
   return (
     <div
-      className="h-full flex flex-col justify-center items-center mt-8 sm:px-0 px-1 mb-4"
+      className="h-full flex flex-col justify-center items-center mt-8 md:px-0 px-2 mb-4"
       id="contact"
       ref={container}
     >
