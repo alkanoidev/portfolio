@@ -1,7 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import classNames from "utils/classNames";
-import TextButton from "./buttons/TextButton";
 
 export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
   return (

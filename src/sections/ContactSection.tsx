@@ -1,11 +1,11 @@
-import IconButton from "components/buttons/IconButton";
-import OutlinedButton from "components/buttons/OutlinedButton";
+import IconButton from "components/ui/buttons/IconButton";
+import OutlinedButton from "components/ui/buttons/OutlinedButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import classNames from "utils/classNames";
-import FilledButton from "components/buttons/FilledButton";
-import DialogBasic from "components/DialogBasic";
+import FilledButton from "components/ui/buttons/FilledButton";
+import DialogBasic from "components/ui/DialogBasic";
 
 export default function ContactSection() {
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);

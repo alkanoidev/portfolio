@@ -1,7 +1,7 @@
 import classNames from "utils/classNames";
-import FilledButton from "./buttons/FilledButton";
-import OutlinedButton from "./buttons/OutlinedButton";
-import TextButton from "./buttons/TextButton";
+import FilledButton from "./ui/buttons/FilledButton";
+import OutlinedButton from "./ui/buttons/OutlinedButton";
+import TextButton from "./ui/buttons/TextButton";
 
 export default function ProjectCard({
   id,
