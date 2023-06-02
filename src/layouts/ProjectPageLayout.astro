@@ -1,11 +1,12 @@
 ---
 const { frontmatter } = Astro.props;
 
-import Navbar from "components/Navbar.astro";
 import "../styles/global.css";
 
 import projects from "../data/projects.json";
 import classNames from "utils/classNames";
+import NavbarSecondary from "components/NavbarSecondary.astro";
+
 const project = projects.find((project) => project.id === frontmatter.id);
 ---
 
@@ -49,7 +50,7 @@ const project = projects.find((project) => project.id === frontmatter.id);
   />
 
   <body class="project-page">
-    <Navbar isOutlineHidden={true} />
+    <NavbarSecondary />
 
     <main
       class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"

@@ -1,20 +1,22 @@
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import classNames from "utils/classNames";
 import TextButton from "./buttons/TextButton";
 
-export default function MobileNav() {
+export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
   return (
     <Menu as="div" className="relative inline-block text-left md:hidden">
       <Menu.Button
         id="openDropdown"
         aria-label="Open Mobile Nav"
         className={classNames(
-          "py-3 px-3 transition rounded-lg ring-4",
+          "py-3 px-3 transition rounded-lg",
+          isSecondary ? "ring-2" : "ring-4",
           "dark:ring-outline-dark ring-outline-light focus:outline-none",
           // hover
           "hover:bg-surface-light dark:hover:bg-surface-dark",
-          "focus:bg-surface-light dark:focus:bg-surface-dark"
+          "focus:bg-surface-light dark:focus:bg-surface-dark",
+          "text-primary-light dark:text-primary-dark"
         )}
       >
         {({ open }) =>
@@ -25,7 +27,7 @@ export default function MobileNav() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
             >
               <path
                 strokeLinecap="round"
@@ -40,7 +42,7 @@ export default function MobileNav() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
             >
               <path
                 strokeLinecap="round"
