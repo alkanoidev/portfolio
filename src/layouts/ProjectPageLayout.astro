@@ -58,11 +58,10 @@ const project = projects.find((project) => project.id === frontmatter.id);
     >
       <div class="w-full mt-40 md:mt-48 lg:mt-64 xl:mt-72">
         <img
-          src="logo.png"
+          src={project?.logo}
           alt={project?.title + " Logo"}
           width="100px"
           height="100px"
-          class="border-2"
         />
         <h1 class="text-3xl md:text-4xl font-bold mt-2">
           {project?.title}
