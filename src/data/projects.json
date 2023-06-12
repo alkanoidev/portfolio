@@ -15,7 +15,8 @@
     ],
     "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "/project/filip-blog"
+    "readMoreLink": "/project/filip-blog",
+    "logo": "/Avatar.webp"
   },
   {
     "id": 1,
@@ -33,7 +34,8 @@
     ],
     "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "/project/filip-blog"
+    "readMoreLink": "/project/filip-blog",
+    "logo": "/Avatar.webp"
   },
   {
     "id": 2,
@@ -51,6 +53,7 @@
     ],
     "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "/project/filip-blog"
+    "readMoreLink": "/project/filip-blog",
+    "logo": "/Avatar.webp"
   }
 ]

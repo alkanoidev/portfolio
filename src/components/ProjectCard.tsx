@@ -13,6 +13,7 @@ export default function ProjectCard({
   year,
   image,
   readMoreLink,
+  logo,
 }: Props) {
   return (
     <div
@@ -26,7 +27,8 @@ export default function ProjectCard({
         <div
           className={`flex flex-col justify-between h-full gap-3 transition`}
         >
-          <div>
+          <div className="flex items-end gap-2 md:flex-wrap">
+            <img src={logo} alt={title + " Logo"} width={40} />
             <h1 className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark">
               {title}
             </h1>
@@ -136,5 +138,6 @@ type Props = {
   year: string;
   image: string;
   readMoreLink?: string;
+  logo?: string;
   onClick?: () => void;
 };
