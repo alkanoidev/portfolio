@@ -8,14 +8,14 @@ export default function OutlinedButton({
   icon,
   onClick,
   fullWidth,
-  isInProjectCard,
+  isBlueTheme,
 }: {
   children?: string | ReactNode | ReactNode[];
   href?: string;
   title: string;
   icon?: ReactElement;
   fullWidth?: boolean;
-  isInProjectCard?: boolean;
+  isBlueTheme?: boolean;
   onClick?: () => void;
 }) {
   if (href)
@@ -28,7 +28,7 @@ export default function OutlinedButton({
           "py-3 px-6 transition text-center font-semibold focus:outline-none",
           "group rounded-full ring-2",
           "text-primary-light dark:text-primary-dark",
-          isInProjectCard
+          isBlueTheme
             ? "ring-primary-light dark:ring-primary-dark"
             : "ring-outline-light dark:ring-outline-dark",
           "inline-flex gap-2 justify-center",
@@ -53,7 +53,10 @@ export default function OutlinedButton({
       className={classNames(
         "py-3 px-6 transition text-center font-semibold focus:outline-none",
         "group rounded-full ring-2",
-        "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
+        "text-primary-light dark:text-primary-dark",
+        isBlueTheme
+          ? "ring-primary-light dark:ring-primary-dark"
+          : "ring-outline-light dark:ring-outline-dark",
         "inline-flex gap-2 justify-center",
         fullWidth ? "w-full" : "w-fit",
         // hover

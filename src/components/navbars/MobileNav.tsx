@@ -10,11 +10,18 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
         aria-label="Open Mobile Nav"
         className={classNames(
           "py-3 px-3 transition rounded-lg",
-          isSecondary ? "ring-2" : "ring-4",
-          "dark:ring-outline-dark ring-outline-light focus:outline-none",
+          isSecondary
+            ? "ring-2 ring-primary-light dark:ring-primary-dark"
+            : "ring-4 dark:ring-outline-dark ring-outline-light",
+          "focus:outline-none",
           // hover
-          "hover:bg-surface-light dark:hover:bg-surface-dark",
-          "focus:bg-surface-light dark:focus:bg-surface-dark",
+          isSecondary
+            ? "hover:bg-[#94ccff] dark:hover:bg-[#0C2737]"
+            : "hover:bg-surface-light dark:hover:bg-surface-dark",
+          // focus
+          isSecondary
+            ? "focus:bg-[#94ccff] dark:focus:bg-[#0C2737]"
+            : "focus:bg-surface-light dark:focus:bg-surface-dark",
           "text-primary-light dark:text-primary-dark"
         )}
       >
@@ -61,13 +68,25 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl bg-surface-light dark:bg-surface-dark shadow-lg focus:outline-none">
+        <Menu.Items
+          className={classNames(
+            "absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl shadow-lg focus:outline-none",
+            isSecondary
+              ? "bg-[#94ccff] dark:bg-[#0C2737]"
+              : "bg-surface-light dark:bg-surface-dark"
+          )}
+        >
           <div className="p-1 flex items-center flex-col">
             <Menu.Item>
               <a
                 aria-label="Projects"
                 href="#projects"
-                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
+                className={classNames(
+                  "group px-2 py-2 text-base font-semibold",
+                  isSecondary
+                    ? "text-on-primary-box-light dark:text-on-primary-box-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark"
+                )}
               >
                 Projects
               </a>
@@ -76,7 +95,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
               <a
                 aria-label="About"
                 href="#about"
-                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
+                className={classNames(
+                  "group px-2 py-2 text-base font-semibold",
+                  isSecondary
+                    ? "text-on-primary-box-light dark:text-on-primary-box-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark"
+                )}
               >
                 About
               </a>
@@ -85,7 +109,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
               <a
                 aria-label="Blog"
                 href="https://filipblog.netlify.app"
-                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
+                className={classNames(
+                  "group px-2 py-2 text-base font-semibold",
+                  isSecondary
+                    ? "text-on-primary-box-light dark:text-on-primary-box-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark"
+                )}
               >
                 Blog
               </a>
@@ -94,7 +123,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
               <a
                 aria-label="Contact"
                 href="#contact"
-                className={`group px-2 py-2 text-base font-semibold text-on-surface-light dark:text-on-surface-dark`}
+                className={classNames(
+                  "group px-2 py-2 text-base font-semibold",
+                  isSecondary
+                    ? "text-on-primary-box-light dark:text-on-primary-box-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark"
+                )}
               >
                 Contact
               </a>
@@ -108,7 +142,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 fill-on-surface-light dark:fill-on-surface-dark"
+                    className={classNames(
+                      "h-6 w-6",
+                      isSecondary
+                        ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                    )}
                     viewBox="0 0 24 24"
                   >
                     <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
@@ -124,7 +163,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
-                    className="h-6 w-6 fill-on-surface-light dark:fill-on-surface-dark"
+                    className={classNames(
+                      "h-6 w-6",
+                      isSecondary
+                        ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                    )}
                   >
                     <path
                       fillRule="evenodd"
@@ -143,7 +187,12 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="w-6 h-6 fill-on-surface-light dark:fill-on-surface-dark"
+                    className={classNames(
+                      "h-6 w-6",
+                      isSecondary
+                        ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                    )}
                   >
                     <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                     <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />

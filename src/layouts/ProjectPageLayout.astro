@@ -6,6 +6,7 @@ import "../styles/global.css";
 import projects from "../data/projects.json";
 import classNames from "utils/classNames";
 import NavbarSecondary from "components/navbars/NavbarSecondary.astro";
+import ProjectLinks from "components/ProjectLinks";
 
 const project = projects.find((project) => project.id === frontmatter.id);
 ---
@@ -67,7 +68,7 @@ const project = projects.find((project) => project.id === frontmatter.id);
           {project?.title}
         </h1>
         <span
-          class="font-semibold text-xl md:text-2xl text-on-light/70 dark:text-on-dark/70"
+          class="font-semibold text-xl md:text-2xl text-on-primary-box-light/70 dark:text-on-primary-box-dark/70"
         >
           {project?.year}
         </span>
@@ -79,8 +80,8 @@ const project = projects.find((project) => project.id === frontmatter.id);
             project?.technologies.map((technology) => (
               <li
                 class={classNames(
-                  "text-on-surface-light dark:text-on-surface-dark text-sm",
-                  "ring-2 ring-outline-light dark:ring-outline-dark ring-opacity-70 dark:ring-opacity-70",
+                  "text-on-primary-box-light dark:text-on-primary-box-dark text-sm",
+                  "ring-2 ring-primary-light dark:ring-primary-dark ring-opacity-70 dark:ring-opacity-70",
                   "px-2 py-1 rounded-full"
                 )}
               >
@@ -90,9 +91,14 @@ const project = projects.find((project) => project.id === frontmatter.id);
           }
         </ul>
       </div>
-      <br />
-      <br />
-      here goes a floating menu for live view and github repo
+
+      <div class="mt-6">
+        <ProjectLinks
+          liveDemoLink={project!.liveDemoLink}
+          githubLink={project!.githubLink}
+        />
+      </div>
+
       <slot />
     </main>
     <script>
