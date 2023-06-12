@@ -16,8 +16,11 @@ export default function ProjectCard({
 }: Props) {
   return (
     <div
-      id={"project__" + id}
-      className="flex flex-col lg:flex-row lg:even:flex-row-reverse justify-center sm:gap-16 gap-5 w-full"
+      id={"project_" + id}
+      className={classNames(
+        "flex flex-col justify-center sm:gap-16 gap-5 w-full",
+        id % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+      )}
     >
       <article className="project bg-[#94ccff] dark:bg-[#0C2737] text-start rounded-3xl w-full min-w-[22.5rem] lg:w-[26rem] flex p-6 px-4 transition">
         <div
@@ -124,7 +127,7 @@ export default function ProjectCard({
 }
 
 type Props = {
-  id?: number;
+  id: number;
   title: string;
   description: string;
   githubLink: string;

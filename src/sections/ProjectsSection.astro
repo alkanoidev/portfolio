@@ -24,7 +24,7 @@ import Link from "components/ui/Link";
   <div
     class="projects w-full flex flex-col flex-wrap justify-center gap-24 mt-10"
   >
-    {projectsData.map((project) => <ProjectCard {...project} />)}
+    {projectsData.map((project) => <ProjectCard client:load {...project} />)}
   </div>
 
   <p class="text-on-primary-box-light dark:text-on-primary-box-dark mt-5">
