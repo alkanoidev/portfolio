@@ -9,6 +9,10 @@ import NavbarSecondary from "components/navbars/NavbarSecondary.astro";
 import ProjectLinks from "components/ProjectLinks";
 
 const project = projects.find((project) => project.id === frontmatter.id);
+
+if (project === undefined || project === null) {
+  throw new TypeError("Cannot find the project.");
+}
 ---
 
 <html>
@@ -17,7 +21,7 @@ const project = projects.find((project) => project.id === frontmatter.id);
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <!-- primary-dark Meta Tags -->
-  <title>Filip - {project?.title}</title>
+  <title>Filip - {project.title}</title>
   <meta name="title" content={frontmatter.title} />
   <meta
     name="description"
@@ -51,32 +55,32 @@ const project = projects.find((project) => project.id === frontmatter.id);
   />
 
   <body class="dark:bg-deep-sky bg-deep-sky-light">
-    <NavbarSecondary backId={project?.id} />
+    <NavbarSecondary backId={project.id} />
 
     <main
       class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto md:px-0 px-2"
     >
       <div class="w-full mt-40 md:mt-48 lg:mt-64 xl:mt-72">
         <img
-          src={project?.logo}
-          alt={project?.title + " Logo"}
+          src={project.logo}
+          alt={project.title + " Logo"}
           width="100px"
           height="100px"
         />
         <h1 class="text-3xl md:text-4xl font-bold mt-2">
-          {project?.title}
+          {project.title}
         </h1>
         <span
           class="font-semibold text-xl md:text-2xl text-on-primary-box-light/70 dark:text-on-primary-box-dark/70"
         >
-          {project?.year}
+          {project.year}
         </span>
         <p class="text-xl md:text-2xl w-2/3 md:w-1/2 mt-2">
-          {project?.description}
+          {project.description}
         </p>
         <ul class="flex flex-wrap items-center gap-3 mt-4 w-full">
           {
-            project?.technologies.map((technology) => (
+            project.technologies.map((technology) => (
               <li
                 class={classNames(
                   "text-on-primary-box-light dark:text-on-primary-box-dark text-sm",
@@ -93,8 +97,8 @@ const project = projects.find((project) => project.id === frontmatter.id);
 
       <div class="mt-6">
         <ProjectLinks
-          liveDemoLink={project!.liveDemoLink}
-          githubLink={project!.githubLink}
+          liveDemoLink={project.liveDemoLink}
+          githubLink={project.githubLink}
         />
       </div>
 
