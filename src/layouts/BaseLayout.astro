@@ -2,58 +2,13 @@
 import Navbar from "components/navbars/Navbar.astro";
 import Footer from "components/Footer.astro";
 import "../styles/global.css";
-
-const props = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/Avatar.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <!-- primary-dark Meta Tags -->
-    <title>{props.title}</title>
-    <meta name="title" content="Filip Ivanovic" />
-    <meta
-      name="description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
+<Navbar />
+<div
+  class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
+>
+  <slot />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://filipivanovic.netlify.app/" />
-    <meta property="og:title" content="Filip Ivanovic" />
-    <meta
-      property="og:description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
-    <meta property="og:image" content="/thumbnail.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://filipivanovic.netlify.app/" />
-    <meta property="twitter:title" content="Filip Ivanovic" />
-    <meta
-      property="twitter:description"
-      content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-    />
-    <meta property="twitter:image" content="/thumbnail.png" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com/" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <Navbar />
-    <div
-      class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto"
-    >
-      <slot />
-
-      <Footer />
-    </div>
-  </body>
-</html>
+  <Footer />
+</div>
