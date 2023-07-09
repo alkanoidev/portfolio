@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+import BaseHead from "components/BaseHead.astro";
 import BaseLayout from "layouts/BaseLayout.astro";
 import AboutSection from "sections/AboutSection.astro";
 import ContactSection from "sections/ContactSection";
@@ -6,12 +8,50 @@ import HomeSection from "sections/HomeSection.astro";
 import ProjectsSection from "sections/ProjectsSection.astro";
 ---
 
-<BaseLayout title="Filip Ivanovic">
-  <HomeSection />
+<html lang="en">
+  <head>
+    <BaseHead title="Filip Ivanovic" />
 
-  <ProjectsSection />
+    <SEO
+      title="Filip Ivanovic"
+      description="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
+      openGraph={{
+        basic: {
+          title: "Filip Ivanovic",
+          type: "website",
+          image: "/thumbnail.png",
+          url: "https://filipivanovic.netlify.app/",
+        },
+      }}
+      twitter={{
+        title: "Filip Ivanovic Portfolio",
+        description:
+          "Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript",
+        card: "summary_large_image",
+        creator: "@alkanoidev",
+        site: "https://filipivanovic.netlify.app/",
+        image: "/thumbnail.png",
+      }}
+    />
+  </head>
+  <body>
+    <BaseLayout>
+      <HomeSection />
 
-  <AboutSection />
+      <ProjectsSection />
 
-  <ContactSection client:visible />
-</BaseLayout>
+      <AboutSection />
+
+      <ContactSection client:load />
+    </BaseLayout>
+
+    <script>
+      import { loglib } from "@loglib/tracker";
+
+      loglib.record({
+        id: "filipivanovic",
+        host: "https://www.loglib.io",
+      });
+    </script>
+  </body>
+</html>
