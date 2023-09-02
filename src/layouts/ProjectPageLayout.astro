@@ -7,6 +7,8 @@ import projects from "../data/projects.json";
 import classNames from "utils/classNames";
 import NavbarSecondary from "components/navbars/NavbarSecondary.astro";
 import ProjectLinks from "components/ProjectLinks";
+import BaseHead from "../components/BaseHead.astro";
+import { SEO } from "astro-seo";
 
 const project = projects.find((project) => project.id === frontmatter.id);
 
@@ -16,43 +18,29 @@ if (project === undefined || project === null) {
 ---
 
 <html>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/Avatar.png" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-  <!-- primary-dark Meta Tags -->
-  <title>Filip - {project.title}</title>
-  <meta name="title" content={frontmatter.title} />
-  <meta
-    name="description"
-    content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-  />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://filipivanovic.netlify.app/" />
-  <meta property="og:title" content="Filip Ivanovic" />
-  <meta
-    property="og:description"
-    content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-  />
-  <meta property="og:image" content="/thumbnail.png" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://filipivanovic.netlify.app/" />
-  <meta property="twitter:title" content="Filip Ivanovic" />
-  <meta
-    property="twitter:description"
-    content="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-  />
-  <meta property="twitter:image" content="/thumbnail.png" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com/" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
+  <head>
+    <BaseHead title={"Filip - " + project.title} />
+    <SEO
+      title={project.title}
+      description={project.description}
+      openGraph={{
+        basic: {
+          title: project.title,
+          type: "website",
+          image: "/thumbnail.png",
+          url: project.liveDemoLink,
+        },
+      }}
+      twitter={{
+        title: project.title,
+        description: project.description,
+        card: "summary_large_image",
+        creator: "@alkanoidev",
+        site: project.liveDemoLink,
+        image: "/thumbnail.png",
+      }}
+    />
+  </head>
 
   <body class="dark:bg-deep-sky bg-deep-sky-light">
     <NavbarSecondary backId={project.id} />
@@ -104,21 +92,10 @@ if (project === undefined || project === null) {
 
       <slot />
     </main>
-    <script>
-      import { gsap } from "gsap";
-      const timeline = gsap.timeline({ delay: 0.3 });
-      timeline.to("#navbar", {
-        duration: 0.3,
-        opacity: 1,
-        y: 0,
-        ease: "power2.easeOut",
-      });
-    </script>
+    <style>
+      * {
+        @apply text-on-primary-box-light dark:text-on-primary-box-dark;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  * {
-    @apply text-on-primary-box-light dark:text-on-primary-box-dark;
-  }
-</style>

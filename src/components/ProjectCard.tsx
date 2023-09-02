@@ -29,7 +29,9 @@ export default function ProjectCard({
         >
           <div className="flex items-end gap-2 md:flex-wrap">
             <img src={logo} alt={title + " Logo"} width={40} />
-            <h1 className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark">
+            <h1
+              className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark"
+            >
               {title}
             </h1>
             <h2 className="font-semibold opacity-70 text-on-primary-box-light dark:text-on-primary-box-dark">
