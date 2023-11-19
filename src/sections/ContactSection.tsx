@@ -85,7 +85,9 @@ export default function ContactSection() {
             "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark"
           )}
         >
-          <h1 className="text-3xl md:text-4xl font-bold">Get In Touch</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">
+            <span className="font-pilowlava">G</span>et In Touch
+          </h1>
           <p className="text-xl md:text-2xl">
             I would love to hear from you and discuss any potential
             opportunities or collaborations.

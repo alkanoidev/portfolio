@@ -32,6 +32,9 @@ module.exports = {
 
       transparent: "rgba(0, 0, 0, 0)"
     },
+    fontFamily: {
+      pilowlava: ["PilowLava"]
+    },
     extend: {
       borderRadius: {
         "4xl": "2rem",
