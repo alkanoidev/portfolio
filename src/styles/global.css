@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Pilowlava";
-  src: url('fonts/Pilowlava-Regular.eot');
-  src: url("fonts/Pilowlava-Regular.woff") format("woff"),
-    url("fonts/Pilowlava-Regular.woff2") format("woff2");
+  src: url("/fonts/Pilowlava-Regular.eot");
+  src: url("/fonts/Pilowlava-Regular.woff") format("woff"),
+    url("/fonts/Pilowlava-Regular.woff2") format("woff2");
 }
 
 * {
