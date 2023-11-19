@@ -138,6 +138,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                 <a
                   href="https://www.linkedin.com/in/filip-ivanovic-60ab98242/"
                   target="_blank"
+                  rel="noreferrer"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -159,6 +160,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   aria-label="GitHub"
                   href="https://github.com/alkanoidev"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -183,6 +185,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   aria-label="Mail alkanoidev@gmail.com"
                   href="mailto:alkanoidev@gmail.com"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
