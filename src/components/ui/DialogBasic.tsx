@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, ReactElement } from "react";
+import { Fragment, type ReactElement } from "react";
 import TextButton from "./buttons/TextButton";
 import classNames from "utils/classNames";
 
@@ -36,7 +36,7 @@ export default function DialogBasic({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-50" />
+          <div className="bg-black fixed inset-0 bg-opacity-50" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -53,7 +53,7 @@ export default function DialogBasic({
               <Dialog.Panel
                 className={classNames(
                   "w-full max-w-xs transform rounded-3xl p-6 text-left align-middle shadow-xl transition-all",
-                  "bg-surface-light dark:bg-surface-dark text-on-surface-light dark:text-on-surface-dark"
+                  "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 )}
               >
                 {icon}
@@ -61,7 +61,7 @@ export default function DialogBasic({
 
                 <Dialog.Title
                   as="h3"
-                  className="mt-4 text-xl text-center font-medium leading-6"
+                  className="mt-4 text-center text-xl font-medium leading-6"
                 >
                   {title}
                 </Dialog.Title>
@@ -71,7 +71,7 @@ export default function DialogBasic({
                   </p>
                 </div>
 
-                <div className="mt-6 max-w-fit ml-auto">
+                <div className="ml-auto mt-6 max-w-fit">
                   <TextButton title="Close" onClick={() => setIsOpen(false)} />
                 </div>
               </Dialog.Panel>

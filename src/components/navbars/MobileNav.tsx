@@ -9,10 +9,10 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
         id="openDropdown"
         aria-label="Open Mobile Nav"
         className={classNames(
-          "py-3 px-3 transition rounded-lg",
+          "rounded-lg px-3 py-3 transition",
           isSecondary
             ? "ring-2 ring-primary-light dark:ring-primary-dark"
-            : "ring-4 dark:ring-outline-dark ring-outline-light",
+            : "ring-4 ring-outline-light dark:ring-outline-dark",
           "focus:outline-none",
           // hover
           isSecondary
@@ -22,7 +22,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
           isSecondary
             ? "focus:bg-[#94ccff] dark:focus:bg-[#0C2737]"
             : "focus:bg-surface-light dark:focus:bg-surface-dark",
-          "text-primary-light dark:text-primary-dark"
+          "text-primary-light dark:text-primary-dark",
         )}
       >
         {({ open }) =>
@@ -33,7 +33,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
+              className="h-6 w-6 stroke-primary-light dark:stroke-primary-dark"
             >
               <path
                 strokeLinecap="round"
@@ -48,7 +48,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
+              className="h-6 w-6 stroke-primary-light dark:stroke-primary-dark"
             >
               <path
                 strokeLinecap="round"
@@ -70,13 +70,13 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
       >
         <Menu.Items
           className={classNames(
-            "absolute right-0 mt-2 w-44 z-20 origin-top-right rounded-2xl shadow-lg focus:outline-none",
+            "absolute right-0 z-20 mt-2 w-44 origin-top-right rounded-2xl shadow-lg focus:outline-none",
             isSecondary
               ? "bg-[#94ccff] dark:bg-[#0C2737]"
-              : "bg-surface-light dark:bg-surface-dark"
+              : "bg-surface-light dark:bg-surface-dark",
           )}
         >
-          <div className="p-1 flex items-center flex-col">
+          <div className="flex flex-col items-center p-1">
             <Menu.Item>
               <a
                 aria-label="Projects"
@@ -85,7 +85,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   "group px-2 py-2 text-base font-semibold",
                   isSecondary
                     ? "text-on-primary-box-light dark:text-on-primary-box-dark"
-                    : "text-on-surface-light dark:text-on-surface-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark",
                 )}
               >
                 Projects
@@ -99,7 +99,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   "group px-2 py-2 text-base font-semibold",
                   isSecondary
                     ? "text-on-primary-box-light dark:text-on-primary-box-dark"
-                    : "text-on-surface-light dark:text-on-surface-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark",
                 )}
               >
                 About
@@ -113,7 +113,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   "group px-2 py-2 text-base font-semibold",
                   isSecondary
                     ? "text-on-primary-box-light dark:text-on-primary-box-dark"
-                    : "text-on-surface-light dark:text-on-surface-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark",
                 )}
               >
                 Blog
@@ -127,13 +127,13 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                   "group px-2 py-2 text-base font-semibold",
                   isSecondary
                     ? "text-on-primary-box-light dark:text-on-primary-box-dark"
-                    : "text-on-surface-light dark:text-on-surface-dark"
+                    : "text-on-surface-light dark:text-on-surface-dark",
                 )}
               >
                 Contact
               </a>
             </Menu.Item>
-            <div className="flex items-center my-2 gap-4">
+            <div className="my-2 flex items-center gap-4">
               <Menu.Item>
                 <a
                   href="https://www.linkedin.com/in/filip-ivanovic-60ab98242/"
@@ -147,7 +147,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                       "h-6 w-6",
                       isSecondary
                         ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
-                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark",
                     )}
                     viewBox="0 0 24 24"
                   >
@@ -169,7 +169,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                       "h-6 w-6",
                       isSecondary
                         ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
-                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark",
                     )}
                   >
                     <path
@@ -194,7 +194,7 @@ export default function MobileNav({ isSecondary }: { isSecondary?: boolean }) {
                       "h-6 w-6",
                       isSecondary
                         ? "fill-on-primary-box-light dark:fill-on-primary-box-dark"
-                        : "fill-on-surface-light dark:fill-on-surface-dark"
+                        : "fill-on-surface-light dark:fill-on-surface-dark",
                     )}
                   >
                     <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />

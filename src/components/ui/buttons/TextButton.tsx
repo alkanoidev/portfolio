@@ -23,7 +23,7 @@ export default function TextButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none font-semibold",
+          "flex items-center justify-center rounded-full px-3 py-2 font-semibold transition focus:outline-none",
           "text-primary-light dark:text-primary-dark",
           // hover
           "hover:bg-primary-light dark:hover:bg-primary-dark",
@@ -35,7 +35,7 @@ export default function TextButton({
           "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
           "focus:ring-primary-light dark:focus:ring-primary-dark",
           "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]",
-          full ? "w-full" : ""
+          full ? "w-full" : "",
         )}
       >
         {title}
@@ -49,7 +49,7 @@ export default function TextButton({
       onClick={onClick}
       aria-label={title}
       className={classNames(
-        "rounded-full px-3 py-2 transition flex justify-center items-center focus:outline-none font-semibold",
+        "flex items-center justify-center rounded-full px-3 py-2 font-semibold transition focus:outline-none",
         "text-primary-light dark:text-primary-dark",
         // hover
         "hover:bg-primary-light dark:hover:bg-primary-dark",
@@ -61,7 +61,7 @@ export default function TextButton({
         "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
         "focus:ring-primary-light dark:focus:ring-primary-dark",
         "focus:ring-opacity-[20%] dark:focus:ring-opacity-[20%]",
-        full ? "w-full" : ""
+        full ? "w-full" : "",
       )}
     >
       {title}

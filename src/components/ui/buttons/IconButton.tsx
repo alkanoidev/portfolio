@@ -18,16 +18,16 @@ export default function IconButton({
         href={href}
         aria-label={title}
         className={classNames(
-          "p-3 transition text-center font-semibold focus:outline-none",
+          "p-3 text-center font-semibold transition focus:outline-none",
           "group rounded-full ring-2",
-          "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
-          "inline-flex gap-2 justify-center",
+          "text-primary-light ring-outline-light dark:text-primary-dark dark:ring-outline-dark",
+          "inline-flex justify-center gap-2",
           // hover
           "hover:bg-primary-light dark:hover:bg-primary-dark",
           "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",
           // focus
           "focus:bg-primary-light dark:focus:bg-primary-dark",
-          "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]"
+          "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
         )}
       >
         {icon ? icon : null}
@@ -39,16 +39,16 @@ export default function IconButton({
       onClick={onClick}
       aria-label={title}
       className={classNames(
-        "p-3 transition text-center font-semibold focus:outline-none",
+        "p-3 text-center font-semibold transition focus:outline-none",
         "group rounded-full ring-2",
-        "text-primary-light dark:text-primary-dark ring-outline-light dark:ring-outline-dark",
-        "inline-flex gap-2 justify-center",
+        "text-primary-light ring-outline-light dark:text-primary-dark dark:ring-outline-dark",
+        "inline-flex justify-center gap-2",
         // hover
         "hover:bg-primary-light dark:hover:bg-primary-dark",
         "hover:bg-opacity-[12%] dark:hover:bg-opacity-[12%]",
         // focus
         "focus:bg-primary-light dark:focus:bg-primary-dark",
-        "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]"
+        "focus:bg-opacity-[20%] dark:focus:bg-opacity-[20%]",
       )}
     >
       {icon ? icon : null}

@@ -19,27 +19,25 @@ export default function ProjectCard({
     <div
       id={"project_" + id}
       className={classNames(
-        "flex flex-col justify-center sm:gap-16 gap-5 w-full",
-        id % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+        "flex w-full flex-col justify-center gap-5 sm:gap-16",
+        id % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse",
       )}
     >
-      <article className="project bg-[#94ccff] dark:bg-[#0C2737] text-start rounded-3xl w-full min-w-[22.5rem] lg:w-[26rem] flex p-6 px-4 transition">
+      <article className="project flex w-full min-w-[22.5rem] rounded-3xl bg-[#94ccff] p-6 px-4 text-start transition dark:bg-[#0C2737] lg:w-[26rem]">
         <div
-          className={`flex flex-col justify-between h-full gap-3 transition`}
+          className={`flex h-full flex-col justify-between gap-3 transition`}
         >
           <div className="flex items-end gap-2 md:flex-wrap">
             <img src={logo} alt={title + " Logo"} width={40} />
-            <h1
-              className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark"
-            >
+            <h1 className="text-2xl font-semibold capitalize text-on-primary-box-light dark:text-on-primary-box-dark">
               {title}
             </h1>
-            <h2 className="font-semibold opacity-70 text-on-primary-box-light dark:text-on-primary-box-dark">
+            <h2 className="font-semibold text-on-primary-box-light opacity-70 dark:text-on-primary-box-dark">
               {year}
             </h2>
           </div>
           <div>
-            <p className="text-base md:text-lg text-on-primary-box-light dark:text-on-primary-box-dark">
+            <p className="text-base text-on-primary-box-light dark:text-on-primary-box-dark md:text-lg">
               {description}
             </p>
             <div className="-ml-3 max-w-fit">
@@ -50,9 +48,9 @@ export default function ProjectCard({
             {technologies.map((technology) => (
               <li
                 className={classNames(
-                  "text-on-primary-box-light dark:text-on-primary-box-dark text-sm",
-                  "ring-2 ring-primary-light dark:ring-primary-dark ring-opacity-70 dark:ring-opacity-70",
-                  "px-2 py-1 rounded-full"
+                  "text-sm text-on-primary-box-light dark:text-on-primary-box-dark",
+                  "ring-2 ring-primary-light ring-opacity-70 dark:ring-primary-dark dark:ring-opacity-70",
+                  "rounded-full px-2 py-1",
                 )}
                 key={technology}
               >
@@ -60,7 +58,7 @@ export default function ProjectCard({
               </li>
             ))}
           </ul>
-          <div className="mt-4 md:mt-auto md:max-w-max md:ml-auto lg:max-w-full lg:ml-0 flex gap-4">
+          <div className="mt-4 flex gap-4 md:ml-auto md:mt-auto md:max-w-max lg:ml-0 lg:max-w-full">
             <FilledButton
               href={liveDemoLink}
               title="Live View"
@@ -72,7 +70,7 @@ export default function ProjectCard({
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 stroke-on-primary-light dark:stroke-on-primary-dark"
+                  className="h-6 w-6 stroke-on-primary-light dark:stroke-on-primary-dark"
                 >
                   <path
                     strokeLinecap="round"
@@ -93,7 +91,7 @@ export default function ProjectCard({
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
-                  className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
+                  className="h-6 w-6 stroke-primary-light dark:stroke-primary-dark"
                 >
                   <path
                     strokeLinecap="round"
@@ -108,21 +106,21 @@ export default function ProjectCard({
       </article>
       <div
         className={classNames(
-          "lg:w-1/3 sm:min-w-[38rem] relative z-0",
+          "relative z-0 sm:min-w-[38rem] lg:w-1/3",
           "before:absolute before:-z-10",
-          "dark:before:w-[70%] dark:before:h-[70%]",
-          "before:w-[90%] before:h-[90%]",
+          "dark:before:h-[70%] dark:before:w-[70%]",
+          "before:h-[90%] before:w-[90%]",
           "before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2",
           "before:bg-on-primary-dark dark:before:bg-primary-light",
-          "md:before:blur-[52px] before:blur-[38px]",
-          "md:darK:before:blur-[52px] dark:before:blur-[32px]"
+          "before:blur-[38px] md:before:blur-[52px]",
+          "md:darK:before:blur-[52px] dark:before:blur-[32px]",
         )}
       >
         <img
           src={image}
           alt={title}
           loading="lazy"
-          className="rounded-3xl w-full h-full"
+          className="h-full w-full rounded-3xl"
         />
         {/* 1024x720px */}
       </div>

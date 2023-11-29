@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Pilowlava";
   src: url("/fonts/Pilowlava-Regular.eot");
-  src: url("/fonts/Pilowlava-Regular.woff") format("woff"),
+  src:
+    url("/fonts/Pilowlava-Regular.woff") format("woff"),
     url("/fonts/Pilowlava-Regular.woff2") format("woff2");
 }
 
@@ -18,7 +19,7 @@ html {
   @apply scroll-pt-32;
 }
 body {
-  @apply bg-light dark:bg-dark transition duration-500;
+  @apply bg-light transition duration-500 dark:bg-dark;
 }
 ::selection {
   @apply bg-primary-light text-on-primary-light;

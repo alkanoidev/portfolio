@@ -24,12 +24,12 @@ export default function FilledButton({
         aria-label={title}
         href={href}
         className={classNames(
-          "py-3 px-6 transition text-center rounded-full font-semibold whitespace-nowrap",
-          "inline-flex gap-2 justify-center",
-          "dark:bg-primary-dark dark:text-on-primary-dark bg-primary-light text-on-primary-light",
-          "dark:hover:bg-[#62b2f2] hover:bg-[#005786]",
-          "dark:focus:bg-[#4397d6] focus:bg-[#004b74] focus:outline-none",
-          fullWidth ? "w-full" : "w-fit"
+          "whitespace-nowrap rounded-full px-6 py-3 text-center font-semibold transition",
+          "inline-flex justify-center gap-2",
+          "bg-primary-light text-on-primary-light dark:bg-primary-dark dark:text-on-primary-dark",
+          "hover:bg-[#005786] dark:hover:bg-[#62b2f2]",
+          "focus:bg-[#004b74] focus:outline-none dark:focus:bg-[#4397d6]",
+          fullWidth ? "w-full" : "w-fit",
         )}
       >
         {title}
@@ -45,12 +45,12 @@ export default function FilledButton({
       aria-label={title}
       type={type ? type : "button"}
       className={classNames(
-        "py-3 px-6 transition text-center rounded-full font-semibold whitespace-nowrap",
-        "inline-flex gap-2 justify-center",
-        "dark:bg-primary-dark dark:text-on-primary-dark bg-primary-light text-on-primary-light",
-        "dark:hover:bg-[#62b2f2] hover:bg-[#005786]",
-        "dark:focus:bg-[#4397d6] focus:bg-[#004b74] focus:outline-none",
-        fullWidth ? "w-full" : "w-fit"
+        "whitespace-nowrap rounded-full px-6 py-3 text-center font-semibold transition",
+        "inline-flex justify-center gap-2",
+        "bg-primary-light text-on-primary-light dark:bg-primary-dark dark:text-on-primary-dark",
+        "hover:bg-[#005786] dark:hover:bg-[#62b2f2]",
+        "focus:bg-[#004b74] focus:outline-none dark:focus:bg-[#4397d6]",
+        fullWidth ? "w-full" : "w-fit",
       )}
     >
       {title}

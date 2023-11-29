@@ -10,7 +10,7 @@ type Props = {
 export default function ProjectLinks({ liveDemoLink, githubLink }: Props) {
   return (
     <div
-      className={classNames("flex justify-center items-center gap-4 max-w-max")}
+      className={classNames("flex max-w-max items-center justify-center gap-4")}
     >
       <FilledButton
         href={liveDemoLink}
@@ -23,7 +23,7 @@ export default function ProjectLinks({ liveDemoLink, githubLink }: Props) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 stroke-on-primary-light dark:stroke-on-primary-dark"
+            className="h-6 w-6 stroke-on-primary-light dark:stroke-on-primary-dark"
           >
             <path
               strokeLinecap="round"
@@ -44,7 +44,7 @@ export default function ProjectLinks({ liveDemoLink, githubLink }: Props) {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
-            className="w-6 h-6 stroke-primary-light dark:stroke-primary-dark"
+            className="h-6 w-6 stroke-primary-light dark:stroke-primary-dark"
           >
             <path
               strokeLinecap="round"
