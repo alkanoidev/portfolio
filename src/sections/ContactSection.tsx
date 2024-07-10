@@ -2,7 +2,7 @@ import IconButton from "components/ui/buttons/IconButton";
 import OutlinedButton from "components/ui/buttons/OutlinedButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classNames from "utils/classNames";
 import FilledButton from "components/ui/buttons/FilledButton";
 import DialogBasic from "components/ui/DialogBasic";
@@ -12,16 +12,20 @@ export default function ContactSection() {
   const container = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
+    const formData = new FormData(e.target as HTMLFormElement);
+
+    const urlSearchParams = new URLSearchParams(
+      [...formData].map(([key, value]) => [key, value as string]),
+    );
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: urlSearchParams.toString(),
     })
       .then(() => {
         setIsOpen(true);
@@ -50,6 +54,7 @@ export default function ContactSection() {
 
     return () => ctx.revert();
   }, []);
+
   return (
     <div
       className="mb-4 mt-8 flex h-full flex-col items-center justify-center px-2 md:px-0"
@@ -210,7 +215,7 @@ export default function ContactSection() {
             />
             <div
               className={classNames(
-                "absolute -bottom-[2px] -right-[2px] z-10 rounded-tl-4xl bg-light p-4 transition dark:bg-dark md:rounded-tl-3xl",
+                "absolute -bottom-[2px] -right-[2px] z-10 rounded-tl-4xl bg-light p-4 transition md:rounded-tl-3xl dark:bg-dark",
                 isTextareaFocused
                   ? "border-b-2 border-l-2 border-r-2 border-t-2 border-b-light border-l-primary-light border-r-light border-t-primary-light dark:border-b-dark dark:border-l-primary-dark dark:border-r-dark dark:border-t-primary-dark"
                   : "border-b-2 border-l-2 border-r-2 border-t-2 border-b-light border-l-outline-light border-r-light border-t-outline-light dark:border-b-dark dark:border-l-outline-dark dark:border-r-dark dark:border-t-outline-dark",
