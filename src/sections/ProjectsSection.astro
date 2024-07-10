@@ -8,7 +8,7 @@ import Link from "components/ui/Link";
 <div
   id="projects"
   class={classNames(
-    "mt-52 h-full flex flex-col justify-center items-center sm:px-0 px-2 relative",
+    "mt-52 h-full flex flex-col justify-center items-center sm:px-0 px-2 relative"
   )}
 >
   <h1
@@ -38,27 +38,41 @@ import Link from "components/ui/Link";
 </div>
 
 <script>
-  const target = document.querySelector("#projects") as HTMLElement;
+  function init() {
+    const target = document.querySelector("#projects") as HTMLElement;
 
-  const observer = new IntersectionObserver(
-    (entries: IntersectionObserverEntry[]) => {
-      entries.map((entry) => {
-        if (entry.isIntersecting) {
-          document.body.classList.remove("bg-light");
-          document.body.classList.remove("dark:bg-dark");
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.map((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio) {
+            document.body.classList.remove("bg-light");
+            document.body.classList.remove("dark:bg-dark");
 
-          document.body.classList.add("dark:bg-deep-sky");
-          document.body.classList.add("bg-deep-sky-light");
-        } else {
-          document.body.classList.remove("dark:bg-deep-sky");
-          document.body.classList.remove("bg-deep-sky-light");
+            document.body.classList.add("dark:bg-deep-sky");
+            document.body.classList.add("bg-deep-sky-light");
+          } else {
+            document.body.classList.remove("dark:bg-deep-sky");
+            document.body.classList.remove("bg-deep-sky-light");
 
-          document.body.classList.add("bg-light");
-          document.body.classList.add("dark:bg-dark");
-        }
-      });
-    },
-  );
+            document.body.classList.add("bg-light");
+            document.body.classList.add("dark:bg-dark");
+          }
+        });
+      }
+    );
 
-  observer.observe(target);
+    observer.observe(target);
+
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        observer.disconnect();
+      },
+      { once: true }
+    );
+  }
+
+  init();
+
+  document.addEventListener("astro:after-swap", init);
 </script>

@@ -17,7 +17,7 @@ import classNames from "utils/classNames";
       class={classNames(
         "gradient-head word mt-5 opacity-0 font-bold text-transparent",
         "bg-clip-text bg-[200%_auto] bg-gradient-to-r dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark",
-        "from-primary-light via-secondary-light to-primary-light",
+        "from-primary-light via-secondary-light to-primary-light"
       )}
     >
       Front-end Developer
@@ -62,10 +62,8 @@ import classNames from "utils/classNames";
     ease: "power2.easeOut",
   });
 
-  timeline.to("#arrow", { opacity: 1, ease: "power0.easeNone" });
-
   const arrowCircle = document.querySelectorAll(".circle");
-
+  timeline.to("#arrow", { opacity: 1, ease: "power0.easeNone" });
   timeline
     .to(arrowCircle, {
       duration: 1,
@@ -107,4 +105,20 @@ import classNames from "utils/classNames";
         amount: 1,
       },
     });
+
+  document.addEventListener("astro:after-swap", () => {
+    Array.from(document.getElementsByClassName("word")).map((word) => {
+      word.classList.add("opacity-100");
+    });
+
+    document.querySelector("#navbar")?.classList.add("opacity-100");
+    document.querySelector("#navbar")?.classList.add("translate-y-0");
+
+    document.querySelector("#arrow")?.classList.add("opacity-100");
+    Array.from(
+      document.getElementsByClassName("circle") as HTMLCollectionOf<HTMLElement>
+    ).map((arrowCircle) => {
+      arrowCircle.style.opacity = "100%";
+    });
+  });
 </script>

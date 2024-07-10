@@ -5,6 +5,7 @@ import TextButton from "./ui/buttons/TextButton";
 
 export default function ProjectCard({
   id,
+  slug,
   title,
   description,
   githubLink,
@@ -12,18 +13,17 @@ export default function ProjectCard({
   technologies,
   year,
   image,
-  readMoreLink,
   logo,
 }: Props) {
   return (
     <div
-      id={"project_" + id}
+      id={slug}
       className={classNames(
         "flex w-full flex-col justify-center gap-5 sm:gap-16",
         id % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse",
       )}
     >
-      <article className="project flex w-full min-w-[22.5rem] rounded-3xl bg-[#94ccff] p-6 px-4 text-start transition dark:bg-[#0C2737] lg:w-[26rem]">
+      <article className="project flex w-full min-w-[22.5rem] rounded-3xl bg-[#94ccff] p-6 px-4 text-start transition lg:w-[26rem] dark:bg-[#0C2737]">
         <div
           className={`flex h-full flex-col justify-between gap-3 transition`}
         >
@@ -37,11 +37,11 @@ export default function ProjectCard({
             </h2>
           </div>
           <div>
-            <p className="text-base text-on-primary-box-light dark:text-on-primary-box-dark md:text-lg">
+            <p className="text-base text-on-primary-box-light md:text-lg dark:text-on-primary-box-dark">
               {description}
             </p>
             <div className="-ml-3 max-w-fit">
-              <TextButton href={readMoreLink} title="Read More" />
+              <TextButton href={"/project/" + slug} title="Read More" />
             </div>
           </div>
           <ul className="flex flex-wrap items-center gap-3">
@@ -130,6 +130,7 @@ export default function ProjectCard({
 
 type Props = {
   id: number;
+  slug: string;
   title: string;
   description: string;
   githubLink: string;

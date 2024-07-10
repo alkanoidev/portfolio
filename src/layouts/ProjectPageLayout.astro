@@ -43,7 +43,7 @@ if (project === undefined || project === null) {
   </head>
 
   <body class="dark:bg-deep-sky bg-deep-sky-light">
-    <NavbarSecondary backId={project.id} />
+    <NavbarSecondary backId={project.slug} />
 
     <main
       class="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl sm:max-w-xl mx-auto md:px-0 px-2"
@@ -73,7 +73,7 @@ if (project === undefined || project === null) {
                 class={classNames(
                   "text-on-primary-box-light dark:text-on-primary-box-dark text-sm",
                   "ring-2 ring-primary-light dark:ring-primary-dark ring-opacity-70 dark:ring-opacity-70",
-                  "px-2 py-1 rounded-full",
+                  "px-2 py-1 rounded-full"
                 )}
               >
                 {technology}

@@ -2,6 +2,7 @@
   {
     "id": 0,
     "title": "Personal Blog",
+    "slug": "personal-blog",
     "description": "A blogging platform for sharing posts about technologies I am currently learning and some tips and tricks.",
     "githubLink": "https://github.com/alkanoidev/filipblog",
     "liveDemoLink": "https://filipblog.netlify.app/",
@@ -15,7 +16,6 @@
     ],
     "image": "projects/filipblog.webp",
     "year": "2022",
-    "readMoreLink": "/project/filip-blog",
     "logo": "/Avatar.webp"
   }
 ]
