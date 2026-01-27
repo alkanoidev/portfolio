@@ -9,48 +9,48 @@ import ProjectsSection from "sections/ProjectsSection.astro";
 ---
 
 <html lang="en">
-  <head>
-    <BaseHead title="Filip Ivanovic" />
+    <head>
+        <BaseHead title="Filip Ivanovic" />
 
-    <SEO
-      title="Filip Ivanovic"
-      description="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
-      openGraph={{
-        basic: {
-          title: "Filip Ivanovic",
-          type: "website",
-          image: "/thumbnail.png",
-          url: "https://filipivanovic.netlify.app/",
-        },
-      }}
-      twitter={{
-        title: "Filip Ivanovic Portfolio",
-        description:
-          "Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript",
-        card: "summary_large_image",
-        creator: "@alkanoidev",
-        site: "https://filipivanovic.netlify.app/",
-        image: "/thumbnail.png",
-      }}
-    />
-  </head>
-  <body>
-    <BaseLayout>
-      <HomeSection />
+        <SEO
+            title="Filip Ivanovic"
+            description="Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript"
+            openGraph={{
+                basic: {
+                    title: "Filip Ivanovic",
+                    type: "website",
+                    image: "/thumbnail.png",
+                    url: "https://filipivanovic.netlify.app/",
+                },
+            }}
+            twitter={{
+                title: "Filip Ivanovic Portfolio",
+                description:
+                    "Filip Ivanovic - Frontend Developer - React, JavaScript, NextJS, TypeScript",
+                card: "summary_large_image",
+                creator: "@alkanoidev",
+                site: "https://filipivanovic.netlify.app/",
+                image: "/thumbnail.png",
+            }}
+        />
+    </head>
+    <body>
+        <BaseLayout>
+            <HomeSection />
 
-      <ProjectsSection />
+            <ProjectsSection />
 
-      <AboutSection />
+            <AboutSection />
 
-      <ContactSection client:load />
-    </BaseLayout>
+            <ContactSection client:load />
+        </BaseLayout>
 
-    <script>
-        import {loglib} from "@loglib/tracker"
+        <script>
+            import { loglib } from "@loglib/tracker";
 
-        loglib.record({
-            id: "filipivanovic" 
-        });
-    </script>
-  </body>
+            loglib.record({
+                id: "filipivanovic",
+            });
+        </script>
+    </body>
 </html>

@@ -4,123 +4,125 @@ import classNames from "utils/classNames";
 ---
 
 <div
-  class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
-  id="home"
+    class="w-full h-[calc(100vh-100px)] flex items-center justify-center flex-col"
+    id="home"
 >
-  <h1 class="text sm:text-6xl text-3xl text-center font-bold">
-    <span class="word opacity-0">Get to know</span>
-    <span class="word opacity-0"> Filip,</span>
-    <br class="sm:hidden block" />
-    <span class="word opacity-0">your next</span>
-    <br />
-    <span
-      class={classNames(
-        "gradient-head word mt-5 opacity-0 font-bold text-transparent *:text-transparent",
-        "bg-clip-text bg-[200%_auto] bg-gradient-to-r dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark",
-        "from-primary-light via-secondary-light to-primary-light"
-      )}
-    >
-        Full-Stack   <br class="block" />
-         <span class="font-pilowlava">S</span>oftware
-         <span class="font-pilowlava">E</span>ngineer
-    </span>
-  </h1>
+    <h1 class="text sm:text-6xl text-3xl text-center font-bold">
+        <span class="word opacity-0">Get to know</span>
+        <span class="word opacity-0"> Filip,</span>
+        <br class="sm:hidden block" />
+        <span class="word opacity-0">your next</span>
+        <br />
+        <span
+            class={classNames(
+                "gradient-head word mt-5 opacity-0 font-bold text-transparent *:text-transparent",
+                "bg-clip-text bg-[200%_auto] bg-gradient-to-r dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark",
+                "from-primary-light via-secondary-light to-primary-light",
+            )}
+        >
+            Full-Stack <br class="block" />
+            <span class="font-pilowlava">S</span>oftware
+            <span class="font-pilowlava">E</span>ngineer
+        </span>
+    </h1>
 
-  <Arrow />
+    <Arrow />
 </div>
 
 <style>
-  .gradient-head {
-    animation: shine 4s linear infinite;
-    animation-delay: 0.5s;
-  }
-  @keyframes shine {
-    to {
-      background-position: 200% center;
+    .gradient-head {
+        animation: shine 4s linear infinite;
+        animation-delay: 0.5s;
     }
-  }
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
 </style>
 
 <script>
-  import { gsap } from "gsap";
+    import { gsap } from "gsap";
 
-  const timeline = gsap.timeline({
-    delay: 0.3,
-  });
-
-  timeline.to(".word", {
-    duration: 0.3,
-    opacity: 1,
-    ease: "power2.easeOut",
-    stagger: {
-      amount: 1.2,
-    },
-  });
-
-  timeline.to("#navbar", {
-    duration: 0.3,
-    opacity: 1,
-    y: 0,
-    ease: "power2.easeOut",
-  });
-
-  const arrowCircle = document.querySelectorAll(".circle");
-  timeline.to("#arrow", { opacity: 1, ease: "power0.easeNone" });
-  timeline
-    .to(arrowCircle, {
-      duration: 1,
-      ease: "power1.inOut",
-      opacity: 1,
-      stagger: {
-        amount: 1,
-      },
-    })
-    .to(arrowCircle, {
-      duration: 1,
-      ease: "power1.inOut",
-      opacity: 0.2,
-      stagger: {
-        amount: 1,
-      },
-    })
-    .to(arrowCircle, {
-      duration: 1,
-      ease: "power1.inOut",
-      opacity: 1,
-      stagger: {
-        amount: 1,
-      },
-    })
-    .to(arrowCircle, {
-      duration: 1,
-      ease: "power1.inOut",
-      opacity: 0.2,
-      stagger: {
-        amount: 1,
-      },
-    })
-    .to(arrowCircle, {
-      duration: 1,
-      ease: "power1.inOut",
-      opacity: 1,
-      stagger: {
-        amount: 1,
-      },
+    const timeline = gsap.timeline({
+        delay: 0.3,
     });
 
-  document.addEventListener("astro:after-swap", () => {
-    Array.from(document.getElementsByClassName("word")).map((word) => {
-      word.classList.add("opacity-100");
+    timeline.to(".word", {
+        duration: 0.3,
+        opacity: 1,
+        ease: "power2.easeOut",
+        stagger: {
+            amount: 1.2,
+        },
     });
 
-    document.querySelector("#navbar")?.classList.add("opacity-100");
-    document.querySelector("#navbar")?.classList.add("translate-y-0");
-
-    document.querySelector("#arrow")?.classList.add("opacity-100");
-    Array.from(
-      document.getElementsByClassName("circle") as HTMLCollectionOf<HTMLElement>
-    ).map((arrowCircle) => {
-      arrowCircle.style.opacity = "100%";
+    timeline.to("#navbar", {
+        duration: 0.3,
+        opacity: 1,
+        y: 0,
+        ease: "power2.easeOut",
     });
-  });
+
+    const arrowCircle = document.querySelectorAll(".circle");
+    timeline.to("#arrow", { opacity: 1, ease: "power0.easeNone" });
+    timeline
+        .to(arrowCircle, {
+            duration: 1,
+            ease: "power1.inOut",
+            opacity: 1,
+            stagger: {
+                amount: 1,
+            },
+        })
+        .to(arrowCircle, {
+            duration: 1,
+            ease: "power1.inOut",
+            opacity: 0.2,
+            stagger: {
+                amount: 1,
+            },
+        })
+        .to(arrowCircle, {
+            duration: 1,
+            ease: "power1.inOut",
+            opacity: 1,
+            stagger: {
+                amount: 1,
+            },
+        })
+        .to(arrowCircle, {
+            duration: 1,
+            ease: "power1.inOut",
+            opacity: 0.2,
+            stagger: {
+                amount: 1,
+            },
+        })
+        .to(arrowCircle, {
+            duration: 1,
+            ease: "power1.inOut",
+            opacity: 1,
+            stagger: {
+                amount: 1,
+            },
+        });
+
+    document.addEventListener("astro:after-swap", () => {
+        Array.from(document.getElementsByClassName("word")).map((word) => {
+            word.classList.add("opacity-100");
+        });
+
+        document.querySelector("#navbar")?.classList.add("opacity-100");
+        document.querySelector("#navbar")?.classList.add("translate-y-0");
+
+        document.querySelector("#arrow")?.classList.add("opacity-100");
+        Array.from(
+            document.getElementsByClassName(
+                "circle",
+            ) as HTMLCollectionOf<HTMLElement>,
+        ).map((arrowCircle) => {
+            arrowCircle.style.opacity = "100%";
+        });
+    });
 </script>

@@ -6,73 +6,77 @@ import Link from "components/ui/Link";
 ---
 
 <div
-  id="projects"
-  class={classNames(
-    "mt-52 h-full flex flex-col justify-center items-center sm:px-0 px-2 relative"
-  )}
+    id="projects"
+    class={classNames(
+        "mt-52 h-full flex flex-col justify-center items-center sm:px-0 px-2 relative",
+    )}
 >
-  <h1
-    class="text-4xl sm:text-5xl font-bold text-on-primary-box-light dark:text-on-primary-box-dark"
-  >
-    <span
-      class="font-pilowlava text-on-primary-box-light dark:text-on-primary-box-dark"
-      >p</span
-    >rojects
-  </h1>
-  <p
-    class="text-2xl sm:text-3xl text-on-primary-box-light dark:text-on-primary-box-dark text-center mt-5"
-  >
-    Things I’ve made trying to put my dent in the universe.
-  </p>
-  <div
-    class="projects w-full flex flex-col flex-wrap justify-center gap-24 mt-10"
-  >
-    {projectsData.map((project) => <ProjectCard client:load {...project} />)}
-  </div>
+    <h1
+        class="text-4xl sm:text-5xl font-bold text-on-primary-box-light dark:text-on-primary-box-dark"
+    >
+        <span
+            class="font-pilowlava text-on-primary-box-light dark:text-on-primary-box-dark"
+            >p</span
+        >rojects
+    </h1>
+    <p
+        class="text-2xl sm:text-3xl text-on-primary-box-light dark:text-on-primary-box-dark text-center mt-5"
+    >
+        Things I’ve made trying to put my dent in the universe.
+    </p>
+    <div
+        class="projects w-full flex flex-col flex-wrap justify-center gap-24 mt-10"
+    >
+        {
+            projectsData.map((project) => (
+                <ProjectCard client:load {...project} />
+            ))
+        }
+    </div>
 
-  <p class="text-on-primary-box-light dark:text-on-primary-box-dark mt-5">
-    <Link href="https://github.com/alkanoidev">
-      check out my other projects on github.
-    </Link>
-  </p>
+    <p class="text-on-primary-box-light dark:text-on-primary-box-dark mt-5">
+        <Link href="https://github.com/alkanoidev">
+            check out my other projects on github.
+        </Link>
+    </p>
 </div>
 
 <script>
-  function init() {
-    const target = document.querySelector("#projects") as HTMLElement;
+    function init() {
+        const target = document.querySelector("#projects") as HTMLElement;
 
-    const observer = new IntersectionObserver(
-      (entries: IntersectionObserverEntry[]) => {
-        entries.map((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio) {
-            document.body.classList.remove("bg-light");
-            document.body.classList.remove("dark:bg-dark");
+        const observer = new IntersectionObserver(
+            (entries: IntersectionObserverEntry[]) => {
+                entries.map((entry) => {
+                    if (entry.isIntersecting && entry.intersectionRatio) {
+                        document.body.classList.remove("bg-light");
+                        document.body.classList.remove("dark:bg-dark");
 
-            document.body.classList.add("dark:bg-deep-sky");
-            document.body.classList.add("bg-deep-sky-light");
-          } else {
-            document.body.classList.remove("dark:bg-deep-sky");
-            document.body.classList.remove("bg-deep-sky-light");
+                        document.body.classList.add("dark:bg-deep-sky");
+                        document.body.classList.add("bg-deep-sky-light");
+                    } else {
+                        document.body.classList.remove("dark:bg-deep-sky");
+                        document.body.classList.remove("bg-deep-sky-light");
 
-            document.body.classList.add("bg-light");
-            document.body.classList.add("dark:bg-dark");
-          }
-        });
-      }
-    );
+                        document.body.classList.add("bg-light");
+                        document.body.classList.add("dark:bg-dark");
+                    }
+                });
+            },
+        );
 
-    observer.observe(target);
+        observer.observe(target);
 
-    document.addEventListener(
-      "astro:before-swap",
-      () => {
-        observer.disconnect();
-      },
-      { once: true }
-    );
-  }
+        document.addEventListener(
+            "astro:before-swap",
+            () => {
+                observer.disconnect();
+            },
+            { once: true },
+        );
+    }
 
-  init();
+    init();
 
-  document.addEventListener("astro:after-swap", init);
+    document.addEventListener("astro:after-swap", init);
 </script>
