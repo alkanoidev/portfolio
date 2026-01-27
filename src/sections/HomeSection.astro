@@ -15,12 +15,14 @@ import classNames from "utils/classNames";
     <br />
     <span
       class={classNames(
-        "gradient-head word mt-5 opacity-0 font-bold text-transparent",
+        "gradient-head word mt-5 opacity-0 font-bold text-transparent *:text-transparent",
         "bg-clip-text bg-[200%_auto] bg-gradient-to-r dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark",
         "from-primary-light via-secondary-light to-primary-light"
       )}
     >
-      Front-end Developer
+        Full-Stack   <br class="block" />
+         <span class="font-pilowlava">S</span>oftware
+         <span class="font-pilowlava">E</span>ngineer
     </span>
   </h1>
 
@@ -29,7 +31,7 @@ import classNames from "utils/classNames";
 
 <style>
   .gradient-head {
-    animation: shine 2s linear infinite;
+    animation: shine 4s linear infinite;
     animation-delay: 0.5s;
   }
   @keyframes shine {

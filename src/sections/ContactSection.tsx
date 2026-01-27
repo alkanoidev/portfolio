@@ -165,7 +165,7 @@ export default function ContactSection() {
           <div className="block w-full space-x-0 space-y-6 sm:inline-flex sm:space-x-4 sm:space-y-0">
             <input
               className={classNames(
-                "w-full rounded-3xl p-6 text-lg transition md:rounded-4xl md:p-8",
+                "w-full rounded-3xl p-6 text-lg hover:transition md:rounded-4xl md:p-8",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 "border-2 border-outline-light dark:border-outline-dark",
                 "focus:border-2 focus:border-primary-light focus:outline-none focus:placeholder:text-transparent dark:focus:border-primary-dark",
@@ -178,7 +178,7 @@ export default function ContactSection() {
             />
             <input
               className={classNames(
-                "w-full rounded-3xl p-6 text-lg transition md:rounded-4xl md:p-8",
+                "w-full rounded-3xl p-6 text-lg hover:transition md:rounded-4xl md:p-8",
                 "bg-surface-light text-on-surface-light dark:bg-surface-dark dark:text-on-surface-dark",
                 "border-2 border-outline-light dark:border-outline-dark",
                 "focus:border-2 focus:border-primary-light focus:outline-none focus:placeholder:text-transparent dark:focus:border-primary-dark",
@@ -192,7 +192,7 @@ export default function ContactSection() {
           </div>
           <div
             className={classNames(
-              "relative z-0 w-full rounded-4xl pb-20 transition md:rounded-5xl",
+              "relative z-0 w-full rounded-4xl pb-20 hover:transition md:rounded-5xl",
               "bg-surface-light dark:bg-surface-dark",
               isTextareaFocused
                 ? "border-2 border-primary-light outline-none dark:border-primary-dark"
