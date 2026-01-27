@@ -4,6 +4,10 @@
     src:
         url("/fonts/Pilowlava-Regular.woff") format("woff"),
         url("/fonts/Pilowlava-Regular.woff2") format("woff2");
+    font-display: swap;
+    ascent-override: 90%;
+    descent-override: 20%;
+    line-gap-override: 0%;
 }
 
 * {
