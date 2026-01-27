@@ -11,4 +11,9 @@ export default defineConfig({
     site: "https://filipivanovic.netlify.app/",
     base: "/",
     integrations: [tailwind(), react()],
+    vite: {
+        ssr: {
+            noExternal: ["gsap"],
+        },
+    },
 });
